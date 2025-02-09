@@ -16,8 +16,8 @@ const OrderConfirm = () => {
   const finalPrice = cartItems.reduce((acc, el) => { return acc + el.price * el.qty },0)
 
   return (
-    <Box bg="blackAlpha.800" h="100%" pt="20px">
-      <Container border="1px solid black" maxW="xl" h="100vh" bg="white" p="0">
+    <Box bg="blackAlpha">
+      <Container maxW="xl" h="100vh" bg="white" p="0">
         <Box onClick={handleClick}>
           <Text
             fontSize={"4xl"}
@@ -32,8 +32,8 @@ const OrderConfirm = () => {
         <Flex alignContent={"center"} pt="20px" flexDirection="column">
           <Box align="center">
             <Image
-              h="250px"
-              w="250px"
+              h="100px"
+              w="100px"
               src="https://icon-library.com/images/confirmation-icon/confirmation-icon-29.jpg"
               alt=""
             />

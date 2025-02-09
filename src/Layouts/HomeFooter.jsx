@@ -40,12 +40,15 @@ const HomeFooter = () => {
         <Divider orientation="horizontal" />
         <Flex justifyContent={"space-between"}>
           <Box display="flex" alignItems="center" gap="1rem">
-            <Image
-              src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png"
-              alt="ucLogo"
-              h="50"
-              w="150"
-            />
+            {/*<Image*/}
+            {/*  src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png"*/}
+            {/*  alt="ucLogo"*/}
+            {/*  h="50"*/}
+            {/*  w="150"*/}
+            {/*/>*/}
+            <Text fontSize="24px" color="#fffff7" fontWeight="semibold">
+              OneStop.in
+            </Text>
             <Text fontSize="12px">
               © 2024-25 One Stop Shop India Pvt. Ltd
             </Text>

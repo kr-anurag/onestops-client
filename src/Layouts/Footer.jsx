@@ -14,11 +14,9 @@ export default function Footer() {
       <Box>
           <Box bg={"#f5f5f5"} color={useColorModeValue("gray.700", "gray.200")}>
               <Box px={5} pt={5}>
-                  <Image
-                      h="44px"
-                      w="148px"
-                      src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648471968852-1f2b01.png"
-                  />
+                  <Text fontSize="28px" fontWeight="bold">
+                      OneStops.in
+                  </Text>
               </Box>
               <Container as={Stack} maxW={"6xl"} py={10}>
                   <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
@@ -28,7 +26,6 @@ export default function Footer() {
                           <Link href={"#"}>Terms & Conditions</Link>
                           <Link href={"#"}>Privacy Policy</Link>
                           <Link href={"#"}>Anti-Discriminatory Policy</Link>
-                          <Link href={"#"}>UC Impact</Link>
                           <Link href={"#"}>Careers</Link>
                       </Stack>
                       <Stack align={"flex-start"}>
@@ -80,7 +77,7 @@ export default function Footer() {
                       align={{ md: "center" }}
                   >
                       <Text>
-                          © Copyright 2022 Urban Company. All rights reserved.
+                          © Copyright 2022 OS Company. All rights reserved.
                       </Text>
                   </Container>
               </Box>

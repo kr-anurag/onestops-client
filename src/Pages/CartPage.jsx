@@ -18,15 +18,17 @@ import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 import { Appcontext } from "../Context/Appcontext";
 import Login from "../Components/Modals/Login";
-import Proceed from "../Components/Modals/Proceed";
+import AddressForm from "../Components/Modals/AddressForm";
+import {serviceData} from "./Services";
 
 const CartPage = () => {
-  const { cartItems, packages, setCartItems, loginStatus } =
+  const { cartItems,  setCartItems, user } =
     useContext(Appcontext);
   const navigate = useNavigate();
   const goBack = () => {
-    navigate("/MensGrooming");
+    navigate("/services");
   };
+
 
   const handleQty = (id, amount) => {
     let a = cartItems.map((item) =>
@@ -39,10 +41,10 @@ const CartPage = () => {
     return acc + el.price * el.qty;
   }, 0);
 
-  console.log(loginStatus);
+  console.log(user);
 
   return (
-    <Box w="60%" m="auto"  h="100%">
+    <Box  w={{base:"100%", md:"60%"}} m="auto" h="100%" px={{base: "20px", md:"0px"}} mb="2rem">
       <Flex borderBottom="1px solid #e3e3e3" p="12px 0px" align="center">
         <IconButton
           icon={<HiArrowNarrowLeft />}
@@ -54,29 +56,12 @@ const CartPage = () => {
           Summary
         </Text>
       </Flex>
-      <HStack overflow="hidden" spacing={5}>
         {/* Cart items box here */}
-        <Flex
-          flexDirection="column"
-          w="55%"
+      <Flex flexDirection={{base:"column", md:"row"}} gap="2rem">
+        <Flex w={{base:"100%", md:"60%"}}
           gap="2rem"
-          h="863px"
-          overflowY="scroll"
           p="20px 10px"
-          sx={{
-            "&::-webkit-scrollbar": {
-              width: "0px",
-              borderRadius: "0px",
-              backgroundColor: `rgba(0, 0, 0, 0.05)`,
-            },
-            "&::-webkit-scrollbar-thumb": {
-              backgroundColor: `#ededed`,
-              borderRadius: `10px`,
-            },
-            "&::-webkit-scrollbar-track": {
-              backgroundColor: `gray.100`,
-            },
-          }}
+              direction="column"
         >
           {cartItems.length === 0 ? (
             <Text> EMPTY CART</Text>
@@ -117,9 +102,9 @@ const CartPage = () => {
                 </Flex>
                 {/* list of services */}
                 <Divider w="87%" m="10px 0" />
-                <HStack p="0 10px">
+                <HStack p="0 10px" >
                   <UnorderedList color="gray" fontSize="14px">
-                    {packages[i].list.map((el) => (
+                    {serviceData.packages[i].list.map((el) => (
                       <ListItem>{el}</ListItem>
                     ))}
                   </UnorderedList>
@@ -130,12 +115,12 @@ const CartPage = () => {
         </Flex>
         {/* Payment Section here */}
         <Flex
-          w="45%"
-          h="863px"
           p="20px 10px"
+          w={{base:"100%", md:"40%"}}
           pb="0"
           direction="column"
           justifyContent="space-between"
+
         >
           <VStack spacing={4}>
             <Text color="rgb(15,15,15)" fontWeight="600" alignSelf="flex-start">
@@ -156,10 +141,10 @@ const CartPage = () => {
             </Flex>
           </VStack>
           <Box borderTop="1px solid #e3e3e3" p="9px 0" align="center">
-            {loginStatus.loggedIn ? <Proceed /> : <Login />}
+            {user.verified_email ? <AddressForm /> : <Login />}
           </Box>
         </Flex>
-      </HStack>
+      </Flex>
     </Box>
   );
 };

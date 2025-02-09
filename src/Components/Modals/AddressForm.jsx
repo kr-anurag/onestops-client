@@ -13,12 +13,12 @@ import {
   Button,
   FormControl,
   InputLeftAddon,
-  ModalHeader,
+  ModalHeader, Textarea,
 } from "@chakra-ui/react";
 import { Appcontext } from "../../Context/Appcontext";
 import { useNavigate } from "react-router-dom";
 
-const Proceed = () => {
+const AddressForm = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const initialRef = React.useRef(null);
@@ -37,8 +37,8 @@ const Proceed = () => {
   const navigate = useNavigate();
 
   const submitOrder = () => {
-    console.log(user, "Proceed");
-    navigate("/OrderConfirm");
+    console.log(user, "AddressForm");
+    navigate("/orders");
   };
 
   return (
@@ -63,7 +63,7 @@ const Proceed = () => {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Enter Detials</ModalHeader>
+          <ModalHeader>Enter Address</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
             <FormControl display="flex" flexDirection="column" gap="1rem">
@@ -99,7 +99,7 @@ const Proceed = () => {
                 </InputGroup>
               </Box>
               <Box>
-                <Input
+                <Textarea
                   placeholder="Enter Address"
                   name="add"
                   value={user.add}
@@ -129,4 +129,4 @@ const Proceed = () => {
   );
 };
 
-export default Proceed;
+export default AddressForm;

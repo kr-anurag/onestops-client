@@ -15,28 +15,39 @@ import {
   Input,
   Text,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
 import { Appcontext } from "../Context/Appcontext";
+import Sidebar from "./Sidebar";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const HomeHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const {user} = useContext(Appcontext);
 
-  const { loginData, handleLoginChange, handleLogin, loginStatus , handleLogout} =
-    useContext(Appcontext);
-  console.log(loginStatus);
-
+  console.log(user)
   return (
     <>
-      <Flex h="60px" justifyContent="center" >
-        <Flex w="1300px" >
-          <Box m="0 auto" mt="10px" display={"flex"} alignItems="center">
-            {/* <Image
-              src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png"
-              w="132px"
-              h="39px"
-            /> */
-}
+      <Flex h="60px" justifyContent="center">
+        <Flex w="1300px">
+          <Box  mt="10px" display={"flex"} alignItems="center">
+            <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
+              <HamburgerIcon w={6} h={6} color="white" />
+            </Button>
+            <Drawer
+                isOpen={isOpen}
+                placement="left"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+            >
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerCloseButton />
+                <DrawerHeader>Menu</DrawerHeader>
+                <DrawerBody display="flex" flexDirection="column">
+                  <Sidebar />
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
             <Text
                 color="#fff"
                 fontSize="4xl"
@@ -54,49 +65,9 @@ const HomeHeader = () => {
                 fontWeight="700"
                 color="#fff"
               >
-                {loginStatus.loggedIn ? "User Logged In" : "Login / Sign Up"}
+                {user ? <Image src={user.picture} w="40px" h="40px" borderRadius="50%"/> : "Login / Sign Up"}
               </Box>
-              <Drawer
-                isOpen={isOpen}
-                placement="right"
-                onClose={onClose}
-                finalFocusRef={btnRef}
-              >
-                <DrawerOverlay />
-                <DrawerContent>
-                  <DrawerCloseButton />
-                  <DrawerHeader>Please Login To Continue</DrawerHeader>
-                  <DrawerBody display="flex" flexDirection="column" gap="1rem">
-                    {loginStatus.loggedIn && (
-                      <Text textAlign="center" color="green">
-                        Logged In
-                      </Text>
-                    )}
-                    <Input
-                      placeholder="Your Email"
-                      name="email"
-                      type="email"
-                      value={loginData.email}
-                      onChange={handleLoginChange}
-                    />
-                    <Input
-                      placeholder="Your Password"
-                      name="password"
-                      type="password"
-                      value={loginData.password}
-                      onChange={handleLoginChange}
-                    />
 
-                    {!loginStatus.loggedIn ? (
-                      <Button bg="black" color="white" onClick={handleLogin}>
-                        Continue
-                      </Button>
-                    ) : (
-                      <Button onClick={handleLogout}>Logout</Button>
-                    )}
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
             </Box>
           </Box>
         </Flex>

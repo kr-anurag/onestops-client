@@ -1,9 +1,9 @@
 import './App.css';
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import {Box, useDisclosure} from "@chakra-ui/react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
-import MensGrooming from "./Pages/MensGrooming";
+import Services from "./Pages/Services";
 import CartPage from "./Pages/CartPage";
 import OrderConfirm from "./Pages/OrderConfirm";
 import Navbar from "./Layouts/Navbar";
@@ -14,16 +14,16 @@ function App() {
     const isHomePage = location.pathname === "/";
 
     return (
-            <Box>
+            <>
                 {!isHomePage && <Navbar />}
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/MensGrooming" element={<MensGrooming />} />
-                    <Route path="/CartPage" element={<CartPage />} />
-                    <Route path="/OrderConfirm" element={<OrderConfirm />} />
+                    <Route path="/" element={<Home/>} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/carts" element={<CartPage />} />
+                    <Route path="/bookings" element={<OrderConfirm />} />
                 </Routes>
                 {!isHomePage && <Footer />}
-            </Box>
+            </>
     );
 }
 
