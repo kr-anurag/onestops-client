@@ -28,8 +28,8 @@ const HomeHeader = () => {
   return (
     <>
       <Flex h="60px" justifyContent="center">
-        <Flex w="1300px">
-          <Box  mt="10px" display={"flex"} alignItems="center">
+        <Flex w="1300px" mt="10px" mx="1rem">
+          <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
               <HamburgerIcon w={6} h={6} color="white" />
             </Button>
@@ -50,13 +50,12 @@ const HomeHeader = () => {
             </Drawer>
             <Text
                 color="#fff"
-                fontSize="4xl"
+                fontSize={{base: "2xl", md: "4xl"}}
                 fontWeight={"800"}
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in</Text>
           </Box>
           <Spacer />
           <Box display="flex" alignItems="center" gap="2rem">
-            <Box>
               <Box
                 as="button"
                 ref={btnRef}
@@ -67,8 +66,6 @@ const HomeHeader = () => {
               >
                 {user ? <Image src={user.picture} w="40px" h="40px" borderRadius="50%"/> : "Login / Sign Up"}
               </Box>
-
-            </Box>
           </Box>
         </Flex>
       </Flex>

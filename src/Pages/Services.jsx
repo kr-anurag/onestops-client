@@ -136,7 +136,7 @@ const Services = () => {
             </Flex>
           </Flex>
           {/* Small Images Box */}
-          <Flex borderBottom="2px solid #E3E3E3" p="30px 0" gap="1.5rem">
+          <Flex borderBottom="2px solid #E3E3E3" p="30px 0" gap="1.5rem" flexWrap={"wrap"}>
             {serviceData.smallImg.map((el) => (
                 <Flex
                     flexDirection={"column"}
@@ -178,7 +178,7 @@ const Services = () => {
                           Package
                         </Text>
                       </Box>
-                      <Flex alignItems="center" justifyContent="space-between" w="90%">
+                      <Flex alignItems="center" justifyContent="space-between" w="90%" >
                         <Text fontSize="18px" fontWeight="700">
                           {el.name}
                         </Text>
@@ -188,7 +188,7 @@ const Services = () => {
                             h="30px"
                             onClick={() => addToCart(i)}
                         >
-                          Add to Cart
+                          Add
                         </Button>
                       </Flex>
                       {/* Stars and Ratings */}
@@ -228,14 +228,13 @@ const Services = () => {
             </center>
             {/* Coupons Box */}
             <Box h="fit-content" p="50px 0">
-              <SimpleGrid spacingY={"20px"} justifyContent="end">
+              <SimpleGrid spacingY={"20px"} >
                 <Flex
                     boxSizing="border-box"
                     gap="0.5rem"
                     p="8px 12px"
                     rounded="md"
                     bg="whitesmoke"
-                    w="352px"
                 >
                   <Box>
                     <Image
@@ -245,9 +244,9 @@ const Services = () => {
                     />
                   </Box>
                   <Box>
-                    <Text fontWeight={"700"} color="rgb(15,15,15)" fontSize={"14px"}>
-                      Save 15% on every order
-                    </Text>
+                    {/*<Text fontWeight={"700"} color="rgb(15,15,15)" fontSize={"14px"}>*/}
+                    {/*  Save 15% on every order*/}
+                    {/*</Text>*/}
                     <Text fontSize="14px" color="#757575">
                       Get Plus Now
                     </Text>

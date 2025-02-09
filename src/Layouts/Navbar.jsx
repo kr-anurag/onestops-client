@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-        <Flex p="10px 30px">
+        <Flex p="10px 10px">
             <Box
                 display={"flex"}
                 alignItems="center"
@@ -59,11 +59,6 @@ export default function Navbar() {
                 </Box>
             </Box>
             <Spacer />
-            <Flex alignItems={"center"} gap="1rem" fontWeight={"semibold"}>
-                <NavLink to={"/"}>Home </NavLink>
-                <NavLink to={"/carts"}>Cart </NavLink>
-                <NavLink to={"/bookings"}>Bookings </NavLink>
-            </Flex>
         </Flex>
         <Divider m="10px 0" borderColor={"blackAlpha.500"} />
         </>

@@ -17,7 +17,7 @@ export default function Sidebar() {
     const location = useLocation();
 
     return (
-        <Flex direction="column" justify="space-between" height="100vh" p="10px">
+        <Flex direction="column" justify="space-between" height="100%" p="10px">
             <Box>
                 {menuItems.map((item) => (
                     <NavLink to={item.path} key={item.name}>
@@ -25,16 +25,16 @@ export default function Sidebar() {
                               bg={location.pathname === item.path ? "#f5f5f5" : "transparent"}
                         >
                             <item.icon size={22}/>
-                            <Text fontSize="lg" fontWeight="bold">{item.name}</Text>
+                            <Text fontSize="lg" fontWeight="600">{item.name}</Text>
                         </Flex>
                         <Divider />
                     </NavLink>
                 ))}
             </Box>
-            <Box>
+            <Box mb={"20px"}>
                 <Flex direction="column" gap={"20px"} >
                     <Divider />
-                <Box>
+                <Box >
                     {user && (
                         <Flex gap="1rem" alignItems={"center"}>
                             <Image src={user.picture} w="40px" h="40px" borderRadius="50%" />

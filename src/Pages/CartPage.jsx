@@ -140,7 +140,9 @@ const CartPage = () => {
               <Text>&#8377; {finalPrice + 49}</Text>
             </Flex>
           </VStack>
-          <Box borderTop="1px solid #e3e3e3" p="9px 0" align="center">
+          <Divider m="14px 0" borderColor="blackAlpha.200" />
+
+          <Box  p="9px 0" align="center">
             {user.verified_email ? <AddressForm /> : <Login />}
           </Box>
         </Flex>

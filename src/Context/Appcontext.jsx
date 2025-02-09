@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import {googleLogout, useGoogleLogin} from "@react-oauth/google";
 import Cookies from "js-cookie";
-import {fetchAndSetUserProfile} from "../utils/Authentication";
+import {fetchAndSetUserProfile} from "../Utils/Authentication";
 import {useNavigate} from "react-router-dom";
 
 export const Appcontext = createContext();

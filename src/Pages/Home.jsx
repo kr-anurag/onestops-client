@@ -73,8 +73,8 @@ const Home = () => {
             <Button
                 display="flex"
                 justifyContent="space-between"
-                w="180px"
-                h="54px"
+                w={{base : "120px", md: "180px"}}
+                h={{base : "40px", md: "54px"}}
             >
               Mumbai <TriangleDownIcon fontSize="sm" />
             </Button>
@@ -92,12 +92,12 @@ const Home = () => {
         </Popover>
         <InputGroup>
           <InputLeftElement
-              h="54px"
+              h={{base : "40px", md: "54px"}}
               pointerEvents="none"
               children={<SearchIcon color="gray.500" />}
           />
           <Input
-              h="54px"
+              h={{base : "40px", md: "54px"}}
               w={{ base: "100%", md: "572px" }}
               bg="white"
               type="text"
@@ -130,11 +130,11 @@ const Home = () => {
           </Box>
           <SearchBar />
         </Box>
-        <Box w="100%" h="100%">
+        <Box >
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
               spacing={5}
-              w={{ base: "90%", md: "1000px" }}
+              w={{ base: "90%", lg: "1000px"}}
               m="-70px auto 0"
               p="24px"
               rounded="md"

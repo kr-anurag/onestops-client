@@ -48,7 +48,7 @@ const AddressForm = () => {
         size="md"
         color="white"
         height="48px"
-        width="416px"
+        width="100%"
         variant="solid"
         bg="#6e42e5"
         _hover={{ bg: "#6e42e5" }}
