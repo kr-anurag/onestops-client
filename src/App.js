@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, {useEffect} from "react";
 import {Box, useDisclosure} from "@chakra-ui/react";
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import Home from "./Pages/Home";
@@ -16,6 +16,10 @@ import MobileNavbar from "./Layouts/MobileNavbar";
 function App() {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
+
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    }, [location.pathname]);
 
     return (
             <>
