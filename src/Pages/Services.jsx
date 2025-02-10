@@ -260,7 +260,7 @@ const Services = () => {
                         p="8px 22px"
                         rounded="md"
                         bg="white"
-                        w="352px"
+
                         justifyContent="space-between"
                         align="center"
                     >
