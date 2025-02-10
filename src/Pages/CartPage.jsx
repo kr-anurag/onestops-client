@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { Appcontext } from "../Context/Appcontext";
 import Login from "../Components/Modals/Login";
 import AddressForm from "../Components/Modals/AddressForm";
-import {serviceData} from "./Services";
+import {ServicesDatabase} from "../Utils/Database";
 
 const CartPage = () => {
   const { cartItems,  setCartItems, user } =
@@ -29,7 +29,7 @@ const CartPage = () => {
     navigate("/services");
   };
 
-
+const serviceData = ServicesDatabase[0];
   const handleQty = (id, amount) => {
     let a = cartItems?.map((item) =>
       item.id === id ? { ...item, qty: item.qty + amount } : item
