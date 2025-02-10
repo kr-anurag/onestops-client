@@ -31,7 +31,7 @@ const CartPage = () => {
 
 
   const handleQty = (id, amount) => {
-    let a = cartItems.map((item) =>
+    let a = cartItems?.map((item) =>
       item.id === id ? { ...item, qty: item.qty + amount } : item
     );
     setCartItems(a);
@@ -41,7 +41,6 @@ const CartPage = () => {
     return acc + el.price * el.qty;
   }, 0);
 
-  console.log(user);
 
   return (
     <Box  w={{base:"100%", md:"60%"}} m="auto" h="100%" px={{base: "20px", md:"0px"}} mb="2rem">
@@ -64,7 +63,7 @@ const CartPage = () => {
               direction="column"
         >
           {cartItems.length === 0 ? (
-            <Text> EMPTY CART</Text>
+            <Box h={"40vh"}><Text> EMPTY CART</Text></Box>
           ) : (
             cartItems.map((el, i) => (
               <Box
@@ -104,8 +103,8 @@ const CartPage = () => {
                 <Divider w="87%" m="10px 0" />
                 <HStack p="0 10px" >
                   <UnorderedList color="gray" fontSize="14px">
-                    {serviceData.packages[i].list.map((el) => (
-                      <ListItem>{el}</ListItem>
+                    {serviceData.packages[i]?.list.map((el) => (
+                      <ListItem key={el}>{el}</ListItem>
                     ))}
                   </UnorderedList>
                 </HStack>
@@ -114,6 +113,7 @@ const CartPage = () => {
           )}
         </Flex>
         {/* Payment Section here */}
+        {cartItems?.length !== 0 && (
         <Flex
           p="20px 10px"
           w={{base:"100%", md:"40%"}}
@@ -145,7 +145,7 @@ const CartPage = () => {
           <Box  p="9px 0" align="center">
             {user.verified_email ? <AddressForm /> : <Login />}
           </Box>
-        </Flex>
+        </Flex>)}
       </Flex>
     </Box>
   );
