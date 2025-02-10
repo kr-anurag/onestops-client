@@ -24,6 +24,7 @@ function App() {
     return (
             <>
                 {!isHomePage && <Navbar />}
+                <Box as="main" pt={!isHomePage ? "60px" : "0"}>
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/services" element={<Services />} />
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/bookings" element={<PrivateRoute element={<OrderConfirm />} />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
+            </Box>
                 <MobileNavbar />
                 {!isHomePage && <Footer />}
             </>

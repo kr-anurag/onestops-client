@@ -21,7 +21,16 @@ export default function Navbar() {
     const btnRef = React.useRef();
 
     return (
-        <>
+        <Box
+            position="fixed"
+            top="0"
+            left="0"
+            right="0"
+            bg="white"
+            boxShadow="md"
+            borderBottom="1px solid #E2E8F0"
+            zIndex={"999"}
+        >
         <Flex p="10px 10px">
             <Box
                 display={"flex"}
@@ -50,7 +59,7 @@ export default function Navbar() {
             <Spacer />
         </Flex>
         <Divider  borderColor={"blackAlpha.500"} />
-        </>
+        </Box>
     )
 
 }
