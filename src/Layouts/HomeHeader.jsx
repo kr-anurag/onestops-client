@@ -8,23 +8,18 @@ import {
   Button,
   Drawer,
   DrawerOverlay,
-  DrawerBody,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  Input,
   Text,
 } from "@chakra-ui/react";
 import { Appcontext } from "../Context/Appcontext";
 import Sidebar from "./Sidebar";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const HomeHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const {user} = useContext(Appcontext);
 
-  console.log(user)
   return (
     <>
       <Flex h="60px" justifyContent="center">
@@ -40,13 +35,7 @@ const HomeHeader = () => {
                 finalFocusRef={btnRef}
             >
               <DrawerOverlay />
-              <DrawerContent>
-                <DrawerCloseButton />
-                <DrawerHeader>Menu</DrawerHeader>
-                <DrawerBody display="flex" flexDirection="column">
                   <Sidebar />
-                </DrawerBody>
-              </DrawerContent>
             </Drawer>
             <Text
                 color="#fff"
@@ -57,14 +46,11 @@ const HomeHeader = () => {
           <Spacer />
           <Box display="flex" alignItems="center" gap="2rem">
               <Box
-                as="button"
-                ref={btnRef}
-                onClick={onOpen}
                 fontSize="14px"
                 fontWeight="700"
                 color="#fff"
               >
-                {user ? <Image src={user.picture} w="40px" h="40px" borderRadius="50%"/> : "Login / Sign Up"}
+                {user ? <Image src={user.picture} w="40px" h="40px" borderRadius="50%"/> : <Link to="/login"> Login / Sign Up </Link>}
               </Box>
           </Box>
         </Flex>

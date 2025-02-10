@@ -14,11 +14,10 @@ const HomeFooter = () => {
   const city = [
     "Mumbai",
     "Kalyan",
-    "Nashik",
   ];
   return (
     <Flex justifyContent={"center"} bg="#000" color="#cbcbcb">
-      <Flex w="1300px" p="30px 0px" flexDirection={"column"} gap="1rem">
+      <Flex w="1300px" p="30px 0px" flexDirection={"column"} gap="1rem" px={{base:"1rem", md:"0px"}}>
         <Wrap spacingX={7} fontWeight="semibold" color="#888">
           <WrapItem>About Us</WrapItem>
           <WrapItem>Terms & Conditions</WrapItem>
@@ -38,14 +37,8 @@ const HomeFooter = () => {
           ))}
         </Wrap>
         <Divider orientation="horizontal" />
-        <Flex justifyContent={"space-between"}>
-          <Box display="flex" alignItems="center" gap="1rem">
-            {/*<Image*/}
-            {/*  src="https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1631097450980-d2de38.png"*/}
-            {/*  alt="ucLogo"*/}
-            {/*  h="50"*/}
-            {/*  w="150"*/}
-            {/*/>*/}
+        <Flex justifyContent={"space-between"} flexWrap={"wrap"} gap={"1rem"}>
+          <Box display="flex" alignItems="center" gap="1rem" flexWrap={"wrap"}>
             <Text fontSize="24px" color="#fffff7" fontWeight="semibold">
               OneStop.in
             </Text>
@@ -68,9 +61,6 @@ const HomeFooter = () => {
             </Box>
             <Box h="30px" w="30px" bg="white" rounded={"md"}>
               <Image src="https://img.icons8.com/ios/2x/linkedin.png" />
-            </Box>
-            <Box h="30px" w="30px" bg="white" rounded={"md"}>
-              <Image src="https://img.icons8.com/ios/2x/pinterest.png" />
             </Box>
           </Flex>
           <Flex>

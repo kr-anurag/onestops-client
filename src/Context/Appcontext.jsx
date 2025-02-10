@@ -9,7 +9,6 @@ export const Appcontext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [user, setUser] = useState(Cookies.get('user') ? JSON.parse(Cookies.get('user')) : null);
-console.log(user)
   const navigate = useNavigate();
 
   const handleLogin = useGoogleLogin({

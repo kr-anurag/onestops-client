@@ -1,68 +1,61 @@
-import React, { useContext } from "react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
-  ModalHeader,
-  Box,
-} from "@chakra-ui/react";
+import React, {useContext, useEffect} from "react";
+import {Box, Button, Container, Heading, Text, useDisclosure, VStack} from "@chakra-ui/react";
+import { FcGoogle } from "react-icons/fc";
 import { Appcontext } from "../../Context/Appcontext";
-import Cookies from "js-cookie";
-import {FcGoogle} from "react-icons/fc";
+import {useNavigate} from "react-router-dom";
 
 const Login = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const initialRef = React.useRef(null);
-  const finalRef = React.useRef(null);
-
   const { handleLogin, user } = useContext(Appcontext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
 
   return (
-      <>
-        <Button
-            onClick={onOpen}
-            size="md"
-            color="white"
-            height="48px"
-            variant="solid"
-            bg="#6e42e5"
-            px="40px"
-            _hover={{ bg: "#6e42e5" }}
+      <Container centerContent minH="50dvh" display="flex" justifyContent="center">
+        <Box
+            bg="white"
+            p={8}
+            boxShadow="lg"
+            borderRadius="lg"
+            textAlign="center"
+            maxW="md"
         >
-          Login/Sign up to proceed
-        </Button>
-        <Modal
-            initialFocusRef={initialRef}
-            finalFocusRef={finalRef}
-            isOpen={isOpen}
-            onClose={onClose}
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalCloseButton />
-            <ModalBody pb={6}>
-              <Box textAlign="center">
-                <Button onClick={handleLogin} w={"full"} leftIcon={<FcGoogle />}>
-                  Sign in with Google
-                </Button>
-              </Box>
-            </ModalBody>
-            <ModalFooter>
-              <Button onClick={onClose}>Cancel</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-      </>
+          <Heading size="lg" mb={4} color="gray.700">
+            Welcome Back
+          </Heading>
+          <Text fontSize="md" color="gray.500" mb={6}>
+            Sign in to continue
+          </Text>
+          <Button
+              leftIcon={<FcGoogle size={24} />}
+              onClick={handleLogin}
+              colorScheme="gray"
+              variant="outline"
+              w="full"
+              py={6}
+              fontSize="md"
+              _hover={{ bg: "gray.50" }}
+          >
+            Sign in with Google
+          </Button>
+
+          <Text fontSize="sm" color="gray.500" mt={6}>
+            By signing in, you agree to our{" "}
+            <Text as="a" href="/terms" color="blue.500" fontWeight="medium" _hover={{ textDecoration: "underline" }}>
+              Terms of Service
+            </Text>{" "}
+            and{" "}
+            <Text as="a" href="/privacy" color="blue.500" fontWeight="medium" _hover={{ textDecoration: "underline" }}>
+              Privacy Policy
+            </Text>.
+          </Text>
+        </Box>
+      </Container>
   );
 };
 

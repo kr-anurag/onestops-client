@@ -17,11 +17,6 @@ import {HamburgerIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
 
 export default function Navbar() {
-    const navigate = useNavigate();
-    const goToHomePage = () => [
-        navigate("/")
-    ]
-
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
 
@@ -43,18 +38,12 @@ export default function Navbar() {
                     finalFocusRef={btnRef}
                 >
                     <DrawerOverlay />
-                    <DrawerContent>
-                        <DrawerCloseButton />
-                        <DrawerHeader>Menu</DrawerHeader>
-                        <DrawerBody display="flex" flexDirection="column">
-                            <Sidebar />
-                        </DrawerBody>
-                    </DrawerContent>
+                    <Sidebar />
                 </Drawer>
-                <Text fontSize="28px" fontWeight="bold">
+                <Text fontSize={{base: "1.4rem", lg:"1.8rem"}} fontWeight="bold">
                     OneStop.in
                 </Text>
-                <Box fontSize={"15px"} ml="1rem">
+                <Box fontSize={"13px"} ml="1rem">
                     <Text>Mumbai</Text>
                 </Box>
             </Box>

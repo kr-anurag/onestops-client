@@ -160,12 +160,12 @@ const Services = () => {
             ))}
           </Flex>
           {/* Services and Tags */}
-          <Flex justifyContent={"space-between"} borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
+          <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
                 w={{base:"100%", lg:"60%"}}
                 p="30px 10px 0px"
             >
-              <SimpleGrid p="20px 0" spacingY="60px">
+              <SimpleGrid p="20px 0" spacingY="40px">
                 {serviceData.packages.map((el, i) => (
                     <Box>
                       <Box display="flex" alignItems="center">
@@ -178,7 +178,7 @@ const Services = () => {
                           Package
                         </Text>
                       </Box>
-                      <Flex alignItems="center" justifyContent="space-between" w="90%" >
+                      <Flex alignItems="center" justifyContent="space-between" w={{base: "100%", md:"90%"}} >
                         <Text fontSize="18px" fontWeight="700">
                           {el.name}
                         </Text>
@@ -227,7 +227,7 @@ const Services = () => {
               <Divider orientation="vertical" borderColor="blackAlpha.700" />
             </center>
             {/* Coupons Box */}
-            <Box h="fit-content" p="50px 0">
+            <Box h="fit-content" p="50px 20px" >
               <SimpleGrid spacingY={"20px"} >
                 <Flex
                     boxSizing="border-box"
