@@ -26,7 +26,8 @@ function MobileNavbar() {
           display={{ base: "flex", md: "none" }}
           justifyContent="space-around"
           py={3}
-
+          px={1}
+          zIndex={"999"}
       >
         {menuItems.map((item) => (
             <Link to={item.path} key={item.name}>
@@ -36,7 +37,7 @@ function MobileNavbar() {
                   color={location.pathname === item.path ? "blue.500" : "gray.600"}
               >
                 <Icon as={item.icon} boxSize={5} />
-                <Text fontSize="sm" mt={1}>{item.name}</Text>
+                <Text fontSize="0.8rem" mt={1}>{item.name}</Text>
               </Flex>
             </Link>
         ))}

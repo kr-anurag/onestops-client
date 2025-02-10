@@ -90,7 +90,7 @@ export const serviceData = {
 };
 
 const Services = () => {
-  const { cartItems, setCartItems, price, packages } = useContext(Appcontext);
+  const { cartItems, setCartItems, price } = useContext(Appcontext);
   const navigate = useNavigate();
 
   const addToCart = (i) => {
@@ -106,10 +106,10 @@ const Services = () => {
       <>
         <Box w={{base:"100%", md:"60%"}} m="auto" h="100%" px={{base: "20px", md:"0px"}} mb="2rem">
           <Flex borderBottom="4px solid #EDEDED" p="40px 0">
-            <Flex h="159px" w="448px" flexDirection={"column"}>
+            <Flex  flexDirection={"column"}>
               <Box>
                 <Tag
-                    size="lg"
+                    size={{base: "md", md: "lg"}}
                     variant="outline"
                     colorScheme={"black"}
                     border="1px solid gray"
@@ -118,7 +118,7 @@ const Services = () => {
                   <TagLabel>One Stop Safe</TagLabel>
                 </Tag>
               </Box>
-              <Text fontSize={"36px"} fontWeight="bold">
+              <Text fontSize={{base: "1.5rem", md: "2rem"}} fontWeight="bold">
                 {serviceData.title}
               </Text>
               <Box>
