@@ -15,6 +15,7 @@ import {NavLink, useNavigate} from "react-router-dom";
 import React from "react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
+import logo from "./../assests/onestop-logo.png"
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,9 +50,14 @@ export default function Navbar() {
                     <DrawerOverlay />
                     <Sidebar />
                 </Drawer>
-                <Text fontSize={{base: "1.4rem", lg:"1.8rem"}} fontWeight="bold">
-                    OneStop.in
-                </Text>
+                <Box>
+                    <Image
+                        h={{base: "40px", md: "50px", lg:"60px"}}
+                        w={{base: "40px", md: "50px", lg:"60px"}}
+                        src={logo}
+                        // mixBlendMode="color-burn"
+                    />
+                </Box>
                 <Box fontSize={"13px"} ml="1rem">
                     <Text>Mumbai</Text>
                 </Box>

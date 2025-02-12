@@ -15,6 +15,7 @@ import Sidebar from "./Sidebar";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 
+
 const HomeHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -37,11 +38,13 @@ const HomeHeader = () => {
               <DrawerOverlay />
                   <Sidebar />
             </Drawer>
+
             <Text
                 color="#fff"
                 fontSize={{base: "2xl", md: "4xl"}}
                 fontWeight={"800"}
-                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in</Text>
+                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in
+            </Text>
           </Box>
           <Spacer />
           <Box display="flex" alignItems="center" gap="2rem">
