@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Box, Textarea, Button, Heading } from "@chakra-ui/react";
-import { FaWhatsapp } from "react-icons/fa";
+import {Box, Textarea, Button, Heading, Icon} from "@chakra-ui/react";
+import {FaTools, FaWhatsapp} from "react-icons/fa";
+import {RiCustomerService2Line} from "react-icons/ri";
 
 const OnDemandService = () => {
     const [request, setRequest] = useState("");
@@ -18,8 +19,11 @@ const OnDemandService = () => {
     };
 
     return (
-        <Box p="20px" border="1px solid #EDEDED" borderRadius="md" boxShadow="md">
-            <Heading as="h3" size="md" mb="10px">On Demand Service</Heading>
+        <Box>
+            <Heading as="h3" size="md" mb="10px">
+                <Icon as={RiCustomerService2Line} mr="5px"/>
+                On Demand Service
+            </Heading>
             <Textarea
                 placeholder="Type your service request here... (min 5 words)"
                 value={request}

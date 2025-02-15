@@ -20,6 +20,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
 import {FaWhatsapp} from "react-icons/fa";
 import OnDemandService from "../Components/ServiceCategory/OnDemandService";
+import demandImage from "../assests/ondemand.png";
 
 const Service = () => {
   const { cartItems, setCartItems, price } = useContext(Appcontext);
@@ -185,7 +186,7 @@ const Service = () => {
               <Divider orientation="vertical" borderColor="blackAlpha.500" m="20px 0"/>
             </center>
             {/* Coupons Box */}
-            <Box h="fit-content" p={{base: "0px 0px", md: "50px 20px"}}>
+            <Box h="fit-content" p={{base: "0px 0px", md: "50px 20px"}} w={{base:"100%", lg:"40%"}}>
               <SimpleGrid spacingY={"20px"} >
                 <Flex
                     boxSizing="border-box"
@@ -207,7 +208,17 @@ const Service = () => {
                     </Text>
                   </Box>
                 </Flex>
-                <OnDemandService />
+                <Flex direction={"column"} align="center">
+                  <Image
+                      src={demandImage}
+                      alt="Service Image"
+                      objectFit="cover"
+                      // width={{ base: "100%", md: "50%" }}
+                  />
+                  <Box flex="1" mt={"1rem"} >
+                    <OnDemandService />
+                  </Box>
+                </Flex>
                 {cartItems.length !== 0 && (
                     <Flex
                         boxSizing="border-box"
