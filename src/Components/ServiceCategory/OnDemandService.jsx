@@ -14,7 +14,7 @@ const OnDemandService = () => {
 
     const handleSubmit = () => {
         const encodedRequest = encodeURIComponent(request);
-        window.open(`https://wa.me/1234567890?text=${encodedRequest}`);
+        window.open(`https://wa.me/7039619954?text=${encodedRequest}`);
     };
 
     return (

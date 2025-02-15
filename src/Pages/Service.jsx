@@ -79,6 +79,7 @@ const Service = () => {
                     h="fit-content"
                     w="70px"
                     boxSizing="border-box"
+                    key={el.title}
                 >
                   <Box rounded={"md"} mb="10px">
                     <Image h="64px" w="64px" rounded="md" src={el.img} />
@@ -102,7 +103,7 @@ const Service = () => {
             >
               <SimpleGrid p="20px 0" spacingY="20px">
                 {serviceData?.packages?.map((el, i) => (
-                    <Box>
+                    <Box key={i}>
                       <Box display="flex" alignItems="center">
                         <Image
                             h="20px"
@@ -150,7 +151,7 @@ const Service = () => {
                       <Box>
                         <UnorderedList color="gray" pl="10px" lineHeight="20px" fontSize="15px">
                           {el.list.map((el) => (
-                              <ListItem>{el}</ListItem>
+                              <ListItem key={el}>{el}</ListItem>
                           ))}
                         </UnorderedList>
                       </Box>
