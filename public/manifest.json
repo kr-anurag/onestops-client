@@ -3,28 +3,24 @@
   "name": "OneStops - Your Household Service Hub",
   "icons": [
     {
-      "src": "/icons/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/icons/logo192.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icons/logo512.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#007bff",
   "background_color": "#f8f9fa",
-  "description": "OneStops is your one-stop platform for all household services, making life easier with reliable solutions at your fingertips.",
-  "orientation": "portrait-primary",
-  "scope": "/",
-  "related_applications": [],
-  "prefer_related_applications": false
+  "description": "OneStops is your one-stop platform for all household services, making life easier with reliable solutions at your fingertips."
 }
