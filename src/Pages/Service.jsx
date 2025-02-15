@@ -159,7 +159,7 @@ const Service = () => {
                           colorScheme="purple"
                           h="30px"
                           leftIcon={<PhoneIcon />}
-                          onClick={() => window.open(`tel:+918540999094`)}
+                          onClick={() => window.open(`tel:+917039619954`)}
                       >
                         Book via Call
                       </Button>
@@ -169,7 +169,7 @@ const Service = () => {
                           h="30px"
                           ml={"1rem"}
                           leftIcon={<FaWhatsapp />}
-                          onClick={() => window.open(`https://wa.me/9657066728?text=I%20am%20interested%20in%20the%20${el.name}%20service`)}
+                          onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${el.name}%20service`)}
                       >
                         Book via WhatsApp
                       </Button>
