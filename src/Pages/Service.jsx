@@ -19,7 +19,7 @@ import { Appcontext } from "../Context/Appcontext";
 import { useNavigate } from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
 
-const Services = () => {
+const Service = () => {
   const { cartItems, setCartItems, price } = useContext(Appcontext);
   const navigate = useNavigate();
   const serviceData = ServicesDatabase[0];
@@ -90,7 +90,7 @@ const Services = () => {
                 </Flex>
             ))}
           </Flex>
-          {/* Services and Tags */}
+          {/* Service and Tags */}
           <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
                 w={{base:"100%", lg:"60%"}}
@@ -211,4 +211,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Service;

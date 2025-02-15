@@ -1,5 +1,42 @@
 import { v4 as uuid } from "uuid";
 
+export const  cleaningServices = [
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg",
+        title: "Bathroom & Kitchen Cleaning",
+        path: "bathroom-kitchen-cleaning",
+    },
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1630420912606-2fffa6.jpeg",
+        title: "Sofa & Carpet Cleaning",
+        path: "sofa-carpet-cleaning",
+    },
+];
+
+export const homeRepairServices = [
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/carpenter.jpg",
+        title: "Home Furniture",
+        path: "home-furniture",
+    },
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/carpenter.jpg",
+        title: "Carpenters",
+        path: "carpenters",
+    },
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/electrician.jpg",
+        title: "Electricians",
+        path: "electricians",
+    },
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/plumber.jpg",
+        title: "Plumbers",
+        path: "plumbers",
+    },
+];
+
+
 export const ServicesDatabase = [
     {
         id: "salon-services",
@@ -72,17 +109,17 @@ export const ServicesDatabase = [
         ]
     },{
         id: "electrician-services",
-        title: "Electrician Services",
+        title: "Electrician Service",
         rating: 4.85,
         reviews: "500K",
         smallImg: [
             {
                 img: "https://res.cloudinary.com/your-image-path/switch-services.jpg",
-                title: "Switch Services",
+                title: "Switch Service",
             },
             {
                 img: "https://res.cloudinary.com/your-image-path/fan-services.jpg",
-                title: "Fan Services",
+                title: "Fan Service",
             },
             {
                 img: "https://res.cloudinary.com/your-image-path/light-services.jpg",
@@ -94,17 +131,17 @@ export const ServicesDatabase = [
             },
             {
                 img: "https://res.cloudinary.com/your-image-path/wiring.jpg",
-                title: "Wiring Services",
+                title: "Wiring Service",
             },
             {
                 img: "https://res.cloudinary.com/your-image-path/inverter.jpg",
-                title: "Inverter Services",
+                title: "Inverter Service",
             },
         ],
         services: [
             {
                 id: uuid(),
-                category: "Switch Related Services",
+                category: "Switch Related Service",
                 list: [
                     { name: "Switch Replacement", price: 100 },
                     { name: "Socket Replacement", price: 120 },
@@ -128,7 +165,7 @@ export const ServicesDatabase = [
             },
             {
                 id: uuid(),
-                category: "Wall/Ceiling Light Services",
+                category: "Wall/Ceiling Light Service",
                 list: [
                     { name: "Wall Light Installation", price: 200 },
                     { name: "Ceiling Light Installation", price: 250 },
@@ -154,7 +191,7 @@ export const ServicesDatabase = [
             },
             {
                 id: uuid(),
-                category: "Wiring Services",
+                category: "Wiring Service",
                 list: [
                     { name: "New Wiring with Casing (Per 5m)", price: 500 },
                     { name: "New Wiring without Casing (Per 5m)", price: 450 },
@@ -163,7 +200,7 @@ export const ServicesDatabase = [
             },
             {
                 id: uuid(),
-                category: "Doorbell Services",
+                category: "Doorbell Service",
                 list: [
                     { name: "Doorbell Installation", price: 200 },
                     { name: "Doorbell Replacement", price: 150 },
@@ -171,7 +208,7 @@ export const ServicesDatabase = [
             },
             {
                 id: uuid(),
-                category: "MCB & Submeter Services",
+                category: "MCB & Submeter Service",
                 list: [
                     { name: "MCB/Fuse Installation", price: 250 },
                     { name: "MCB/Fuse Replacement", price: 200 },
@@ -181,7 +218,7 @@ export const ServicesDatabase = [
             },
             {
                 id: uuid(),
-                category: "Inverter & Stabilizer Services",
+                category: "Inverter & Stabilizer Service",
                 list: [
                     { name: "Inverter Installation", price: 800 },
                     { name: "Stabilizer Installation", price: 600 },

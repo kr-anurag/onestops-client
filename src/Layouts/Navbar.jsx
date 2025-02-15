@@ -16,6 +16,7 @@ import React from "react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
 import logo from "./../assests/onestop-logo.png"
+import {MdLocationOn} from "react-icons/md";
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,8 +58,9 @@ export default function Navbar() {
                         src={logo}
                     />
                 </Box>
-                <Box fontSize={"13px"} ml="0.8rem">
-                    <Text>Mumbai</Text>
+                <Box fontSize={"13px"} ml="0.8rem" display="flex" alignItems="center">
+                    <MdLocationOn />
+                    <Text ml="0.2rem">Mumbai</Text>
                 </Box>
             </Box>
             <Spacer />

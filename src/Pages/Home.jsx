@@ -20,11 +20,12 @@ import {
 } from "@chakra-ui/react";
 import HomeHeader from "../Layouts/HomeHeader";
 import { TriangleDownIcon, SearchIcon } from "@chakra-ui/icons";
-import { Appcontext } from "../Context/Appcontext";
 import HomeFooter from "../Layouts/HomeFooter";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../Components/Swiper/Carousel";
 import { keyframes } from "@emotion/react";
+import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
+import {cleaningServices, homeRepairServices} from "../Utils/Database";
 
 const services = [
   {
@@ -102,7 +103,7 @@ const Home = () => {
               w={{ base: "100%", md: "572px" }}
               bg="white"
               type="text"
-              placeholder="Search For Services"
+              placeholder="Search For Service"
           />
         </InputGroup>
       </Box>
@@ -185,8 +186,8 @@ const Home = () => {
         <Box p="20px 0 64px" mt="70px">
           <Carousel />
         </Box>
-        <CleaningAndPestControl />
-        <HomeRepairs />
+        <ServiceCategory title="Home Repairs" services={homeRepairServices} />
+        <ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />
         <HomeFooter />
       </>
   );
@@ -196,126 +197,3 @@ const Home = () => {
 export default Home;
 
 
-const CleaningAndPestControl = () => {
-  const cleaningServices = [
-    {
-      img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg",
-      title: "Bathroom & Kitchen Cleaning",
-    },
-    {
-      img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1630420912606-2fffa6.jpeg",
-      title: "Sofa & Carpet Cleaning",
-    },
-  ];
-
-  return (
-      <Box
-          display="flex"
-          flexDirection="column"
-          borderBottom="16px solid #f2f4f6"
-          p={{ base: "20px 0 40px", md: "50px 0 70px" }}
-          gap="3rem"
-      >
-        <Text
-            fontSize={{ base: "24px", md: "32px" }}
-            fontWeight="700"
-            color="#212121"
-            textAlign="center"
-        >
-          Cleaning & Pest Control
-        </Text>
-        <Flex justifyContent="center" gap="2rem" flexWrap="wrap">
-          {cleaningServices.map((service) => (
-              <Box key={service.title} w={{ base: "100%", md: "auto" }}>
-                <Box>
-                  <Image
-                      mb="20px"
-                      transition="transform 0.4s"
-                      _hover={{ transform: "scale(1.10)" }}
-                      rounded="md"
-                      h={{ base: "220px", md: "180px" }}
-                      w={{ base: "100%", md: "300px" }}
-                      px={{ base: "20px", md: "0px" }}
-                      src={service.img}
-                  />
-                </Box>
-                <Text
-                    textAlign="center"
-                    fontSize="14px"
-                    color="#212121"
-                    fontWeight="500"
-                >
-                  {service.title}
-                </Text>
-              </Box>
-          ))}
-        </Flex>
-      </Box>
-  );
-};
-
-const homeRepairServices = [
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/carpenter.jpg",
-    title: "Home Furniture",
-  },
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/carpenter.jpg",
-    title: "Carpenters",
-  },
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/electrician.jpg",
-    title: "Electricians",
-  },
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/categories/home_screen/plumber.jpg",
-    title: "Plumbers",
-  },
-];
-
-const HomeRepairs = () => {
-  return (
-      <Box
-          display="flex"
-          flexDirection="column"
-          borderBottom="16px solid #f2f4f6"
-          p={{ base: "20px 0 40px", md: "50px 0 70px" }}
-          gap="3rem"
-      >
-        <Text
-            fontSize={{ base: "24px", md: "32px" }}
-            fontWeight="700"
-            color="#212121"
-            textAlign="center"
-        >
-          Home Repairs
-        </Text>
-        <Flex justifyContent="center" gap="2rem" flexWrap="wrap">
-          {homeRepairServices.map((service) => (
-              <Box key={service.title} w={{ base: "100%", md: "auto" }}>
-                <Box>
-                  <Image
-                      mb="20px"
-                      transition="transform 0.4s"
-                      _hover={{ transform: "scale(1.10)" }}
-                      rounded="md"
-                      h={{ base: "220px", md: "180px" }}
-                      w={{ base: "100%", md: "300px" }}
-                      px={{ base: "20px", md: "0px" }}
-                      src={service.img}
-                  />
-                </Box>
-                <Text
-                    textAlign="center"
-                    fontSize="14px"
-                    color="#212121"
-                    fontWeight="500"
-                >
-                  {service.title}
-                </Text>
-              </Box>
-          ))}
-        </Flex>
-      </Box>
-  );
-};

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import {Box, useDisclosure} from "@chakra-ui/react";
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import Home from "./Pages/Home";
-import Services from "./Pages/Services";
+import Service from "./Pages/Service";
 import CartPage from "./Pages/CartPage";
 import OrderConfirm from "./Pages/OrderConfirm";
 import Navbar from "./Layouts/Navbar";
@@ -16,6 +16,7 @@ import AboutUs from "./Pages/Aboutus";
 import ScreenLoader from "./Components/Loaders/ScreenLoader";
 import ScreenLoadingBar from "./Components/Loaders/ScreenLoadingBar";
 import InstallAppButton from "./Components/InstallApp/InstallAppButton";
+import AllServices from "./Pages/AllServices";
 
 function App() {
     const location = useLocation();
@@ -40,7 +41,8 @@ function App() {
                 <Box as="main" pt={!isHomePage ? "75px" : "0"}>
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="/services" element={<Services />} />
+                    <Route path="/services" element={<AllServices />} />
+                    <Route path={"/services/:id"} element={<Service/>} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/carts" element={<PrivateRoute element={<CartPage />} />} />
                     <Route path="/bookings" element={<PrivateRoute element={<OrderConfirm />} />} />
