@@ -16,13 +16,15 @@ import {
 import { StarIcon } from "@chakra-ui/icons";
 import { RiShieldCheckFill } from "react-icons/ri";
 import { Appcontext } from "../Context/Appcontext";
-import { useNavigate } from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
 
 const Service = () => {
   const { cartItems, setCartItems, price } = useContext(Appcontext);
   const navigate = useNavigate();
-  const serviceData = ServicesDatabase[0];
+  const { id: serviceId } = useParams();
+  const serviceData = ServicesDatabase.find(service => service.id === serviceId) || ServicesDatabase[0];
+
 
   const addToCart = (i) => {
     let item = serviceData.packages.filter((el, ind) => ind === i);
@@ -68,7 +70,7 @@ const Service = () => {
           </Flex>
           {/* Small Images Box */}
           <Flex borderBottom="2px solid #E3E3E3" p="30px 0" gap="1.5rem" flexWrap={"wrap"}>
-            {serviceData.smallImg.map((el) => (
+            {serviceData.smallImg?.map((el) => (
                 <Flex
                     flexDirection={"column"}
                     alignItems="center"
@@ -97,7 +99,7 @@ const Service = () => {
                 p="30px 10px 0px"
             >
               <SimpleGrid p="20px 0" spacingY="40px">
-                {serviceData.packages.map((el, i) => (
+                {serviceData?.packages?.map((el, i) => (
                     <Box>
                       <Box display="flex" alignItems="center">
                         <Image
@@ -175,9 +177,6 @@ const Service = () => {
                     />
                   </Box>
                   <Box>
-                    {/*<Text fontWeight={"700"} color="rgb(15,15,15)" fontSize={"14px"}>*/}
-                    {/*  Save 15% on every order*/}
-                    {/*</Text>*/}
                     <Text fontSize="14px" color="#757575">
                       Get Plus Now
                     </Text>

@@ -27,38 +27,44 @@ import { keyframes } from "@emotion/react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import {cleaningServices, homeRepairServices} from "../Utils/Database";
 
-const services = [
+const topServices = [
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png",
     title: "Salon For Women",
+    path: "salon-for-women",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png",
     title: "Salon For Men",
+    path: "salon-for-men",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6b1f5250.png",
     title: "AC/Appliance Repair",
+    path: "ac-appliance-repair",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png",
     title: "Cleaning & Pest Control",
+    path: "cleaning-pest-control",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_07f29980.jpeg",
     title: "Electricians",
+    path: "electrician-services",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
     title: "Plumbers & Carpenters",
+    path: "plumbers-carpenters",
   },
 ];
 
 const Home = () => {
   const navigate = useNavigate();
 
-  const moveToMG = () => {
-    navigate("/services");
+  const moveToMG = (id) => {
+    navigate(`/services/${id}`);
   };
 
   const SearchBar = () => (
@@ -153,7 +159,7 @@ const Home = () => {
               bg="white"
               boxShadow="xl"
           >
-            {services.map((el) => (
+            {topServices?.map((el) => (
                 <Box
                     key={el.title}
                     bg="white"
@@ -165,7 +171,7 @@ const Home = () => {
                     justifyContent="space-between"
                     flexDirection="column"
                     _hover={{ bg: "#e5e5e5" }}
-                    onClick={moveToMG}
+                    onClick={() => moveToMG(el?.path)}
                 >
                   <Box w="fit-content" alignSelf="center">
                     <Image h="32px" w="32px" src={el.img} alt="myImage" />
