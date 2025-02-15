@@ -14,6 +14,7 @@ import { Appcontext } from "../Context/Appcontext";
 import Sidebar from "./Sidebar";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
+import logo from "./../assests/logo-white.png"
 
 
 const HomeHeader = () => {
@@ -38,11 +39,16 @@ const HomeHeader = () => {
               <DrawerOverlay />
                   <Sidebar />
             </Drawer>
-
+            <Image
+                h={{base: "40px", md: "50px", lg:"50px"}}
+                w={{base: "40px", md: "50px", lg:"50px"}}
+                src={logo}
+            />
             <Text
                 color="#fff"
-                fontSize={{base: "2xl", md: "4xl"}}
+                fontSize={{base: "2xl", md: "3xl"}}
                 fontWeight={"800"}
+                ml={"0.3rem"}
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in
             </Text>
           </Box>
@@ -53,7 +59,9 @@ const HomeHeader = () => {
                 fontWeight="700"
                 color="#fff"
               >
-                {user ? <Image src={user.picture} w="40px" h="40px" borderRadius="50%"/> : <Link to="/login"> Login / Sign Up </Link>}
+                {user ?
+                    <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
+                    <Link to="/login"> Login / Sign Up </Link>}
               </Box>
           </Box>
         </Flex>

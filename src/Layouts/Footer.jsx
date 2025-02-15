@@ -1,6 +1,7 @@
 import {Box, Container, Image, Link, SimpleGrid, Stack, Text, useColorModeValue} from "@chakra-ui/react";
 import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 import React from "react";
+import logo from "../assests/onestop-logo.png";
 
 export default function Footer() {
     const ListHeader = ({ children }) => {

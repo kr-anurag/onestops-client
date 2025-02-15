@@ -55,10 +55,9 @@ export default function Navbar() {
                         h={{base: "40px", md: "50px", lg:"60px"}}
                         w={{base: "40px", md: "50px", lg:"60px"}}
                         src={logo}
-                        // mixBlendMode="color-burn"
                     />
                 </Box>
-                <Box fontSize={"13px"} ml="1rem">
+                <Box fontSize={"13px"} ml="0.8rem">
                     <Text>Mumbai</Text>
                 </Box>
             </Box>

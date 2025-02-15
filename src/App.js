@@ -24,7 +24,7 @@ function App() {
     return (
             <>
                 {!isHomePage && <Navbar />}
-                <Box as="main" pt={!isHomePage ? "60px" : "0"}>
+                <Box as="main" pt={!isHomePage ? "75px" : "0"}>
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/services" element={<Services />} />
