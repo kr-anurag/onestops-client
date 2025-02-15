@@ -184,7 +184,7 @@ const Service = () => {
               <Divider orientation="vertical" borderColor="blackAlpha.500" m="20px 0"/>
             </center>
             {/* Coupons Box */}
-            <Box h="fit-content" p="50px 20px" >
+            <Box h="fit-content" p={{base: "0px 0px", md: "50px 20px"}}>
               <SimpleGrid spacingY={"20px"} >
                 <Flex
                     boxSizing="border-box"
@@ -206,7 +206,6 @@ const Service = () => {
                     </Text>
                   </Box>
                 </Flex>
-
                 <OnDemandService />
                 {cartItems.length !== 0 && (
                     <Flex
