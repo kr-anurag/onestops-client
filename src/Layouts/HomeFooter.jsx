@@ -12,7 +12,11 @@ import {Link} from "react-router-dom";
 
 const HomeFooter = () => {
   const city = [
-    "Mumbai",
+    "South Mumbai",
+    "Navi Mumbai",
+    "Western Suburbs",
+    "Central Mumbai",
+    "Thane",
     "Kalyan",
   ];
   return (
@@ -29,7 +33,7 @@ const HomeFooter = () => {
           Serving In
         </Text>
         <Text fontSize="16px" color="#bfbfbf" fontWeight="bolder">
-          IND
+          MUMBAI
         </Text>
         <Wrap spacingX={7} fontWeight="semibold" color="#888">
           {city.map((city,i) => (

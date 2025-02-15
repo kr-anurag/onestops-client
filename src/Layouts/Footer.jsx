@@ -26,13 +26,10 @@ export default function Footer() {
                           <Link href={"#"}>About Us</Link>
                           <Link href={"#"}>Terms & Conditions</Link>
                           <Link href={"#"}>Privacy Policy</Link>
-                          <Link href={"#"}>Anti-Discriminatory Policy</Link>
-                          <Link href={"#"}>Careers</Link>
                       </Stack>
                       <Stack align={"flex-start"}>
                           <ListHeader>For Customers</ListHeader>
                           <Link href={"#"}>Categories near you</Link>
-                          <Link href={"#"}>Blog</Link>
                           <Link href={"#"}>Contact Us</Link>
                       </Stack>
                       <Stack align={"flex-start"}>

@@ -136,7 +136,7 @@ const Home = () => {
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
             >
-              Home Services, On Demand.
+              Endless possibilities, just one request away.
             </Text>
           </Box>
           <SearchBar />

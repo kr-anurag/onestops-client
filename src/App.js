@@ -15,6 +15,7 @@ import MobileNavbar from "./Layouts/MobileNavbar";
 import AboutUs from "./Pages/Aboutus";
 import ScreenLoader from "./Components/Loaders/ScreenLoader";
 import ScreenLoadingBar from "./Components/Loaders/ScreenLoadingBar";
+import InstallAppButton from "./Components/InstallApp/InstallAppButton";
 
 function App() {
     const location = useLocation();
@@ -26,7 +27,7 @@ function App() {
     }, [location.pathname]);
 
     useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 2000);
+        const timer = setTimeout(() => setLoading(false), 1500);
         return () => clearTimeout(timer);
     }, []);
 

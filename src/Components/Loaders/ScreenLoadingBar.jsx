@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import {Box, Flex, Image, Text} from "@chakra-ui/react";
 import logo from "../../assests/onestop-logo.png";
 
+
 const ScreenLoadingBar = () => {
     const [progress, setProgress] = useState(0);
-    const [visible, setVisible] = useState(true);
+    // const [visible, setVisible] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -13,7 +14,7 @@ const ScreenLoadingBar = () => {
                     return prev + 1;
                 } else {
                     clearInterval(interval);
-                    setTimeout(() => setVisible(false), 400);
+                    // setTimeout(() => setVisible(false), 300);
                     return 100;
                 }
             });
@@ -22,7 +23,7 @@ const ScreenLoadingBar = () => {
         return () => clearInterval(interval);
     }, []);
 
-    if (!visible) return null;
+    // if (!visible) return null;
 
     return (
         <Flex
@@ -43,17 +44,17 @@ const ScreenLoadingBar = () => {
                 w={{base: "80px", md: "90px", lg:"100px"}}
                 src={logo}
             />
-            <Box width="80%" maxWidth="250px" bg="gray.200" borderRadius="md" overflow="hidden" mt="1rem">
+            <Box width="80%" maxWidth="250px" bg="gray.200" borderRadius="md" overflow="hidden" mt="1.5rem">
                 <Box
                     width={`${progress}%`}
-                    height="0.8rem"
+                    height="0.5rem"
                     bg="blue.500"
                     transition="width 0.5s ease"
                 />
             </Box>
-            <Text mt={4} fontSize="lg" fontWeight="bold">
-                Loading... {progress}%
-            </Text>
+            {/*<Text mt={4} fontSize="lg" fontWeight="bold">*/}
+            {/*    Loading... {progress}%*/}
+            {/*</Text>*/}
         </Flex>
     );
 };
