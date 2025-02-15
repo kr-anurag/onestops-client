@@ -11,7 +11,7 @@ import {
     Text,
     useDisclosure
 } from "@chakra-ui/react";
-import {NavLink, useNavigate} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import React from "react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
@@ -64,6 +64,18 @@ export default function Navbar() {
                 </Box>
             </Box>
             <Spacer />
+            {/*<Box*/}
+            {/*    display="flex"*/}
+            {/*    alignItems="center"*/}
+            {/*    gap="1rem"*/}
+            {/*    fontSize="14px"*/}
+            {/*    fontWeight="700"*/}
+            {/*    mr={"1rem"}*/}
+            {/*>*/}
+            {/*    <Link to="/"> Home </Link>*/}
+            {/*    <Link to="/services"> Services </Link>*/}
+            {/*    <Link to="/login"> Login </Link>*/}
+            {/*</Box>*/}
         </Flex>
         {/*<Divider  borderColor={"blackAlpha.500"} />*/}
         </Box>

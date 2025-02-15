@@ -190,7 +190,7 @@ const Home = () => {
           </SimpleGrid>
         </Box>
         <Box p="20px 0 64px" mt="70px">
-          <Carousel />
+          <Carousel images={imgArr}/>
         </Box>
         <ServiceCategory title="Home Repairs" services={homeRepairServices} />
         <ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />
@@ -199,6 +199,13 @@ const Home = () => {
   );
 };
 
+const imgArr = [
+  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657006546486-545754.jpeg",
+  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733512041-813a4c.jpeg",
+  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733511465-f22ed1.jpeg",
+  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733505075-80d1ba.jpeg",
+  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733505585-4d3fe3.jpeg",
+];
 
 export default Home;
 
