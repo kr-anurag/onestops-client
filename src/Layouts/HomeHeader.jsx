@@ -25,7 +25,7 @@ const HomeHeader = () => {
   return (
     <>
       <Flex h="60px" justifyContent="center">
-        <Flex w="1300px" mt="10px" mx="1rem">
+        <Flex w="1300px" mt="10px" mx="0.8rem">
           <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
               <HamburgerIcon w={6} h={6} color="white" />
@@ -53,7 +53,7 @@ const HomeHeader = () => {
             </Text>
           </Box>
           <Spacer />
-          <Box display="flex" alignItems="center" gap="2rem">
+          <Box display="flex" alignItems="center">
               <Box
                 fontSize="14px"
                 fontWeight="700"
@@ -61,7 +61,7 @@ const HomeHeader = () => {
               >
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
-                    <Link to="/login"> Login / Sign Up </Link>}
+                    <Link to="/login"> Login </Link>}
               </Box>
           </Box>
         </Flex>

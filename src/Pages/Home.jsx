@@ -24,6 +24,7 @@ import { Appcontext } from "../Context/Appcontext";
 import HomeFooter from "../Layouts/HomeFooter";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../Components/Swiper/Carousel";
+import { keyframes } from "@emotion/react";
 
 const services = [
   {
@@ -107,6 +108,15 @@ const Home = () => {
       </Box>
   );
 
+  const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
   return (
       <>
         <Box
@@ -124,6 +134,7 @@ const Home = () => {
                 fontSize={{ base: "2xl", md: "5xl" }}
                 fontWeight="600"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
+                animation={`${fadeIn} 1.5s ease-in-out`}
             >
               Home Services, On Demand.
             </Text>

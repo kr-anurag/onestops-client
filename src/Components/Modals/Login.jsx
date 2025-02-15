@@ -1,8 +1,9 @@
 import React, {useContext, useEffect} from "react";
-import {Box, Button, Container, Heading, Text, useDisclosure, VStack} from "@chakra-ui/react";
+import {Box, Button, Container, Heading, Image, Text, useDisclosure, VStack} from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
 import { Appcontext } from "../../Context/Appcontext";
 import {useNavigate} from "react-router-dom";
+import logo from "../../assests/onestop-logo.png";
 
 const Login = () => {
   const { handleLogin, user } = useContext(Appcontext);
@@ -26,6 +27,12 @@ const Login = () => {
             maxW="md"
         >
           <Heading size="lg" mb={4} color="gray.700">
+            <Image
+                h={{base: "80px", md: "90px", lg:"100px"}}
+                w={{base: "80px", md: "90px", lg:"100px"}}
+                src={logo}
+                mx={"auto"}
+            />
             Welcome Back
           </Heading>
           <Text fontSize="md" color="gray.500" mb={6}>

@@ -8,7 +8,7 @@ import {
   Divider,
   Image,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const HomeFooter = () => {
   const city = [
@@ -19,7 +19,7 @@ const HomeFooter = () => {
     <Flex justifyContent={"center"} bg="#000" color="#cbcbcb">
       <Flex w="1300px" p="30px 0px" flexDirection={"column"} gap="1rem" px={{base:"1rem", md:"0px"}}>
         <Wrap spacingX={7} fontWeight="semibold" color="#888">
-          <WrapItem>About Us</WrapItem>
+         <Link to={"/about-us"}> <WrapItem>About Us</WrapItem></Link>
           <WrapItem>Terms & Conditions</WrapItem>
           <WrapItem>Privacy Policy</WrapItem>
           <WrapItem>Contact Us</WrapItem>

@@ -63,7 +63,7 @@ export default function Navbar() {
             </Box>
             <Spacer />
         </Flex>
-        <Divider  borderColor={"blackAlpha.500"} />
+        {/*<Divider  borderColor={"blackAlpha.500"} />*/}
         </Box>
     )
 

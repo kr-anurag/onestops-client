@@ -12,7 +12,7 @@ import {
 import React, { useContext } from "react";
 import { Appcontext } from "../Context/Appcontext";
 import {NavLink, useLocation} from "react-router-dom";
-import { FaHome, FaServicestack, FaShoppingCart, FaClipboardList } from "react-icons/fa";
+import {FaHome, FaServicestack, FaShoppingCart, FaClipboardList, FaInfoCircle} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 const menuItems = [
@@ -20,6 +20,7 @@ const menuItems = [
     { name: "Services", path: "/services", icon: FaServicestack },
     { name: "Cart", path: "/carts", icon: FaShoppingCart },
     { name: "Bookings", path: "/bookings", icon: FaClipboardList },
+    { name: "About Us", path: "/about-us", icon: FaInfoCircle },
 ];
 
 export default function Sidebar() {
