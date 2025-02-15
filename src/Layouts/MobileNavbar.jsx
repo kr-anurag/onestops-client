@@ -1,7 +1,8 @@
 import React from 'react'
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
-import {FaHome, FaShoppingCart, FaClipboardList, FaServicestack} from "react-icons/fa";
+import {FaHome, FaShoppingCart, FaClipboardList} from "react-icons/fa";
+import {MdBuild} from "react-icons/md";
 
 
 function MobileNavbar() {
@@ -9,7 +10,7 @@ function MobileNavbar() {
 
   const menuItems = [
     { name: "Home", icon: FaHome, path: "/" },
-    { name: "Services", icon: FaServicestack, path: "/services" },
+    { name: "Services", icon: MdBuild, path: "/services" },
     { name: "Cart", icon: FaShoppingCart, path: "/carts" },
     { name: "Bookings", icon: FaClipboardList, path: "/bookings" }
   ];

@@ -19,6 +19,7 @@ import { Appcontext } from "../Context/Appcontext";
 import {useNavigate, useParams} from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
 import {FaWhatsapp} from "react-icons/fa";
+import OnDemandService from "../Components/ServiceCategory/OnDemandService";
 
 const Service = () => {
   const { cartItems, setCartItems, price } = useContext(Appcontext);
@@ -96,7 +97,7 @@ const Service = () => {
           {/* Service and Tags */}
           <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
-                w={{base:"100%", lg:"60%"}}
+                w={{base:"100%", lg:"70%"}}
                 p="30px 10px 0px"
             >
               <SimpleGrid p="20px 0" spacingY="20px">
@@ -153,7 +154,7 @@ const Service = () => {
                           ))}
                         </UnorderedList>
                       </Box>
-                      <Box mt={"1rem"} flexWrap={"wrap"}>
+                      <Flex gap={"1rem"} flexWrap={"wrap"} mt={"1rem"}>
                       <Button
                           variant="outline"
                           colorScheme="purple"
@@ -167,21 +168,20 @@ const Service = () => {
                           variant="outline"
                           colorScheme="green"
                           h="30px"
-                          ml={"1rem"}
                           leftIcon={<FaWhatsapp />}
-                          onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${el.name}%20service`)}
+                          onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}
                       >
                         Book via WhatsApp
                       </Button>
-                        </Box>
-                      <Divider m="20px 0" borderColor="blackAlpha.500" w="70%" />
+                        </Flex>
+                      <Divider m="20px 0" borderColor="blackAlpha.500" w="80%" />
                     </Box>
 
                 ))}
               </SimpleGrid>
             </Box>
             <center>
-              <Divider orientation="vertical" borderColor="blackAlpha.700" />
+              <Divider orientation="vertical" borderColor="blackAlpha.500" m="20px 0"/>
             </center>
             {/* Coupons Box */}
             <Box h="fit-content" p="50px 20px" >
@@ -202,11 +202,12 @@ const Service = () => {
                   </Box>
                   <Box>
                     <Text fontSize="14px" color="#757575">
-                      Get Plus Now
+                      Confused? You can request anything !!!
                     </Text>
                   </Box>
                 </Flex>
-                {/* Cart box here, make sure to hide it incase no items in cart */}
+
+                <OnDemandService />
                 {cartItems.length !== 0 && (
                     <Flex
                         boxSizing="border-box"

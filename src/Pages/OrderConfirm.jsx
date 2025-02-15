@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom";
 const OrderConfirm = () => {
   const { user, cartItems } = React.useContext(Appcontext);
 
-  console.log(user, cartItems);
-
   const navigate = useNavigate()
   const handleClick = () => {
     navigate("/")
@@ -17,6 +15,9 @@ const OrderConfirm = () => {
 
   return (
     <Box bg="blackAlpha">
+      {
+        cartItems.length > 0 ?
+
       <Container maxW="xl" h="100vh" bg="white" p="0">
         <Box onClick={handleClick}>
           <Text
@@ -77,7 +78,10 @@ const OrderConfirm = () => {
             </Table>
           </TableContainer>
         </Box>
-      </Container>
+      </Container> : <Text textAlign={"center"} fontSize="2xl" fontWeight="600" minH="50dvh" p="20px 0">
+              No items in cart
+      </Text>
+      }
     </Box>
   );
 };
