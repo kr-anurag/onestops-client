@@ -9,7 +9,7 @@ export default function Carousel({images}) {
 
 
     return (
-        <div className="App" style={{ width: "75%", margin: "auto" }}>
+        <Box  w={{base: "90%", md: "80%"}} m={"auto"}>
             <Swiper
                 slidesPerView={4}
                 slidesPerGroup={1}
@@ -30,14 +30,15 @@ export default function Carousel({images}) {
                     <SwiperSlide key={index}>
                         <Box
                             transition="transform .2s"
-                            _hover={{ transform: "scale(1.10)" }}
-                            h={{ base: "150px", md: "200px" }}
+                            _hover={{ transform: "scale(1.05)" }}
+                            // h={{ base: "175px", md: "200px" }}
+                            aspectRatio={3/2}
                         >
                             <Image src={el} alt="" />
                         </Box>
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </Box>
     );
 }

@@ -27,6 +27,7 @@ import { keyframes } from "@emotion/react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import {cleaningServices, homeRepairServices, sampleTestimonials} from "../Utils/Database";
 import Testimonials from "../Components/Testmonial/Testimonial";
+import HomeCarousel from "../Components/HomeCarousel";
 
 const topServices = [
   {
