@@ -29,7 +29,7 @@ const Testimonial = ({ name, rating, text, avatar }) => {
 
 const Testimonials = ({ testimonials }) => {
     return (
-        <Box maxW={"1100px"} mx={"auto"} py={8}>
+        <Box maxW={"1100px"} mx={"auto"} p={4} mb={4}>
             <Text
                 fontSize={{ base: "24px", md: "32px" }}
                 fontWeight="700"
