@@ -3,7 +3,7 @@ import { Box, Container, Heading, Text, Image, SimpleGrid } from "@chakra-ui/rea
 
 const AboutUs = () => {
     return (
-        <Box bg="gray.50" py={10} minH={"50vh"}>
+        <Box  py={10} minH={"50vh"}>
             <Container maxW="6xl">
                 <Heading as="h1" size="xl" mb={6} textAlign="center">
                     About Us
