@@ -40,13 +40,13 @@ function App() {
                 {!isHomePage && <Navbar />}
                 <Box as="main" pt={!isHomePage ? "75px" : "0"}>
                 <Routes>
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/services" element={<AllServices />} />
+                    <Route exact path="/" element={<Home/>} />
+                    <Route exact path="/services" element={<AllServices />} />
                     <Route path={"/services/:id"} element={<Service/>} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/carts" element={<PrivateRoute element={<CartPage />} />} />
-                    <Route path="/bookings" element={<PrivateRoute element={<OrderConfirm />} />} />
-                    <Route path="/about-us" element={<AboutUs />} />
+                    <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/carts" element={<PrivateRoute element={<CartPage />} />} />
+                    <Route exact path="/bookings" element={<PrivateRoute element={<OrderConfirm />} />} />
+                    <Route exact path="/about-us" element={<AboutUs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Box>
