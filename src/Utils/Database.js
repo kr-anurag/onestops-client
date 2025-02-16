@@ -203,3 +203,37 @@ export const ServicesDatabase = [
         ],
     },
 ]
+
+export const sampleTestimonials = [
+    {
+        name: "John Doe",
+        rating: 5,
+        text: "Great service! Highly recommend.",
+        avatar: "https://bit.ly/dan-abramov",
+    },
+    {
+        name: "Jane Smith",
+        rating: 4,
+        text: "Very satisfied with the service.",
+        avatar: "https://bit.ly/kent-c-dodds",
+    },
+    {
+        name: "Alice Johnson",
+        rating: 5,
+        text: "Exceptional quality and customer service.",
+        avatar: "https://bit.ly/prosper-baba",
+    },
+    {
+        name: "Bob Brown",
+        rating: 3,
+        text: "Good, but there's room for improvement.",
+        avatar: "https://bit.ly/ryan-florence",
+    },
+    {
+        name: "Charlie Davis",
+        rating: 4,
+        text: "Very professional and timely.",
+        avatar: "https://bit.ly/code-beast",
+    },
+];
+

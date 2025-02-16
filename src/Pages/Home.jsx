@@ -25,7 +25,8 @@ import { useNavigate } from "react-router-dom";
 import Carousel from "../Components/Swiper/Carousel";
 import { keyframes } from "@emotion/react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
-import {cleaningServices, homeRepairServices} from "../Utils/Database";
+import {cleaningServices, homeRepairServices, sampleTestimonials} from "../Utils/Database";
+import Testimonials from "../Components/Testmonial/Testimonial";
 
 const topServices = [
   {
@@ -194,6 +195,8 @@ const Home = () => {
         </Box>
         <ServiceCategory title="Home Repairs" services={homeRepairServices} />
         <ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />
+
+        <Testimonials testimonials={sampleTestimonials} />
         <HomeFooter />
       </>
   );

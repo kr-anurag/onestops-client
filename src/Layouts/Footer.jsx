@@ -1,7 +1,7 @@
 import {Box, Container, Image, Link, SimpleGrid, Stack, Text, useColorModeValue} from "@chakra-ui/react";
 import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 import React from "react";
-import logo from "../assests/onestop-logo.png";
+
 
 export default function Footer() {
     const ListHeader = ({ children }) => {
@@ -12,7 +12,6 @@ export default function Footer() {
         );
     };
   return (
-      <Box>
           <Box bg={"#f5f5f5"} color={useColorModeValue("gray.700", "gray.200")}>
               <Box px={5} pt={5}>
                   <Text fontSize="28px" fontWeight="bold">
@@ -80,6 +79,5 @@ export default function Footer() {
                   </Container>
               </Box>
           </Box>
-      </Box>
   );
 }

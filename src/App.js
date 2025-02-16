@@ -1,4 +1,3 @@
-import './App.css';
 import React, {useEffect, useState} from "react";
 import {Box, useDisclosure} from "@chakra-ui/react";
 import {Routes, Route, useLocation, Navigate} from "react-router-dom";
@@ -17,6 +16,8 @@ import ScreenLoader from "./Components/Loaders/ScreenLoader";
 import ScreenLoadingBar from "./Components/Loaders/ScreenLoadingBar";
 import InstallAppButton from "./Components/InstallApp/InstallAppButton";
 import AllServices from "./Pages/AllServices";
+import Testimonials from "./Components/Testmonial/Testimonial";
+import {sampleTestimonials} from "./Utils/Database";
 
 function App() {
     const location = useLocation();
@@ -36,9 +37,9 @@ function App() {
         return <ScreenLoadingBar />;
     }
     return (
-            <>
+            <div id="root">
                 {!isHomePage && <Navbar />}
-                <Box as="main" pt={!isHomePage ? "75px" : "0"}>
+                <Box as="main" pt={!isHomePage ? "75px" : "0px"}>
                 <Routes>
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/services" element={<AllServices />} />
@@ -52,7 +53,8 @@ function App() {
             </Box>
                 <MobileNavbar />
                 {!isHomePage && <Footer />}
-            </>
+
+            </div>
     );
 }
 
