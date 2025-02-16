@@ -37,7 +37,7 @@ const ServiceCategory = ({ title, services, }) => {
                             <Image
                                 mb="20px"
                                 transition="transform 0.4s"
-                                _hover={{ transform: "scale(1.10)" }}
+                                _hover={{ transform: "scale(1.05)" }}
                                 rounded="md"
                                 h={{ base: "220px", md: "180px" }}
                                 w={{ base: "100%", md: "300px" }}
