@@ -12,13 +12,13 @@ import {
 import React, { useContext } from "react";
 import { Appcontext } from "../Context/Appcontext";
 import {NavLink, useLocation} from "react-router-dom";
-import {FaHome, FaServicestack, FaShoppingCart, FaClipboardList, FaInfoCircle} from "react-icons/fa";
+import {FaHome, FaShoppingCart, FaClipboardList, FaInfoCircle} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import {MdBuild} from "react-icons/md";
+import { MdMiscellaneousServices} from "react-icons/md";
 
 const menuItems = [
     { name: "Home", path: "/", icon: FaHome },
-    { name: "Services", path: "/services", icon: MdBuild },
+    { name: "Services", path: "/services", icon: MdMiscellaneousServices },
     { name: "Cart", path: "/carts", icon: FaShoppingCart },
     { name: "Bookings", path: "/bookings", icon: FaClipboardList },
     { name: "About Us", path: "/about-us", icon: FaInfoCircle },
