@@ -129,7 +129,7 @@ const Home = () => {
   return (
       <>
         <Box
-            h={"598px"}
+            h={{base: "448px", md: "598px"}}
             bgImage={bannerImage}
             bgPosition="center"
             bgRepeat="no-repeat"
