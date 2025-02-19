@@ -137,7 +137,7 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign="center" mt={{ base: "200px", md: "250px" }}>
+          <Box textAlign="center" mt={{ base: "150px", md: "250px" }}>
             <Text
                 color="#fff"
                 fontSize={{ base: "3xl", md: "5xl" }}
