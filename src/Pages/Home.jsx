@@ -27,7 +27,7 @@ import { keyframes } from "@emotion/react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import {cleaningServices, homeRepairServices, sampleTestimonials} from "../Utils/Database";
 import Testimonials from "../Components/Testmonial/Testimonial";
-import HomeCarousel from "../Components/HomeCarousel";
+import bannerImage from "./../assests/banner.webp"
 
 const topServices = [
   {
@@ -129,21 +129,22 @@ const Home = () => {
   return (
       <>
         <Box
-            h={"552px"}
-            bgImage="url('https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1615375782838-f890f8.jpeg')"
+            h={"624px"}
+            bgImage={bannerImage}
             bgPosition="center"
             bgRepeat="no-repeat"
             bgAttachment="fixed"
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign="center" mt={{ base: "100px", md: "190px" }}>
+          <Box textAlign="center" mt={{ base: "250px"}}>
             <Text
                 color="#fff"
                 fontSize={{ base: "2xl", md: "5xl" }}
-                fontWeight="600"
+                fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
+                textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
             >
               Endless possibilities, just one request away.
             </Text>
