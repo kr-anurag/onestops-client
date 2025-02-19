@@ -137,10 +137,10 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign="center" mt={{ base: "150px", md: "250px" }}>
+          <Box textAlign="center" mt={{ base: "125px", md: "250px" }}>
             <Text
                 color="#fff"
-                fontSize={{ base: "3xl", md: "5xl" }}
+                fontSize={{ base: "2xl", md: "5xl" }}
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
