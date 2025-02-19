@@ -129,7 +129,7 @@ const Home = () => {
   return (
       <>
         <Box
-            h={"65dvh"}
+            h={"70dvh"}
             bgImage={bannerImage}
             bgPosition="center"
             bgRepeat="no-repeat"
