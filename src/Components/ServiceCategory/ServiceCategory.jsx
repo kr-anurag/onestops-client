@@ -13,18 +13,26 @@ const ServiceCategory = ({ title, services, }) => {
         <Box
             display="flex"
             flexDirection="column"
-            borderBottom="16px solid #f2f4f6"
+            // borderBottom="16px solid #f2f4f6"
             p={{ base: "20px 0 40px", md: "50px 0 70px" }}
             gap="3rem"
+            maxW={"1200px"}
+            mx={"auto"}
         >
-            <Text
-                fontSize={{ base: "24px", md: "32px" }}
-                fontWeight="700"
-                color="#212121"
-                textAlign="center"
-            >
-                {title}
-            </Text>
+            <Box>
+                <Text
+                    fontSize={{ base: "24px", md: "32px" }}
+                    fontWeight="700"
+                    color="#212121"
+                    textAlign="center"
+                    mb={4}
+                >
+                    {title}
+                </Text>
+                <Text  fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center">
+                    {`Explore our wide range of ${title.toLowerCase()} services`}
+                </Text>
+            </Box>
             <Flex justifyContent="center" gap="2rem" flexWrap="wrap">
                 {services.map((service) => (
                     <Box

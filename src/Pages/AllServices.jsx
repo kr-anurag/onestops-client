@@ -7,8 +7,7 @@ import demandImage from "./../assests/ondemand.png"
 const AllServices = () => {
     return (
         <>
-            <ServiceCategory title="Home Repairs" services={homeRepairServices} />
-            <ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />
+            <ServiceCategory title="Our Services" services={homeRepairServices} />
             <Box maxW={"1200px"} mx={"auto"}  >
                 <Flex direction={{ base: "column", md: "row" }} align="center">
                     <Image

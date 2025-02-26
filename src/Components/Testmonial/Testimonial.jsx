@@ -29,27 +29,32 @@ const Testimonial = ({ name, rating, text, avatar }) => {
 
 const Testimonials = ({ testimonials }) => {
     return (
-        <Box maxW={"1100px"} mx={"auto"} p={4} mb={4}>
-            <Text
-                fontSize={{ base: "24px", md: "32px" }}
-                fontWeight="700"
-                color="#212121"
-                textAlign="center"
-                mb={8}
+        <Box bg="white" pb={16} pt={16}>
+            <Box maxW={"1100px"} mx={"auto"} p={4} mb={4} >
+                <Text
+                    fontSize={{ base: "24px", md: "32px" }}
+                    fontWeight="700"
+                    color="#212121"
+                    textAlign="center"
+                    mb={4}
+                >
+                    Customer Reviews
+                </Text>
+                <Text  fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center" mb="12">
+                    See what our customers say about our services
+                </Text>
+            <Flex
+                gap={"1.5rem"}
+                flexWrap={"wrap"}
+                spacing={8}
+                borderRadius="lg"
+                w="full"
             >
-                Testimonials
-            </Text>
-        <Flex
-            gap={"1.5rem"}
-            flexWrap={"wrap"}
-            spacing={8}
-            borderRadius="lg"
-            w="full"
-        >
-            {testimonials.map((testimonial, index) => (
-                <Testimonial key={index} {...testimonial}/>
-            ))}
-        </Flex>
+                {testimonials.map((testimonial, index) => (
+                    <Testimonial key={index} {...testimonial}/>
+                ))}
+            </Flex>
+            </Box>
         </Box>
     );
 };

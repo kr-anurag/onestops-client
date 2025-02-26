@@ -37,7 +37,7 @@ function App() {
         return <ScreenLoadingBar />;
     }
     return (
-            <div id="root">
+            <Box height={"100dvh"}>
                 {!isHomePage && <Navbar />}
                 <Box as="main" pt={!isHomePage ? "75px" : "0px"}>
                 <Routes>
@@ -54,7 +54,7 @@ function App() {
                 <MobileNavbar />
                 {!isHomePage && <Footer />}
 
-            </div>
+            </Box>
     );
 }
 

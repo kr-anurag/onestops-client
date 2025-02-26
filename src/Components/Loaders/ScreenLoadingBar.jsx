@@ -47,7 +47,7 @@ const ScreenLoadingBar = () => {
             <Box width="80%" maxWidth="250px" bg="gray.200" borderRadius="md" overflow="hidden" mt="1.5rem">
                 <Box
                     width={`${progress}%`}
-                    height="0.5rem"
+                    height="0.4rem"
                     bg="blue.500"
                     transition="width 0.5s ease"
                 />

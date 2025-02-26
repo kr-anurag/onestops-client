@@ -50,7 +50,7 @@ const HomeHeader = () => {
                 fontSize={{base: "2xl", md: "3xl"}}
                 fontWeight={"800"}
                 ml={"0.3rem"}
-                textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
+                // textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in
             </Text>
           </Box>

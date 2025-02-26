@@ -64,9 +64,9 @@ const Service = () => {
                       .map((_, i) => (
                           <StarIcon key={i} color="gray" />
                       ))}
-                  <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                    {serviceData.rating} ({serviceData.reviews})
-                  </Box>
+                  {/*<Box as="span" ml="2" color="gray.600" fontSize="sm">*/}
+                  {/*  {serviceData.rating} ({serviceData.reviews})*/}
+                  {/*</Box>*/}
                 </Box>
               </Box>
             </Flex>
@@ -121,7 +121,7 @@ const Service = () => {
                         </Text>
                         {/*<Button*/}
                         {/*    variant="outline"*/}
-                        {/*    colorScheme="purple"*/}
+                        {/*    colorScheme="blue"*/}
                         {/*    h="30px"*/}
                         {/*    onClick={() => addToCart(i)}*/}
                         {/*>*/}
@@ -129,22 +129,22 @@ const Service = () => {
                         {/*</Button>*/}
                       </Flex>
                       {/* Stars and Ratings */}
-                      <Box display="flex" alignItems="center">
-                        {Array(1)
-                            .fill("")
-                            .map((_, i) => (
-                                <StarIcon key={i} color="gray" />
-                            ))}
-                        <Box as="span" ml="2" color="gray.600" fontSize="xs">
-                          {el.rating}
-                        </Box>
-                      </Box>
+                      {/*<Box display="flex" alignItems="center">*/}
+                      {/*  {Array(1)*/}
+                      {/*      .fill("")*/}
+                      {/*      .map((_, i) => (*/}
+                      {/*          <StarIcon key={i} color="gray" />*/}
+                      {/*      ))}*/}
+                      {/*  <Box as="span" ml="2" color="gray.600" fontSize="xs">*/}
+                      {/*    {el.rating}*/}
+                      {/*  </Box>*/}
+                      {/*</Box>*/}
                       {/* Price and hours */}
                       <Box mt="3px">
                         <Text fontSize="15px" fontWeight="700">
-                          &#8377; {el.price} &bull;{" "}
+                          {/*&#8377; {el.price} &bull;{" "}*/}
                           <Text as="span" color="gray" fontWeight="thin">
-                            {el.time}
+                            Duration: {el.time}
                           </Text>{" "}
                         </Text>
                       </Box>
@@ -159,7 +159,7 @@ const Service = () => {
                       <Flex gap={"1rem"} flexWrap={"wrap"} mt={"1rem"}>
                       <Button
                           variant="outline"
-                          colorScheme="purple"
+                          colorScheme="blue"
                           h="30px"
                           leftIcon={<PhoneIcon />}
                           onClick={() => window.open(`tel:+917039619954`)}
@@ -167,7 +167,7 @@ const Service = () => {
                         Book via Call
                       </Button>
                       <Button
-                          variant="outline"
+                          // variant="outline"
                           colorScheme="green"
                           h="30px"
                           leftIcon={<FaWhatsapp />}
@@ -233,7 +233,7 @@ const Service = () => {
                       <Text fontSize="20px" color="#0f0f0f" fontWeight="bold">
                         &#8377; {price}
                       </Text>
-                      <Button colorScheme="purple" p="24px 26px" onClick={goToCart}>
+                      <Button colorScheme="blue" p="24px 26px" onClick={goToCart}>
                         View Cart
                       </Button>
                     </Flex>

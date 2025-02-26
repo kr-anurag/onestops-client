@@ -81,7 +81,7 @@ const serviceData = ServicesDatabase[0];
                       size="sm"
                       isAttached
                       variant="outline"
-                      colorScheme="purple"
+                      colorScheme="blue"
                     >
                       <IconButton
                         icon={<MinusIcon />}

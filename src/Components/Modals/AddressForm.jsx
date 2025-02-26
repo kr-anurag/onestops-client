@@ -110,7 +110,7 @@ const AddressForm = () => {
           </ModalBody>
           <ModalFooter align="center">
             <Button
-              colorScheme="purple"
+              colorScheme="blue"
               mr={3}
               onClick={submitOrder}
               disabled={

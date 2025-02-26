@@ -52,11 +52,13 @@ export default function Navbar() {
                     <Sidebar />
                 </Drawer>
                 <Box>
+                    <Link to={"/#"}>
                     <Image
                         h={{base: "40px", md: "50px", lg:"60px"}}
                         w={{base: "40px", md: "50px", lg:"60px"}}
                         src={logo}
                     />
+                    </Link>
                 </Box>
                 <Box fontSize={"13px"} ml="0.8rem" display="flex" alignItems="center">
                     <MdLocationOn />

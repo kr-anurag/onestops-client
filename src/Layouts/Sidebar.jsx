@@ -41,7 +41,7 @@ export default function Sidebar() {
                                       bg={location.pathname === item.path ? "#f5f5f5" : "transparent"}
                                 >
                                     <item.icon size={22}/>
-                                    <Text fontSize="md" fontWeight="600">{item.name}</Text>
+                                    <Text fontSize="md" fontWeight="500">{item.name}</Text>
                                 </Flex>
                                 <Divider />
                             </NavLink>

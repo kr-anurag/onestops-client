@@ -29,6 +29,7 @@ function MobileNavbar() {
           py={3}
           px={1}
           zIndex={"999"}
+          overflowX={"hidden"}
       >
         {menuItems.map((item) => (
             <Link to={item.path} key={item.name}>

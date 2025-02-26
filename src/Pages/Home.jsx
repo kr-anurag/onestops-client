@@ -28,22 +28,29 @@ import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import {cleaningServices, homeRepairServices, sampleTestimonials} from "../Utils/Database";
 import Testimonials from "../Components/Testmonial/Testimonial";
 import bannerImage from "./../assests/banner.webp"
+import HowItWorks from "../Components/Common/HowItWorks";
+import Statistics from "../Components/Common/Statistics";
 
 const topServices = [
+  // {
+  //   img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png",
+  //   title: "Salon For Women",
+  //   path: "salon-for-women",
+  // },
+  // {
+  //   img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png",
+  //   title: "Salon For Men",
+  //   path: "salon-for-men",
+  // },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png",
-    title: "Salon For Women",
-    path: "salon-for-women",
-  },
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png",
-    title: "Salon For Men",
-    path: "salon-for-men",
+    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_07f29980.jpeg",
+    title: "Electricians",
+    path: "electrician-services",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6b1f5250.png",
     title: "AC/Appliance Repair",
-    path: "ac-appliance-repair",
+    path: "appliance-services",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png",
@@ -51,14 +58,19 @@ const topServices = [
     path: "cleaning-pest-control",
   },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_07f29980.jpeg",
-    title: "Electricians",
-    path: "electrician-services",
+    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
+    title: "Carpenters",
+    path: "carpenter-services",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
-    title: "Plumbers & Carpenters",
-    path: "plumbers-carpenters",
+    title: "Plumbers",
+    path: "plumber-services",
+  },
+  {
+    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
+    title: "Painters",
+    path: "painting-services",
   },
 ];
 
@@ -129,8 +141,8 @@ const Home = () => {
   return (
       <>
         <Box
-            h={{base: "478px", md: "598px"}}
-            bgImage={bannerImage}
+            h={{ base: "478px", md: "598px" }}
+            bgImage="url('https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1615375782838-f890f8.jpeg')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgAttachment="fixed"
@@ -144,7 +156,7 @@ const Home = () => {
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
-                textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
+                // textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
             >
               Endless possibilities, just one request away.
             </Text>
@@ -195,10 +207,11 @@ const Home = () => {
         <Box p="20px 0 64px" mt="70px">
           <Carousel images={imgArr}/>
         </Box>
-        <ServiceCategory title="Home Repairs" services={homeRepairServices} />
-        <ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />
-
+        <ServiceCategory title="Our Services" services={homeRepairServices} />
+        {/*<ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />*/}
+        <HowItWorks />
         <Testimonials testimonials={sampleTestimonials} />
+        <Statistics />
         <HomeFooter />
       </>
   );
