@@ -10,7 +10,7 @@ const OnDemandService = () => {
     const handleChange = (e) => {
         const value = e.target.value;
         setRequest(value);
-        setIsDisabled(value.trim().split(/\s+/).length < 5);
+        setIsDisabled(value.trim().split(/\s+/).length < 1);
     };
 
     const handleSubmit = () => {
@@ -25,7 +25,7 @@ const OnDemandService = () => {
                 On Demand Service
             </Heading>
             <Textarea
-                placeholder="Type your service request here... (min 5 words)"
+                placeholder="Type your service request here..."
                 value={request}
                 onChange={handleChange}
                 height="150px"

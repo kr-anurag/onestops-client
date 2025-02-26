@@ -49,9 +49,9 @@ const HomeHeader = () => {
                 color="#fff"
                 fontSize={{base: "2xl", md: "3xl"}}
                 fontWeight={"800"}
-                ml={"0.3rem"}
+                ml={"0.4rem"}
                 // textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
-                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStops.in
+                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStop's
             </Text>
           </Box>
           <Spacer />
@@ -63,7 +63,7 @@ const HomeHeader = () => {
               >
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
-                    <Link to="/login" textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"> Login </Link>}
+                    <Button><Link to="/login"> Login </Link></Button>}
               </Box>
           </Box>
         </Flex>

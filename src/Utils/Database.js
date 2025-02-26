@@ -30,12 +30,12 @@ export const homeRepairServices = [
         path: "plumber-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/3301a1214b39485e288b0ea0b65b9240.jpg",
+        img: "https://public.readdy.ai/ai/img_res/71d56df0b76fe646babd8d137382b495.jpg",
         title: "Appliance Repair",
         path: "appliance-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/9e4f03a71df8bd5d310b18dbd3e71540.jpg",
+        img: "https://public.readdy.ai/ai/img_res/80c5407b7a53cdcb2a6b905dd8716501.jpg",
         title: "Painting & Waterproofing",
         path: "painting-services",
     },

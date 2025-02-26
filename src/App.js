@@ -18,6 +18,7 @@ import InstallAppButton from "./Components/InstallApp/InstallAppButton";
 import AllServices from "./Pages/AllServices";
 import Testimonials from "./Components/Testmonial/Testimonial";
 import {sampleTestimonials} from "./Utils/Database";
+import FloatingButtons from "./Components/Common/FloatingButtons";
 
 function App() {
     const location = useLocation();
@@ -51,6 +52,7 @@ function App() {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Box>
+                <FloatingButtons />
                 <MobileNavbar />
                 {!isHomePage && <Footer />}
 
