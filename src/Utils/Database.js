@@ -392,15 +392,6 @@ export const ServicesDatabase = [
                     "Plastic buffer installation (up to 4)"
                 ]
             },
-            {
-                "id": "uuid()",
-                "name": "Carpenter Visit",
-                "time": "30 mins",
-                "list": [
-                    "A carpenter will assess your needs upon arrival at your home",
-                    "A quote will be provided before the service begins"
-                ]
-            }
         ]
     },
     {
@@ -653,34 +644,22 @@ export const ServicesDatabaseBackup = [
 
 export const sampleTestimonials = [
     {
-        name: "John Doe",
+        name: "Prashant Jadhav",
         rating: 5,
-        text: "Great service! Highly recommend.",
-        avatar: "https://bit.ly/dan-abramov",
+        text: "The customer support is fantastic! They go above and beyond to ensure satisfaction. OneStop is my go-to service now!",
+        avatar: "https://ik.imagekit.io/ulyn7697x/WhatsApp%20Image%202025-02-26%20at%2020.47.20.jpeg?updatedAt=1740584431348",
     },
     {
-        name: "Jane Smith",
+        name: "Suraj Sarfale",
         rating: 4,
-        text: "Very satisfied with the service.",
-        avatar: "https://bit.ly/kent-c-dodds",
+        text: "I love how OneStop handles any request! I asked for something unique, and they found it for me effortlessly. Truly a one-stop solution",
+        avatar: "https://ik.imagekit.io/ulyn7697x/WhatsApp%20Image%202025-02-26%20at%2020.46.29.jpeg?updatedAt=1740584431073",
     },
     {
-        name: "Alice Johnson",
+        name: "Hemangi Rane",
         rating: 5,
-        text: "Exceptional quality and customer service.",
-        avatar: "https://bit.ly/prosper-baba",
-    },
-    {
-        name: "Bob Brown",
-        rating: 3,
-        text: "Good, but there's room for improvement.",
-        avatar: "https://bit.ly/ryan-florence",
-    },
-    {
-        name: "Charlie Davis",
-        rating: 4,
-        text: "Very professional and timely.",
-        avatar: "https://bit.ly/code-beast",
+        text: "Such a convenient service! I just told them what I needed, and they took care of everything. Hassle-free and super quick!",
+        avatar: "https://ik.imagekit.io/ulyn7697x/WhatsApp%20Image%202025-02-26%20at%2020.46.55.jpeg?updatedAt=1740584430734",
     },
 ];
 

@@ -47,11 +47,12 @@ const HomeHeader = () => {
             />
             <Text
                 color="#fff"
-                fontSize={{base: "2xl", md: "3xl"}}
-                fontWeight={"800"}
+                fontSize={{base: "xl", md: "3xl"}}
+                fontWeight={"700"}
                 ml={"0.4rem"}
+                display={{base: "none", md: "block"}}
                 // textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
-                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">OneStop's
+                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">onestops.in
             </Text>
           </Box>
           <Spacer />
@@ -63,7 +64,7 @@ const HomeHeader = () => {
               >
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
-                    <Link to="/login"> <Button borderRadius="2rem"> Login </Button> </Link>}
+                    <Link to="/login"> <Button borderRadius="2rem" fontSize={{base: "0.8rem", md: "1rem"}}> Login </Button> </Link>}
               </Box>
           </Box>
         </Flex>
