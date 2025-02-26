@@ -63,7 +63,7 @@ const HomeHeader = () => {
               >
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
-                    <Button><Link to="/login"> Login </Link></Button>}
+                    <Link to="/login"> <Button borderRadius="2rem"> Login </Button> </Link>}
               </Box>
           </Box>
         </Flex>

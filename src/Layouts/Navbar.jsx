@@ -11,16 +11,27 @@ import {
     Text,
     useDisclosure
 } from "@chakra-ui/react";
-import {Link, NavLink, useNavigate} from "react-router-dom";
-import React from "react";
+import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
+import React, {useContext} from "react";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
 import logo from "./../assests/onestop-logo.png"
-import {MdLocationOn} from "react-icons/md";
+import {MdLocationOn, MdMiscellaneousServices} from "react-icons/md";
+import {Appcontext} from "../Context/Appcontext";
+import {FaClipboardList, FaHome, FaInfoCircle, FaShoppingCart} from "react-icons/fa";
 
 export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
+    const {user} = useContext(Appcontext);
+    const location = useLocation();
+
+    const menuItems = [
+        { name: "Home", path: "/", icon: FaHome },
+        { name: "Services", path: "/services", icon: MdMiscellaneousServices },
+        { name: "Cart", path: "/carts", icon: FaShoppingCart },
+        { name: "Bookings", path: "/bookings", icon: FaClipboardList },
+    ];
 
     return (
         <Box
@@ -66,18 +77,40 @@ export default function Navbar() {
                 </Box>
             </Box>
             <Spacer />
-            {/*<Box*/}
-            {/*    display="flex"*/}
-            {/*    alignItems="center"*/}
-            {/*    gap="1rem"*/}
-            {/*    fontSize="14px"*/}
-            {/*    fontWeight="700"*/}
-            {/*    mr={"1rem"}*/}
-            {/*>*/}
-            {/*    <Link to="/"> Home </Link>*/}
-            {/*    <Link to="/services"> Services </Link>*/}
-            {/*    <Link to="/login"> Login </Link>*/}
-            {/*</Box>*/}
+            <Box
+                display={{base: "none", md: "flex"}}
+                alignItems="center"
+                gap="0.1rem"
+                fontSize="16px"
+                fontWeight="500"
+                mr={"2rem"}
+            >
+                {
+                    menuItems.map(
+                        (m)=>{
+                            return (
+                                <NavLink
+                                    key={m.name}
+                                    to={m.path}
+                                    style={({ isActive }) => ({
+                                        background: isActive && "#f2f4f6",
+                                        minWidth: "80px",
+                                        padding: "6px 18px",
+                                        borderRadius: "1rem",
+                                        textAlign: "center",
+                                        textDecoration: "none",
+                                    })}
+                                >
+                                    {m.name}
+                                </NavLink>
+                            )
+                        }
+                    )
+                }
+                {user ?
+                    <Image src={user.picture} w="40px" h="40px" ml="1.5rem" borderRadius="50%" onClick={onOpen} /> :
+               <Button borderRadius="2rem" colorScheme="blue" variant="solid" ml="1.5rem"> <Link to="/login"> Login </Link></Button>}
+            </Box>
         </Flex>
         {/*<Divider  borderColor={"blackAlpha.500"} />*/}
         </Box>
