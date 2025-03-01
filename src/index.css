@@ -23,6 +23,16 @@ code {
   --font-size-normal-mobile: 14px;
   --font-size-normal-tablet: 16px;
   --font-size-normal-big-screen: 18px;
+
+  --font-size-mini-mobile: 12px;
+  --font-size-mini-tablet: 14px;
+  --font-size-mini-big-screen: 16px;
+}
+:root {
+  --font-size-title: var(--font-size-title-mobile);
+  --font-size-subtitle: var(--font-size-subtitle-mobile);
+  --font-size-normal: var(--font-size-normal-mobile);
+  --font-size-mini: var(--font-size-mini-mobile);
 }
 
 @media (min-width: 768px) {
@@ -30,6 +40,7 @@ code {
     --font-size-title: var(--font-size-title-tablet);
     --font-size-subtitle: var(--font-size-subtitle-tablet);
     --font-size-normal: var(--font-size-normal-tablet);
+    --font-size-mini: var(--font-size-mini-tablet);
   }
 }
 
@@ -38,11 +49,6 @@ code {
     --font-size-title: var(--font-size-title-big-screen);
     --font-size-subtitle: var(--font-size-subtitle-big-screen);
     --font-size-normal: var(--font-size-normal-big-screen);
+    --font-size-mini: var(--font-size-mini-big-screen);
   }
-}
-
-:root {
-  --font-size-title: var(--font-size-title-mobile);
-  --font-size-subtitle: var(--font-size-subtitle-mobile);
-  --font-size-normal: var(--font-size-normal-mobile);
 }

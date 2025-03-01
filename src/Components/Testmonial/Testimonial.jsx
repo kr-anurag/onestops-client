@@ -13,7 +13,7 @@ const Testimonial = ({ name, rating, text, avatar }) => {
                 <HStack spacing={4}>
                     <Avatar name={name} src={avatar} size={avatarSize} />
                     <VStack align="start">
-                        <Text fontWeight="bold" fontSize="lg">{name}</Text>
+                        <Text fontWeight="bold" fontSize="var(--font-size-normal)">{name}</Text>
                         <HStack>
                             {[...Array(5)].map((_, i) => (
                                 <StarIcon key={i} color={i < rating ? "yellow.400" : "gray.300"} />
@@ -32,7 +32,7 @@ const Testimonials = ({ testimonials }) => {
         <Box bg="white" pb={16} pt={16}>
             <Box maxW={"1100px"} mx={"auto"} p={4} mb={4} >
                 <Text
-                    fontSize={{ base: "24px", md: "32px" }}
+                    fontSize="var(--font-size-title)"
                     fontWeight="700"
                     color="#212121"
                     textAlign="center"
@@ -40,7 +40,7 @@ const Testimonials = ({ testimonials }) => {
                 >
                     Customer Reviews
                 </Text>
-                <Text  fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center" mb="12">
+                <Text fontSize="var(--font-size-normal)" color="gray.600" textAlign="center" mb="12">
                     See what our customers say about our services
                 </Text>
             <Flex

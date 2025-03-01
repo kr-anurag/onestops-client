@@ -20,7 +20,7 @@ const ServiceCategory = ({ title, services, }) => {
         >
             <Box>
                 <Text
-                    fontSize={{ base: "24px", md: "32px" }}
+                    fontSize="var(--font-size-title)"
                     fontWeight="700"
                     color="#212121"
                     textAlign="center"
@@ -28,7 +28,7 @@ const ServiceCategory = ({ title, services, }) => {
                 >
                     {title}
                 </Text>
-                <Text  fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center">
+                <Text  fontSize="var(--font-size-normal)" color="gray.600" textAlign="center">
                     {`Explore our wide range of ${title.toLowerCase()} services`}
                 </Text>
             </Box>

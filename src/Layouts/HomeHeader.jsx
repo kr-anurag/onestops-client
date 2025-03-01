@@ -8,13 +8,15 @@ import {
   Button,
   Drawer,
   DrawerOverlay,
-  Text,
+  Text, Icon,
 } from "@chakra-ui/react";
 import { Appcontext } from "../Context/Appcontext";
 import Sidebar from "./Sidebar";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import {HamburgerIcon, LockIcon} from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import logo from "./../assests/logo-white.png"
+import InstallAppButton from "../Components/InstallApp/InstallAppButton";
+import {FaLock} from "react-icons/fa";
 
 
 const HomeHeader = () => {
@@ -54,17 +56,20 @@ const HomeHeader = () => {
             </Text>
           </Box>
           <Spacer />
-          <Box display="flex" alignItems="center">
-              <Box
-                fontSize="14px"
-                fontWeight="700"
-                color="#fff"
-              >
+          <Box display="flex" alignItems="center"  gap={"0.8rem"} fontSize="14px"
+               fontWeight="700"
+               color="#fff">
+                <InstallAppButton />
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
-                    <Link to="/login"> <Button borderRadius="2rem" fontSize={{base: "0.8rem", md: "0.9rem"}}> Login </Button> </Link>}
+                    <Link to="/login"> <Button  leftIcon={<Icon as={LockIcon} />}
+                                                borderRadius="2rem"
+                                                fontSize={{base: "0.8rem", md: "0.9rem"}}
+                                                _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
+                                                _active={{ transform: "scale(0.98)" }}
+                    >Login </Button> </Link>}
               </Box>
-          </Box>
+
         </Flex>
       </Flex>
     </>

@@ -33,7 +33,7 @@ const HowItWorks = () => {
                 <Heading as="h2" textAlign="center" mb="4" fontSize="var(--font-size-title)" fontWeight="700" color="#212121">
                     How It Works
                 </Heading>
-                <Text fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center" mb="12">
+                <Text fontSize="var(--font-size-normal)" color="gray.600" textAlign="center" mb="12">
                     Book your service in just a few simple steps
                 </Text>
                 <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap="8">
