@@ -57,6 +57,7 @@ const InstallAppNotification = ({ deferredPrompt, onClose }) => {
                         _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
                         _active={{ transform: "scale(0.98)" }}
                         mt={4}
+                        mb={2}
                     >
                         Install Now
                     </Button>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image, Flex } from "@chakra-ui/react";
+import {Box, Text, Image, Flex, Grid} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const ServiceCategory = ({ title, services, }) => {
@@ -32,35 +32,40 @@ const ServiceCategory = ({ title, services, }) => {
                     {`Explore our wide range of ${title.toLowerCase()} services`}
                 </Text>
             </Box>
-            <Flex justifyContent="center" gap="2rem" flexWrap="wrap">
-                {services.map((service) => (
-                    <Box
-                        key={service.title}
-                        w={{ base: "100%", md: "auto" }}
-                        onClick={() => handleServiceClick(service.path)}
-                        cursor="pointer"
-                    >
-                        <Box px={{ base: "20px", md: "0px" }}>
+            <Flex justifyContent="center" gap="2rem" flexWrap="wrap" px={6}>
+                <Grid
+                    templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(auto-fill, minmax(250px, 1fr))" }}
+                    gap="2rem"
+                    w="100%"
+                >
+                    {services.map((service) => (
+                        <Box
+                            key={service.title}
+                            onClick={() => handleServiceClick(service.path)}
+                            cursor="pointer"
+                            position="relative"
+                        >
                             <Image
                                 mb="20px"
                                 transition="transform 0.4s"
                                 _hover={{ transform: "scale(1.05)" }}
                                 rounded="lg"
-                                h={{ base: "220px", md: "180px" }}
-                                w={{ base: "100%", md: "300px" }}
+                                h={{ base: "auto", md: "180px" }}
+                                w="100%"
                                 src={service.img}
                             />
+                            <Text
+                                width="100%"
+                                textAlign="center"
+                                fontSize="14px"
+                                fontWeight="500"
+                                px="10px"
+                            >
+                                {service.title}
+                            </Text>
                         </Box>
-                        <Text
-                            textAlign="center"
-                            fontSize="14px"
-                            color="#212121"
-                            fontWeight="500"
-                        >
-                            {service.title}
-                        </Text>
-                    </Box>
-                ))}
+                    ))}
+                </Grid>
             </Flex>
         </Box>
     );

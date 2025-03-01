@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import logo from "./../assests/logo-white.png"
 import InstallAppButton from "../Components/InstallApp/InstallAppNotification";
 import {FaLock} from "react-icons/fa";
+import {MdLocationOn} from "react-icons/md";
 
 
 const HomeHeader = () => {
@@ -46,14 +47,26 @@ const HomeHeader = () => {
                 w={{base: "40px", md: "50px", lg:"50px"}}
                 src={logo}
             />
-            <Text
-                color="#fff"
-                fontSize={{base: "xl", md: "3xl"}}
-                fontWeight={"700"}
-                ml={"0.4rem"}
-                display={{base: "none", md: "block"}}
-                fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">onestop's
-            </Text>
+            <Box display="flex" alignItems="flex-start"
+                 lineHeight={1.3}
+                 justifyContent="center" flexDirection="column"
+                 ml={"0.7rem"}>
+              <Text
+                  color="#fff"
+                  fontSize={{base: "xl", md: "3xl"}}
+                  fontWeight={"700"}
+                  // display={{base: "none", md: "block"}}
+                  fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">onestop's
+              </Text>
+              <Box display="flex" color="#fff" alignItems="center" gap={"0.2rem"}>
+                <MdLocationOn />
+                <Text  color="#fff" fontSize="12px">
+                 Mumbai
+                </Text>
+              </Box>
+
+            </Box>
+
           </Box>
           <Spacer />
           <Box display="flex" alignItems="center"  gap={"0.8rem"} fontSize="14px"

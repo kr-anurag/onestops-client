@@ -6,7 +6,7 @@ import {Box, Flex, Image} from "@chakra-ui/react";
 import demandImage from "./../assests/ondemand.png"
 const AllServices = () => {
     return (
-        <>
+        <Box mt="1rem">
             <ServiceCategory title="Our Services" services={homeRepairServices} />
             <Box maxW={"1200px"} mx={"auto"}  >
                 <Flex direction={{ base: "column", md: "row" }} align="center">
@@ -22,7 +22,7 @@ const AllServices = () => {
                     </Box>
                 </Flex>
             </Box>
-        </>
+        </Box>
     );
 };
 

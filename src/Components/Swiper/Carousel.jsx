@@ -31,7 +31,6 @@ export default function Carousel({images}) {
                         <Box
                             transition="transform .2s"
                             _hover={{ transform: "scale(1.05)" }}
-                            // h={{ base: "175px", md: "200px" }}
                             aspectRatio={3/2}
                         >
                             <Image src={el} alt="" />

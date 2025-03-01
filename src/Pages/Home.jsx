@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Text,
@@ -16,32 +16,22 @@ import {
   PopoverHeader,
   PopoverBody,
   PopoverArrow,
-  PopoverCloseButton, useBreakpointValue,
+  PopoverCloseButton,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import HomeHeader from "../Layouts/HomeHeader";
 import { TriangleDownIcon, SearchIcon } from "@chakra-ui/icons";
-import HomeFooter from "../Layouts/HomeFooter";
 import { useNavigate } from "react-router-dom";
+import HomeHeader from "../Layouts/HomeHeader";
+import HomeFooter from "../Layouts/HomeFooter";
 import Carousel from "../Components/Swiper/Carousel";
-import { keyframes } from "@emotion/react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
-import {cleaningServices, homeRepairServices, sampleTestimonials} from "../Utils/Database";
 import Testimonials from "../Components/Testmonial/Testimonial";
-import bannerImage from "./../assests/banner.webp"
 import HowItWorks from "../Components/Common/HowItWorks";
 import Statistics from "../Components/Common/Statistics";
+import { cleaningServices, homeRepairServices, sampleTestimonials } from "../Utils/Database";
+import {keyframes} from "@emotion/react";
 
 const topServices = [
-  // {
-  //   img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757635235-1a139e.png",
-  //   title: "Salon For Women",
-  //   path: "salon-for-women",
-  // },
-  // {
-  //   img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/images/growth/home-screen/1609757629780-2b2187.png",
-  //   title: "Salon For Men",
-  //   path: "salon-for-men",
-  // },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_07f29980.jpeg",
     title: "Electricians",
@@ -71,6 +61,16 @@ const topServices = [
 
 const Home = () => {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredServices, setFilteredServices] = useState(topServices);
+
+  useEffect(() => {
+    setFilteredServices(
+        topServices.filter((service) =>
+            service.title.toLowerCase().includes(searchQuery.toLowerCase())
+        )
+    );
+  }, [searchQuery]);
 
   const moveToMG = (id) => {
     navigate(`/services/${id}`);
@@ -90,9 +90,9 @@ const Home = () => {
             <Button
                 display="flex"
                 justifyContent="space-between"
-                w={{base : "110px", md: "180px"}}
-                h={{base : "35px", md: "54px"}}
-                fontSize={{base : "14px", md: "16px"}}
+                w={{ base: "110px", md: "180px" }}
+                h={{ base: "35px", md: "54px" }}
+                fontSize={{ base: "14px", md: "16px" }}
             >
               Mumbai <TriangleDownIcon fontSize="sm" />
             </Button>
@@ -110,29 +110,32 @@ const Home = () => {
         </Popover>
         <InputGroup>
           <InputLeftElement
-              h={{base : "40px", md: "54px"}}
+              h={{ base: "40px", md: "54px" }}
               pointerEvents="none"
               children={<SearchIcon color="gray.500" />}
           />
           <Input
-              h={{base : "40px", md: "54px"}}
+              h={{ base: "40px", md: "54px" }}
               w={{ base: "100%", md: "572px" }}
               bg="white"
               type="text"
               placeholder="Search For Service"
+              value={searchQuery}
+              onChange={(e) =>
+                  setSearchQuery(e.target.value)}
           />
         </InputGroup>
       </Box>
   );
 
   const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  `;
 
   return (
       <>
@@ -145,7 +148,7 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign={{md: "center"}} mt={{ base: "115px", md: "210px"}} px="2rem">
+          <Box textAlign={{ md: "center" }} mt={{ base: "115px", md: "210px" }} px="2rem">
             <Text
                 color="#fff"
                 fontSize={{ base: "2xl", md: "5xl" }}
@@ -158,18 +161,18 @@ const Home = () => {
           </Box>
           <SearchBar />
         </Box>
-        <Box >
+        <Box>
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
               spacing={5}
-              w={{ base: "90%", lg: "1000px"}}
+              w={{ base: "90%", lg: "1000px" }}
               m="-70px auto 0"
               p="24px"
               rounded="md"
               bg="white"
               boxShadow="xl"
           >
-            {topServices?.map((el) => (
+            {filteredServices.map((el) => (
                 <Box
                     key={el.title}
                     bg="white"
@@ -200,10 +203,9 @@ const Home = () => {
           </SimpleGrid>
         </Box>
         <Box p="10px 0 64px" mt="70px">
-          <Carousel images={imgArr}/>
+          <Carousel images={imgArr} />
         </Box>
         <ServiceCategory title="Our Services" services={homeRepairServices} />
-        {/*<ServiceCategory title="Cleaning & Pest Control" services={cleaningServices} />*/}
         <HowItWorks />
         <Testimonials testimonials={sampleTestimonials} />
         <Statistics />
@@ -221,5 +223,3 @@ const imgArr = [
 ];
 
 export default Home;
-
-
