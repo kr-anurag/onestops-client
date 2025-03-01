@@ -64,7 +64,6 @@ const HomeHeader = () => {
                  Mumbai
                 </Text>
               </Box>
-
             </Box>
 
           </Box>

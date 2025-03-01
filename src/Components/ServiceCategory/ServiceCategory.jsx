@@ -15,7 +15,7 @@ const ServiceCategory = ({ title, services, }) => {
             flexDirection="column"
             p={{ base: "10px 0 40px", md: "10px 0 60px" }}
             gap="3rem"
-            maxW={"1200px"}
+            maxW={"1100px"}
             mx={"auto"}
         >
             <Box>

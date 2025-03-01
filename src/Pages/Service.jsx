@@ -41,7 +41,7 @@ const Service = () => {
   return (
       <>
         <Box w={{base:"100%", md:"60%"}} m="auto" h="100%" px={{base: "20px", md:"0px"}} mb="2rem">
-          <Flex borderBottom="4px solid #EDEDED" p="40px 0">
+          <Flex borderBottom="4px solid #EDEDED" p={{base: "20px 0", md: "40px 0"}}>
             <Flex  flexDirection={"column"}>
               <Box>
                 <Tag
@@ -49,6 +49,7 @@ const Service = () => {
                     variant="outline"
                     colorScheme={"black"}
                     border="1px solid gray"
+                    mb={1}
                 >
                   <TagLeftIcon boxSize="16px" as={RiShieldCheckFill} />
                   <TagLabel>One Stop Safe</TagLabel>

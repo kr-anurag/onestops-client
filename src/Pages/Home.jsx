@@ -33,27 +33,27 @@ import {keyframes} from "@emotion/react";
 
 const topServices = [
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_07f29980.jpeg",
+    img: "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
     title: "Electricians",
     path: "electrician-services",
   },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6b1f5250.png",
+    img: "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
     title: "Appliance Repair",
     path: "appliance-services",
   },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
+    img: "https://ik.imagekit.io/ulyn7697x/woman.png?updatedAt=1740831155914",
     title: "Carpenters",
     path: "carpenter-services",
   },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
+    img: "https://ik.imagekit.io/ulyn7697x/plumber%20(1).png?updatedAt=1740853653226",
     title: "Plumbers",
     path: "plumber-services",
   },
   {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
+    img: "https://ik.imagekit.io/ulyn7697x/painter%20(1).png?updatedAt=1740831438506",
     title: "Painters",
     path: "painting-services",
   },
@@ -76,57 +76,7 @@ const Home = () => {
     navigate(`/services/${id}`);
   };
 
-  const SearchBar = () => (
-      <Box
-          display="flex"
-          gap="1rem"
-          m="20px auto"
-          w={{ base: "90%", md: "fit-content" }}
-          p="10px"
-          flexDirection={{ base: "column", md: "row" }}
-      >
-        <Popover>
-          <PopoverTrigger>
-            <Button
-                display="flex"
-                justifyContent="space-between"
-                w={{ base: "110px", md: "180px" }}
-                h={{ base: "35px", md: "54px" }}
-                fontSize={{ base: "14px", md: "16px" }}
-            >
-              Mumbai <TriangleDownIcon fontSize="sm" />
-            </Button>
-          </PopoverTrigger>
-          <Portal>
-            <PopoverContent>
-              <PopoverArrow />
-              <PopoverHeader>Current Location</PopoverHeader>
-              <PopoverCloseButton />
-              <PopoverBody>
-                <Input placeholder="Search for Society/Apartment" />
-              </PopoverBody>
-            </PopoverContent>
-          </Portal>
-        </Popover>
-        <InputGroup>
-          <InputLeftElement
-              h={{ base: "40px", md: "54px" }}
-              pointerEvents="none"
-              children={<SearchIcon color="gray.500" />}
-          />
-          <Input
-              h={{ base: "40px", md: "54px" }}
-              w={{ base: "100%", md: "572px" }}
-              bg="white"
-              type="text"
-              placeholder="Search For Service"
-              value={searchQuery}
-              onChange={(e) =>
-                  setSearchQuery(e.target.value)}
-          />
-        </InputGroup>
-      </Box>
-  );
+
 
   const fadeIn = keyframes`
     from {
@@ -159,13 +109,14 @@ const Home = () => {
               Endless possibilities, just one request away.
             </Text>
           </Box>
-          <SearchBar />
+          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
         </Box>
         <Box>
+          {filteredServices.length > 0 ? (
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
               spacing={5}
-              w={{ base: "90%", lg: "1000px" }}
+              w={{ base: "85%", lg: "954px" }}
               m="-70px auto 0"
               p="24px"
               rounded="md"
@@ -176,8 +127,8 @@ const Home = () => {
                 <Box
                     key={el.title}
                     bg="white"
-                    w="128px"
-                    h="112px"
+                    w="112px"
+                    h="100px"
                     rounded="md"
                     p="10px"
                     display="flex"
@@ -185,15 +136,17 @@ const Home = () => {
                     flexDirection="column"
                     _hover={{ bg: "#e5e5e5", boxShadow: "lg" }}
                     onClick={() => moveToMG(el?.path)}
+                    boxShadow={{base: "xl", md: "none"}}
                 >
-                  <Box w="fit-content" alignSelf="center">
-                    <Image h="32px" w="32px" src={el.img} alt="myImage" />
+                  <Box w="fit-content" alignSelf="center" >
+                    <Image h="50px" w="55px" src={el.img} alt="myImage" />
                   </Box>
                   <Box
                       textAlign="center"
-                      lineHeight="16px"
+                      lineHeight={"16px"}
+                      mt={"8px"}
                       h="40px"
-                      fontSize="16px"
+                      fontSize="14px"
                       color="#212121"
                   >
                     {el.title}
@@ -201,6 +154,13 @@ const Home = () => {
                 </Box>
             ))}
           </SimpleGrid>
+          ) : (
+              <Box textAlign="center" mt="20px" bg={"white"}>
+                <Text fontSize={{ base: "md", md: "xl" }} color="gray.500">
+                  {`No services found with ${searchQuery}`}
+                </Text>
+              </Box>
+          )}
         </Box>
         <Box p="10px 0 64px" mt="70px">
           <Carousel images={imgArr} />
@@ -222,4 +182,55 @@ const imgArr = [
   "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733505585-4d3fe3.jpeg",
 ];
 
+const SearchBar = ({searchQuery, setSearchQuery}) => (
+    <Box
+        display="flex"
+        gap="1rem"
+        m="20px auto"
+        w={{ base: "90%", md: "fit-content" }}
+        p="10px"
+        flexDirection={{ base: "column", md: "row" }}
+    >
+      <Popover>
+        <PopoverTrigger>
+          <Button
+              display="flex"
+              justifyContent="space-between"
+              w={{ base: "110px", md: "180px" }}
+              h={{ base: "35px", md: "54px" }}
+              fontSize={{ base: "14px", md: "16px" }}
+          >
+            Mumbai <TriangleDownIcon fontSize="sm" />
+          </Button>
+        </PopoverTrigger>
+        <Portal>
+          <PopoverContent>
+            <PopoverArrow />
+            <PopoverHeader>Current Location</PopoverHeader>
+            <PopoverCloseButton />
+            <PopoverBody>
+              <Input placeholder="Search for Society/Apartment" />
+            </PopoverBody>
+          </PopoverContent>
+        </Portal>
+      </Popover>
+      <InputGroup>
+        <InputLeftElement
+            h={{ base: "40px", md: "54px" }}
+            pointerEvents="none"
+            children={<SearchIcon color="gray.500" />}
+        />
+        <Input
+            h={{ base: "40px", md: "54px" }}
+            w={{ base: "100%", md: "572px" }}
+            bg="white"
+            type="text"
+            placeholder="Search For Service"
+            value={searchQuery}
+            onChange={(e) =>
+                setSearchQuery(e.target.value)}
+        />
+      </InputGroup>
+    </Box>
+);
 export default Home;

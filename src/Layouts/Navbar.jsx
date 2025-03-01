@@ -71,9 +71,22 @@ export default function Navbar() {
                     />
                     </Link>
                 </Box>
-                <Box fontSize={"13px"} ml="0.8rem" display="flex" alignItems="center">
-                    <MdLocationOn />
-                    <Text ml="0.2rem">Mumbai</Text>
+                <Box display="flex" alignItems="flex-start"
+                     lineHeight={1.3}
+                     justifyContent="center" flexDirection="column"
+                     ml={"0.7rem"}>
+                    <Text
+                        fontSize={{base: "xl", md: "3xl"}}
+                        fontWeight={"700"}
+                        fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">onestop's
+                    </Text>
+                    <Box display="flex" alignItems="center" gap={"0.2rem"}>
+                        <MdLocationOn />
+                        <Text fontSize="12px">
+                            Mumbai
+                        </Text>
+                    </Box>
+
                 </Box>
             </Box>
             <Spacer />

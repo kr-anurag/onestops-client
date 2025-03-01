@@ -30,7 +30,7 @@ export default function Sidebar() {
     const location = useLocation();
 
     return (
-        <DrawerContent width={{base:"275px !important", md:"300px !important" }}>
+        <DrawerContent width={{base:"290px !important", md:"300px !important" }}>
             <DrawerCloseButton />
             <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody display="flex" flexDirection="column">
