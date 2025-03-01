@@ -15,7 +15,7 @@ import Sidebar from "./Sidebar";
 import {HamburgerIcon, LockIcon} from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import logo from "./../assests/logo-white.png"
-import InstallAppButton from "../Components/InstallApp/InstallAppButton";
+import InstallAppButton from "../Components/InstallApp/InstallAppNotification";
 import {FaLock} from "react-icons/fa";
 
 
@@ -59,7 +59,6 @@ const HomeHeader = () => {
           <Box display="flex" alignItems="center"  gap={"0.8rem"} fontSize="14px"
                fontWeight="700"
                color="#fff">
-                <InstallAppButton />
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" onClick={onOpen} /> :
                     <Link to="/login"> <Button  leftIcon={<Icon as={LockIcon} />}

@@ -5,7 +5,7 @@ import {
     Drawer, DrawerBody, DrawerCloseButton,
     DrawerContent, DrawerHeader,
     DrawerOverlay,
-    Flex,
+    Flex, Icon,
     Image,
     Spacer,
     Text,
@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import {Link, NavLink, useLocation, useNavigate} from "react-router-dom";
 import React, {useContext} from "react";
-import {HamburgerIcon} from "@chakra-ui/icons";
+import {HamburgerIcon, LockIcon} from "@chakra-ui/icons";
 import Sidebar from "./Sidebar";
 import logo from "./../assests/onestop-logo.png"
 import {MdLocationOn, MdMiscellaneousServices} from "react-icons/md";
@@ -109,10 +109,17 @@ export default function Navbar() {
                 }
                 {user ?
                     <Image src={user.picture} w="40px" h="40px" ml="1.5rem" borderRadius="50%" onClick={onOpen} /> :
-               <Button borderRadius="2rem" colorScheme="blue" variant="solid" ml="1.5rem"> <Link to="/login"> Login </Link></Button>}
+                    <Button  leftIcon={<Icon as={LockIcon} />}
+                             borderRadius="2rem"
+                             fontSize={{base: "0.8rem", md: "0.9rem"}}
+                             bgGradient="linear(to-r, blue.400, blue.600)"
+                             color="white"
+                             _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
+                             _active={{ transform: "scale(0.98)" }}>
+                        <Link to="/login"> Login </Link>
+                    </Button>}
             </Box>
         </Flex>
-        {/*<Divider  borderColor={"blackAlpha.500"} />*/}
         </Box>
     )
 

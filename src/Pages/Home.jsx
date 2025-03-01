@@ -90,8 +90,9 @@ const Home = () => {
             <Button
                 display="flex"
                 justifyContent="space-between"
-                w={{base : "120px", md: "180px"}}
-                h={{base : "40px", md: "54px"}}
+                w={{base : "110px", md: "180px"}}
+                h={{base : "35px", md: "54px"}}
+                fontSize={{base : "14px", md: "16px"}}
             >
               Mumbai <TriangleDownIcon fontSize="sm" />
             </Button>
@@ -198,7 +199,7 @@ const Home = () => {
             ))}
           </SimpleGrid>
         </Box>
-        <Box p="20px 0 64px" mt="70px">
+        <Box p="10px 0 64px" mt="70px">
           <Carousel images={imgArr}/>
         </Box>
         <ServiceCategory title="Our Services" services={homeRepairServices} />

@@ -40,20 +40,20 @@ const HowItWorks = () => {
                     {steps.map((step, index) => (
                         <Flex key={index} direction="column" align="center" textAlign="center">
                             <Flex
-                                w={{base:"16", md:"20"}}
-                                h={{base:"16", md:"20"}}
+                                w={{base:"14", md:"20"}}
+                                h={{base:"14", md:"20"}}
                                 bg="blue.100"
                                 rounded="full"
                                 align="center"
                                 justify="center"
                                 mb="6"
                             >
-                                <Icon as={step.icon} boxSize={{base:"7", md:"10"}} color="blue.600" />
+                                <Icon as={step.icon} boxSize={{base:"6", md:"10"}} color="blue.600" />
                             </Flex>
-                            <Heading as="h3" size="md" mb="4">
+                            <Heading as="h3" size="md" mb="4"  fontSize="var(--font-size-normal)">
                                 {index + 1}. {step.title}
                             </Heading>
-                            <Text color="gray.600">
+                            <Text color="gray.600" fontSize="var(--font-size-mini)">
                                 {step.description}
                             </Text>
                         </Flex>
