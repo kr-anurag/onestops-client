@@ -30,11 +30,11 @@ export default function Sidebar() {
     const location = useLocation();
 
     return (
-        <DrawerContent>
+        <DrawerContent width={{base:"275px !important", md:"300px !important" }}>
             <DrawerCloseButton />
             <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody display="flex" flexDirection="column">
-                 <Flex direction="column" justify="space-between" height="100dvh" p="10px">
+                 <Flex direction="column" justify="space-between" height="100dvh" >
                     <Box>
                         {menuItems.map((item) => (
                             <NavLink to={item.path} key={item.name}>

@@ -30,7 +30,7 @@ const HomeHeader = () => {
         <Flex w="1300px" mt="10px" mx="0.8rem">
           <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
-              <HamburgerIcon w={6} h={6} color="white" />
+              <HamburgerIcon w={{base: 5, md: 6}} h={{base: 5, md: 6}} color="white" />
             </Button>
             <Drawer
                 isOpen={isOpen}

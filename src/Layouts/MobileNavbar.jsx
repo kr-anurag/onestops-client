@@ -32,11 +32,13 @@ function MobileNavbar() {
           overflowX={"hidden"}
       >
         {menuItems.map((item) => (
-            <Link to={item.path} key={item.name}>
+            <Link to={item.path} key={item.name} _focus={{ outline: "none" }}>
               <Flex
                   flexDirection="column"
                   alignItems="center"
                   color={location.pathname === item.path ? "blue.500" : "gray.600"}
+                  _focus={{ outline: "none" }}
+
               >
                 <Icon as={item.icon} boxSize={5} />
                 <Text fontSize="0.8rem" mt={1}>{item.name}</Text>

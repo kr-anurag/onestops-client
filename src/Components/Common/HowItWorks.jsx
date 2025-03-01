@@ -50,10 +50,10 @@ const HowItWorks = () => {
                             >
                                 <Icon as={step.icon} boxSize={{base:"6", md:"10"}} color="blue.600" />
                             </Flex>
-                            <Heading as="h3" size="md" mb="4"  fontSize="var(--font-size-normal)">
+                            <Heading as="h3" size="md" mb="4" >
                                 {index + 1}. {step.title}
                             </Heading>
-                            <Text color="gray.600" fontSize="var(--font-size-mini)">
+                            <Text color="gray.600">
                                 {step.description}
                             </Text>
                         </Flex>
