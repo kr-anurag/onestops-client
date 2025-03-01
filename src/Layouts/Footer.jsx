@@ -1,6 +1,7 @@
 import {Box, Container, Image, Link, SimpleGrid, Stack, Text, useColorModeValue} from "@chakra-ui/react";
-import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube} from "react-icons/fa";
 import React from "react";
+import {SocialMediaIcons} from "./HomeFooter";
 
 
 export default function Footer() {
@@ -13,12 +14,12 @@ export default function Footer() {
     };
   return (
           <Box bg={"#f5f5f5"} color={useColorModeValue("gray.700", "gray.200")}>
-              <Box px={5} pt={5}>
-                  <Text fontSize="28px" fontWeight="bold">
-                      OneStops.in
-                  </Text>
-              </Box>
               <Container as={Stack} maxW={"6xl"} py={10}>
+                  <Box pb={5}>
+                      <Text fontSize="28px" fontWeight="bold">
+                          onestops.co.in
+                      </Text>
+                  </Box>
                   <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
                       <Stack align={"flex-start"}>
                           <ListHeader>Company</ListHeader>
@@ -28,33 +29,30 @@ export default function Footer() {
                       </Stack>
                       <Stack align={"flex-start"}>
                           <ListHeader>For Customers</ListHeader>
-                          <Link href={"#"}>Categories near you</Link>
+                          {/*<Link href={"#/services"}>Categories near you</Link>*/}
                           <Link href={"#"}>Contact Us</Link>
                       </Stack>
-                      <Stack align={"flex-start"}>
-                          <ListHeader>For Partners</ListHeader>
-                          <Link href={"#"}>Register as a professional</Link>
-                      </Stack>
+                      {/*<Stack align={"flex-start"}>*/}
+                      {/*    <ListHeader>For Partners</ListHeader>*/}
+                      {/*    <Link href={"#"}>Register as a professional</Link>*/}
+                      {/*</Stack>*/}
 
                       <Box align={"flex-start"}>
                           <ListHeader>Install App</ListHeader>
                           <Stack direction={"row"} spacing={6} mb="20px" mt="20px">
-                              <FaTwitter />
-                              <FaFacebook />
-                              <FaInstagram />
-                              <FaLinkedin />
+                            <SocialMediaIcons size={24}/>
                           </Stack>
-                          <Image
-                              h="36px"
-                              w="108px"
-                              src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648463870745-38fece.png"
-                          />
-                          <Image
-                              h="36px"
-                              w="108px"
-                              mt="20px"
-                              src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648463880397-b2cc52.svg"
-                          />
+                          {/*<Image*/}
+                          {/*    h="36px"*/}
+                          {/*    w="108px"*/}
+                          {/*    src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648463870745-38fece.png"*/}
+                          {/*/>*/}
+                          {/*<Image*/}
+                          {/*    h="36px"*/}
+                          {/*    w="108px"*/}
+                          {/*    mt="20px"*/}
+                          {/*    src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648463880397-b2cc52.svg"*/}
+                          {/*/>*/}
                       </Box>
                   </SimpleGrid>
               </Container>

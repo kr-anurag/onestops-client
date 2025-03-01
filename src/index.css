@@ -10,3 +10,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --font-size-title-mobile: 24px;
+  --font-size-title-tablet: 28px;
+  --font-size-title-big-screen: 32px;
+
+  --font-size-subtitle-mobile: 18px;
+  --font-size-subtitle-tablet: 20px;
+  --font-size-subtitle-big-screen: 24px;
+
+  --font-size-normal-mobile: 14px;
+  --font-size-normal-tablet: 16px;
+  --font-size-normal-big-screen: 18px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-title: var(--font-size-title-tablet);
+    --font-size-subtitle: var(--font-size-subtitle-tablet);
+    --font-size-normal: var(--font-size-normal-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-title: var(--font-size-title-big-screen);
+    --font-size-subtitle: var(--font-size-subtitle-big-screen);
+    --font-size-normal: var(--font-size-normal-big-screen);
+  }
+}
+
+:root {
+  --font-size-title: var(--font-size-title-mobile);
+  --font-size-subtitle: var(--font-size-subtitle-mobile);
+  --font-size-normal: var(--font-size-normal-mobile);
+}

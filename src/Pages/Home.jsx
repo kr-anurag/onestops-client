@@ -49,13 +49,8 @@ const topServices = [
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6b1f5250.png",
-    title: "AC/Appliance Repair",
+    title: "Appliance Repair",
     path: "appliance-services",
-  },
-  {
-    img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_72d18950.png",
-    title: "Cleaning & Pest Control",
-    path: "cleaning-pest-control",
   },
   {
     img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_64/t_high_res_template/categories/category_v2/category_6fbad370.png",
@@ -149,14 +144,13 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign="center" mt={{ base: "115px", md: "250px" }}>
+          <Box textAlign={{md: "center"}} mt={{ base: "115px", md: "250px" }} px="2rem">
             <Text
                 color="#fff"
-                fontSize={{ base: "3xl", md: "5xl" }}
+                fontSize={{ base: "2xl", md: "5xl" }}
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
-                // textShadow="2px 2px 4px rgba(0, 0, 0, 0.9)"
             >
               Endless possibilities, just one request away.
             </Text>
@@ -185,7 +179,7 @@ const Home = () => {
                     display="flex"
                     justifyContent="space-between"
                     flexDirection="column"
-                    _hover={{ bg: "#e5e5e5" }}
+                    _hover={{ bg: "#e5e5e5", boxShadow: "lg" }}
                     onClick={() => moveToMG(el?.path)}
                 >
                   <Box w="fit-content" alignSelf="center">

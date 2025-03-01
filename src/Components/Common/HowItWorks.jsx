@@ -1,12 +1,17 @@
 import { Box, Flex, Grid, Heading, Icon, Text } from "@chakra-ui/react";
 import React from "react";
-import { FaSearch, FaCalendarAlt, FaCheckCircle } from "react-icons/fa";
+import {FaSearch, FaCalendarAlt, FaCheckCircle, FaVideo} from "react-icons/fa";
 
 const steps = [
     {
         icon: FaSearch,
         title: "Choose Your Service",
         description: "Browse through our services and select what you need",
+    },
+    {
+        icon: FaVideo,
+        title: "Consult Our Expert",
+        description: "Consult our expert on video call from Home",
     },
     {
         icon: FaCalendarAlt,
@@ -24,16 +29,14 @@ const steps = [
 const HowItWorks = () => {
     return (
         <Box py="20" bg="#f2f4f6">
-            <Box maxW={"1100px"} mx="auto" px="4">
-                <Heading as="h2" textAlign="center" mb="4" fontSize={{ base: "24px", md: "32px" }}
-                         fontWeight="700"
-                         color="#212121">
+            <Box maxW={"1200px"} mx="auto" px="4">
+                <Heading as="h2" textAlign="center" mb="4" fontSize="var(--font-size-title)" fontWeight="700" color="#212121">
                     How It Works
                 </Heading>
                 <Text fontSize={{ base: "16px", md: "20px" }} color="gray.600" textAlign="center" mb="12">
                     Book your service in just a few simple steps
                 </Text>
-                <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap="8">
+                <Grid templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }} gap="8">
                     {steps.map((step, index) => (
                         <Flex key={index} direction="column" align="center" textAlign="center">
                             <Flex

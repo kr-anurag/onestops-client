@@ -15,6 +15,7 @@ import {NavLink, useLocation} from "react-router-dom";
 import {FaHome, FaShoppingCart, FaClipboardList, FaInfoCircle} from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdMiscellaneousServices} from "react-icons/md";
+import {SocialMediaIcons} from "./HomeFooter";
 
 const menuItems = [
     { name: "Home", path: "/", icon: FaHome },
@@ -60,6 +61,10 @@ export default function Sidebar() {
                                 </Flex>
                             )}</Box>
                         <Box>
+                            <Box mb={4} display={"flex"} justifyContent={"center"}>
+                                <SocialMediaIcons size={22}/>
+                            </Box>
+
                             {!user ? (
                                 <Button onClick={handleLogin} w={"full"} leftIcon={<FcGoogle />}>
                                     Sign in with Google

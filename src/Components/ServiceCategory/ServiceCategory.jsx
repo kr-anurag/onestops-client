@@ -13,7 +13,6 @@ const ServiceCategory = ({ title, services, }) => {
         <Box
             display="flex"
             flexDirection="column"
-            // borderBottom="16px solid #f2f4f6"
             p={{ base: "20px 0 40px", md: "50px 0 70px" }}
             gap="3rem"
             maxW={"1200px"}
@@ -41,15 +40,14 @@ const ServiceCategory = ({ title, services, }) => {
                         onClick={() => handleServiceClick(service.path)}
                         cursor="pointer"
                     >
-                        <Box>
+                        <Box px={{ base: "20px", md: "0px" }}>
                             <Image
                                 mb="20px"
                                 transition="transform 0.4s"
                                 _hover={{ transform: "scale(1.05)" }}
-                                rounded="md"
+                                rounded="lg"
                                 h={{ base: "220px", md: "180px" }}
                                 w={{ base: "100%", md: "300px" }}
-                                px={{ base: "20px", md: "0px" }}
                                 src={service.img}
                             />
                         </Box>
