@@ -175,11 +175,12 @@ const Home = () => {
 };
 
 const imgArr = [
-  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657006546486-545754.jpeg",
-  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733512041-813a4c.jpeg",
-  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733511465-f22ed1.jpeg",
-  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733505075-80d1ba.jpeg",
-  "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_568/t_high_res_template/images/growth/luminosity/1657733505585-4d3fe3.jpeg",
+  "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%203.png?updatedAt=1740917970719",
+  "https://ik.imagekit.io/ulyn7697x/Onestop%20Ads%202.png?updatedAt=1740917970609",
+  "https://ik.imagekit.io/ulyn7697x/Onestop%20ads%204.png?updatedAt=1740918218022",
+  "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%205.png?updatedAt=1740918217809",
+  "https://ik.imagekit.io/ulyn7697x/ondemand.png?updatedAt=1740918384244",
+    "https://ik.imagekit.io/ulyn7697x/ondemand-service.png?updatedAt=1740918383984"
 ];
 
 const SearchBar = ({searchQuery, setSearchQuery}) => (
