@@ -59,7 +59,7 @@ const topServices = [
   },
   {
     img: "https://ik.imagekit.io/ulyn7697x/customer-service.png?updatedAt=1740976487463",
-    title: "All Services",
+    title: "Other Services",
     path: "",
   },
 ];
@@ -120,9 +120,9 @@ const Home = () => {
           {filteredServices.length > 0 ? (
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
-              spacing={5}
+              spacing={6}
               w={{ base: "85%", lg: "900px" }}
-              m="-70px auto 0"
+              m="-60px auto 0"
               p="24px"
               rounded="md"
               bg="white"
@@ -151,7 +151,7 @@ const Home = () => {
                       lineHeight={"16px"}
                       mt={"8px"}
                       h="40px"
-                      fontSize="14px"
+                      fontSize={{base: "12px", md: "14px", lg: "16px"}}
                       color="#212121"
                   >
                     {el.title}
@@ -185,7 +185,6 @@ const imgArr = [
   "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%203.png?updatedAt=1740917970719",
   "https://ik.imagekit.io/ulyn7697x/Onestop%20Ads%202.png?updatedAt=1740917970609",
   "https://ik.imagekit.io/ulyn7697x/Onestop%20ads%204.png?updatedAt=1740918218022",
-  "https://ik.imagekit.io/ulyn7697x/ondemand.png?updatedAt=1740918384244",
 ];
 
 const SearchBar = ({searchQuery, setSearchQuery}) => (
