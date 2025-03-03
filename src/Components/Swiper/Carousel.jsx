@@ -1,24 +1,24 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { Image, Box } from "@chakra-ui/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import "../Swiper/styles.css";
 
-export default function Carousel({images}) {
-
-
+export default function Carousel({ images }) {
     return (
-        <Box  w={{base: "90%", md: "80%"}} m={"auto"}>
+        <Box w={{ base: "90%", md: "80%" }} m={"auto"}>
             <Swiper
                 slidesPerView={4}
                 slidesPerGroup={1}
                 spaceBetween={20}
                 className="external-buttons"
-                loop={false}
+                loop={true}
                 loopFillGroupWithBlank={true}
-                navigation={true}
-                modules={[Navigation]}
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
+                modules={[Navigation, Autoplay]}
+                // navigation={true}
                 breakpoints={{
                     320: { slidesPerView: 1, spaceBetween: 10 },
                     480: { slidesPerView: 2, spaceBetween: 10 },
@@ -31,9 +31,9 @@ export default function Carousel({images}) {
                         <Box
                             transition="transform .2s"
                             _hover={{ transform: "scale(1.05)" }}
-                            aspectRatio={3/2}
+                            aspectRatio={3 / 2}
                         >
-                            <Image src={el} alt="" />
+                            <Image src={el} alt="" borderRadius="lg" />
                         </Box>
                     </SwiperSlide>
                 ))}

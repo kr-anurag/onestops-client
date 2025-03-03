@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import {Link} from "react-router-dom";
 import {FaFacebook, FaInstagram, FaTwitter, FaYoutube} from "react-icons/fa";
+import {FaXTwitter} from "react-icons/fa6";
 
 const HomeFooter = () => {
   const city = [
@@ -83,7 +84,7 @@ export const SocialMediaIcons = ({size}) => {
   const iconSize = size+"px" || "24px";
   const socialMedia = [
     { icon: <FaFacebook size={iconSize} />, url: "https://www.facebook.com/profile.php?id=61570912250470" },
-    { icon: <FaTwitter size={iconSize} />, url: "https://x.com/OneStops007" },
+    { icon: <FaXTwitter size={iconSize} />, url: "https://x.com/OneStops007" },
     { icon: <FaInstagram size={iconSize} />, url: "https://www.instagram.com/onestop_youronesolution2024?igsh=MW5uZGMydndvMG9pYw%3D%3D&utm_source=qr" },
     { icon: <FaYoutube size={iconSize} />, url: "https://youtube.com/@onestop-yos?si=_j0qZ_OZHj5HTBFJ" },
   ];

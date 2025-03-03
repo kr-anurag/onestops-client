@@ -47,11 +47,11 @@ export const ServicesDatabase = [
         "title": "Electrician Services",
         "smallImg": [
             {
-                "img": "https://res.cloudinary.com/your-image-path/switch-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/switch.png?updatedAt=1740977784661",
                 "title": "Switch Related Services"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/fan-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/air-conditioner.png?updatedAt=1740977890072",
                 "title": "Fan Related Works"
             },
             {

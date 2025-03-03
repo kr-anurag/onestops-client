@@ -57,6 +57,11 @@ const topServices = [
     title: "Painters",
     path: "painting-services",
   },
+  {
+    img: "https://ik.imagekit.io/ulyn7697x/customer-service.png?updatedAt=1740976487463",
+    title: "All Services",
+    path: "",
+  },
 ];
 
 const Home = () => {
@@ -90,7 +95,7 @@ const Home = () => {
   return (
       <>
         <Box
-            h={{ base: "478px", md: "598px" }}
+            h={{ base: "428px", md: "528px" }}
             bgImage="url('https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1615375782838-f890f8.jpeg')"
             bgPosition="center"
             bgRepeat="no-repeat"
@@ -98,10 +103,10 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign={{ md: "center" }} mt={{ base: "115px", md: "210px" }} px="2rem">
+          <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "120px", lg: "180px" }} px="2rem">
             <Text
                 color="#fff"
-                fontSize={{ base: "2xl", md: "5xl" }}
+                fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeIn} 1.5s ease-in-out`}
@@ -116,7 +121,7 @@ const Home = () => {
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
               spacing={5}
-              w={{ base: "85%", lg: "954px" }}
+              w={{ base: "85%", lg: "900px" }}
               m="-70px auto 0"
               p="24px"
               rounded="md"
@@ -175,19 +180,19 @@ const Home = () => {
 };
 
 const imgArr = [
+  "https://ik.imagekit.io/ulyn7697x/ondemand.png?updatedAt=1740918384244",
+  "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%205.png?updatedAt=1740918217809",
   "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%203.png?updatedAt=1740917970719",
   "https://ik.imagekit.io/ulyn7697x/Onestop%20Ads%202.png?updatedAt=1740917970609",
   "https://ik.imagekit.io/ulyn7697x/Onestop%20ads%204.png?updatedAt=1740918218022",
-  "https://ik.imagekit.io/ulyn7697x/Onestops%20Ads%205.png?updatedAt=1740918217809",
   "https://ik.imagekit.io/ulyn7697x/ondemand.png?updatedAt=1740918384244",
-    "https://ik.imagekit.io/ulyn7697x/ondemand-service.png?updatedAt=1740918383984"
 ];
 
 const SearchBar = ({searchQuery, setSearchQuery}) => (
     <Box
         display="flex"
         gap="1rem"
-        m="20px auto"
+        m="1rem auto"
         w={{ base: "90%", md: "fit-content" }}
         p="10px"
         flexDirection={{ base: "column", md: "row" }}
