@@ -120,7 +120,7 @@ const Home = () => {
           {filteredServices.length > 0 ? (
           <SimpleGrid
               columns={{ base: 2, sm: 3, md: 4, lg: 6 }}
-              spacing={6}
+              spacing={5}
               w={{ base: "85%", lg: "900px" }}
               m="-60px auto 0"
               p="24px"
@@ -151,7 +151,7 @@ const Home = () => {
                       lineHeight={"16px"}
                       mt={"8px"}
                       h="40px"
-                      fontSize={{base: "12px", md: "14px", lg: "16px"}}
+                      fontSize={{base: "14px", md: "14px", lg: "16px"}}
                       color="#212121"
                   >
                     {el.title}

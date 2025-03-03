@@ -53,7 +53,7 @@ export default function Sidebar() {
                             <Divider />
                         <Box >
                             {user && (
-                                <Flex gap="1rem" alignItems={"center"}>
+                                <Flex gap="1rem" alignItems={"center"} justifyContent={"center"}>
                                     <Image src={user.picture} w="40px" h="40px" borderRadius="50%" />
                                         <Text textAlign="center" fontWeight={"600"}>
                                             {user.name}
