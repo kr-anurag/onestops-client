@@ -14,9 +14,7 @@ import { Appcontext } from "../Context/Appcontext";
 import Sidebar from "./Sidebar";
 import {HamburgerIcon, LockIcon} from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import logo from "./../assests/logo-white.png"
-import InstallAppButton from "../Components/InstallApp/InstallAppNotification";
-import {FaLock} from "react-icons/fa";
+import logo from "./../assests/onestop-logo.png"
 import {MdLocationOn} from "react-icons/md";
 
 
@@ -31,7 +29,7 @@ const HomeHeader = () => {
         <Flex w="1300px" mt="10px" mx="0.8rem">
           <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
-              <HamburgerIcon w={{base: 5, md: 6}} h={{base: 5, md: 6}} color="white" />
+              <HamburgerIcon w={{base: 6, md: 6}} h={{base: 6, md: 6}}  />
             </Button>
             <Drawer
                 isOpen={isOpen}
@@ -52,15 +50,13 @@ const HomeHeader = () => {
                  justifyContent="center" flexDirection="column"
                  ml={"0.7rem"}>
               <Text
-                  color="#fff"
                   fontSize={{base: "xl", md: "3xl"}}
                   fontWeight={"700"}
-                  // display={{base: "none", md: "block"}}
                   fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">onestop's
               </Text>
-              <Box display="flex" color="#fff" alignItems="center" gap={"0.2rem"}>
+              <Box display="flex" alignItems="center" gap={"0.2rem"}>
                 <MdLocationOn />
-                <Text  color="#fff" fontSize="12px">
+                <Text  fontSize="12px">
                  Mumbai
                 </Text>
               </Box>

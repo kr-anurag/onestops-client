@@ -83,12 +83,15 @@ const Home = () => {
 
 
 
-  const fadeIn = keyframes`
-    from {
+// Define the keyframes for the animation
+  const fadeInUp = keyframes`
+    0% {
       opacity: 0;
+      transform: translateY(20px);
     }
-    to {
+    100% {
       opacity: 1;
+      transform: translateY(0);
     }
   `;
 
@@ -96,7 +99,7 @@ const Home = () => {
       <>
         <Box
             h={{ base: "428px", md: "528px" }}
-            bgImage="url('https://res.cloudinary.com/urbanclap/image/upload/images/growth/home-screen/1615375782838-f890f8.jpeg')"
+            bgImage="url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgAttachment="fixed"
@@ -106,16 +109,19 @@ const Home = () => {
           <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "120px", lg: "180px" }} px="2rem">
             <Text
                 color="#fff"
-                fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+                fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
-                animation={`${fadeIn} 1.5s ease-in-out`}
+                animation={`${fadeInUp} 1.5s ease-in-out`}
+                textShadow="2px 2px 4px rgba(0, 0, 0, 0.7)"
             >
               Endless possibilities, just one request away.
             </Text>
           </Box>
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
         </Box>
+
+
         <Box>
           {filteredServices.length > 0 ? (
           <SimpleGrid
