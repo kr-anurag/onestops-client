@@ -99,7 +99,7 @@ const Home = () => {
       <>
         <Box
             h={{ base: "458px", md: "528px" }}
-            background="linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
+            background="linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgAttachment="fixed"
