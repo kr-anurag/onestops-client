@@ -106,7 +106,7 @@ const Home = () => {
             bgSize="cover"
         >
           <HomeHeader />
-          <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "120px", lg: "180px" }} px="2rem">
+          <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "120px", lg: "220px" }} px="2rem">
             <Text
                 color="#fff"
                 fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -114,6 +114,7 @@ const Home = () => {
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeInUp} 1.5s ease-in-out`}
                 textShadow="2px 2px 4px rgba(0, 0, 0, 0.7)"
+                lineHeight={{base: "40px", md: "50px"}}
             >
               Endless possibilities, just one request away.
             </Text>
