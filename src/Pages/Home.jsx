@@ -99,7 +99,7 @@ const Home = () => {
       <>
         <Box
             h={{ base: "458px", md: "528px" }}
-            bgImage="url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
+            background="linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%), url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
             bgPosition="center"
             bgRepeat="no-repeat"
             bgAttachment="fixed"
@@ -113,7 +113,6 @@ const Home = () => {
                 fontWeight="800"
                 fontFamily="axiforma-semiBold,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif"
                 animation={`${fadeInUp} 1.5s ease-in-out`}
-                textShadow="2px 2px 4px rgba(0, 0, 0, 0.7)"
                 lineHeight={{base: "40px", md: "50px"}}
             >
               Endless possibilities, just one request away.

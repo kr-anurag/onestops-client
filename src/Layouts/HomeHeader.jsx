@@ -14,7 +14,7 @@ import { Appcontext } from "../Context/Appcontext";
 import Sidebar from "./Sidebar";
 import {HamburgerIcon, LockIcon} from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import logo from "./../assests/onestop-logo.png"
+import logo from "./../assests/logo-white.png"
 import {MdLocationOn} from "react-icons/md";
 
 
@@ -25,11 +25,11 @@ const HomeHeader = () => {
 
   return (
     <>
-      <Flex h="60px" justifyContent="center">
+      <Flex h="60px" justifyContent="center" color="#fff">
         <Flex w="1300px" mt="10px" mx="0.8rem" >
           <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
-              <HamburgerIcon w={{base: 6, md: 6}} h={{base: 6, md: 6}}  />
+              <HamburgerIcon w={{base: 6, md: 6}} h={{base: 6, md: 6}}  color="#fff"/>
             </Button>
             <Drawer
                 isOpen={isOpen}
