@@ -16,7 +16,7 @@ export default function Carousel({ images }) {
                 className="external-buttons"
                 loop={true}
                 loopFillGroupWithBlank={true}
-                autoplay={{ delay: 2000, disableOnInteraction: false }}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
                 modules={[Navigation, Autoplay]}
                 // navigation={true}
                 breakpoints={{
