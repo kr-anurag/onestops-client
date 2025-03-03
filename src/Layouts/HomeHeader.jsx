@@ -26,7 +26,7 @@ const HomeHeader = () => {
   return (
     <>
       <Flex h="60px" justifyContent="center">
-        <Flex w="1300px" mt="10px" mx="0.8rem">
+        <Flex w="1300px" mt="10px" mx="0.8rem" >
           <Box  display={"flex"} alignItems="center">
             <Button ref={btnRef} onClick={onOpen} bg="transparent" _hover={{ bg: "transparent" }}>
               <HamburgerIcon w={{base: 6, md: 6}} h={{base: 6, md: 6}}  />

@@ -98,7 +98,7 @@ const Home = () => {
   return (
       <>
         <Box
-            h={{ base: "428px", md: "528px" }}
+            h={{ base: "458px", md: "528px" }}
             bgImage="url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1740981992690')"
             bgPosition="center"
             bgRepeat="no-repeat"
