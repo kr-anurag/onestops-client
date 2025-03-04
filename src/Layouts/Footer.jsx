@@ -38,7 +38,7 @@ export default function Footer() {
                       {/*</Stack>*/}
 
                       <Box align={"flex-start"}>
-                          <ListHeader>Install App</ListHeader>
+                          <ListHeader>Follow us</ListHeader>
                           <Stack direction={"row"} spacing={6} mb="20px" mt="20px">
                             <SocialMediaIcons size={24}/>
                           </Stack>
