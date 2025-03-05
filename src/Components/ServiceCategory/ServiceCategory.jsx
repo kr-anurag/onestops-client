@@ -1,12 +1,20 @@
 import React from "react";
 import {Box, Text, Image, Flex, Grid} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Masonry from 'react-masonry-css';
 
 const ServiceCategory = ({ title, services, }) => {
     const navigate = useNavigate();
 
     const handleServiceClick = (path) => {
         navigate(`/services/${path}`);
+    };
+
+    const breakpointColumnsObj = {
+        default: 4,
+        1100: 3,
+        700: 2,
+        500: 1
     };
 
     return (
@@ -50,9 +58,9 @@ const ServiceCategory = ({ title, services, }) => {
                                 transition="transform 0.4s"
                                 _hover={{ transform: "scale(1.05)" }}
                                 rounded="lg"
-                                h={{ base: "auto", md: "180px" }}
                                 w="100%"
                                 src={service.img}
+                                aspectRatio={3 / 2}
                             />
                             <Text
                                 width="100%"

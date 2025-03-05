@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper";
+import { Navigation, Autoplay, Pagination } from "swiper";
 import { Image, Box } from "@chakra-ui/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import "swiper/css/pagination";
 import "../Swiper/styles.css";
 
 export default function Carousel({ images }) {
@@ -17,11 +18,12 @@ export default function Carousel({ images }) {
                 loop={true}
                 loopFillGroupWithBlank={true}
                 autoplay={{ delay: 2000, disableOnInteraction: false }}
-                modules={[Navigation, Autoplay]}
+                modules={[Navigation, Autoplay, Pagination]}
                 // navigation={true}
+                pagination={{ clickable: true }}
                 breakpoints={{
                     320: { slidesPerView: 1, spaceBetween: 10 },
-                    480: { slidesPerView: 2, spaceBetween: 10 },
+                    480: { slidesPerView: 1, spaceBetween: 10 },
                     768: { slidesPerView: 3, spaceBetween: 15 },
                     1024: { slidesPerView: 4, spaceBetween: 20 },
                 }}

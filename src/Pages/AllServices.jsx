@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
-import { cleaningServices, homeRepairServices } from "../Utils/Database";
+import { allServices } from "../Utils/Database";
 import OnDemandService from "../Components/ServiceCategory/OnDemandService";
 import { Box, Flex, Image, Input, InputGroup, InputLeftElement, Text } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
@@ -8,11 +8,11 @@ import demandImage from "./../assests/ondemand.png";
 
 const AllServices = () => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [filteredServices, setFilteredServices] = useState(homeRepairServices);
+    const [filteredServices, setFilteredServices] = useState(allServices);
 
     useEffect(() => {
         setFilteredServices(
-            homeRepairServices.filter((service) =>
+            allServices.filter((service) =>
                 service.title.toLowerCase().includes(searchQuery.toLowerCase())
             )
         );
@@ -49,6 +49,7 @@ const AllServices = () => {
                         boxSize={{ base: "100%", md: "50%" }}
                         objectFit="cover"
                         width={{ base: "100%", md: "55%" }}
+
                     />
                     <Box flex="1" ml={{ md: "20px" }} mt={{ base: "20px", md: "0" }} p={{ base: "1rem", md: "1.5rem" }}>
                         <OnDemandService />

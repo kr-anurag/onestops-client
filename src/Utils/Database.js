@@ -1,5 +1,38 @@
 import { v4 as uuid } from "uuid";
 
+export const topServices = [
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
+        title: "Electricians",
+        path: "electrician-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
+        title: "Appliance Repair",
+        path: "appliance-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/woman.png?updatedAt=1740831155914",
+        title: "Carpenters",
+        path: "carpenter-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/plumber%20(1).png?updatedAt=1740853653226",
+        title: "Plumbers",
+        path: "plumber-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/painter%20(1).png?updatedAt=1740831438506",
+        title: "Painters",
+        path: "painting-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/customer-service.png?updatedAt=1740976487463",
+        title: "Other Services",
+        path: "",
+    },
+];
+
 export const  cleaningServices = [
     {
         img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg",
@@ -13,31 +46,41 @@ export const  cleaningServices = [
     },
 ];
 
-export const homeRepairServices = [
+export const allServices = [
     {
-        img: "https://public.readdy.ai/ai/img_res/86f8fe318aa84c3a8dc23a7457963375.jpg",
+        img: "https://ik.imagekit.io/ulyn7697x/86f8fe318aa84c3a8dc23a7457963375.jpg?updatedAt=1740982108305",
         title: "Home Furniture & Carpenters",
         path: "carpenter-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/c51405fecd029f91ae69e8bedfeeabeb.jpg",
+        img: "https://ik.imagekit.io/ulyn7697x/c51405fecd029f91ae69e8bedfeeabeb.jpg?updatedAt=1740982112780",
         title: "Electricians",
         path: "electrician-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/9e4f03a71df8bd5d310b18dbd3e71540.jpg",
+        img: "https://ik.imagekit.io/ulyn7697x/9e4f03a71df8bd5d310b18dbd3e71540.jpg?updatedAt=1740982108434",
         title: "Plumbers",
         path: "plumber-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/71d56df0b76fe646babd8d137382b495.jpg",
+        img: "https://ik.imagekit.io/ulyn7697x/71d56df0b76fe646babd8d137382b495.jpg?updatedAt=1740982108586",
         title: "Appliance Repair",
         path: "appliance-services",
     },
     {
-        img: "https://public.readdy.ai/ai/img_res/80c5407b7a53cdcb2a6b905dd8716501.jpg",
+        img: "https://ik.imagekit.io/ulyn7697x/80c5407b7a53cdcb2a6b905dd8716501.jpg?updatedAt=1740982109014",
         title: "Painting & Waterproofing",
         path: "painting-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/laundary_uPQf12XuVG?updatedAt=1741172526408",
+        title: "Laundry",
+        path: "laundry-services",
+    },
+    {
+        img: "https://ik.imagekit.io/ulyn7697x/Untitled%20design%20(2).png?updatedAt=1741169254608",
+        title: "Tiffin Services",
+        path: "tiffin-services",
     },
 ];
 
@@ -566,6 +609,95 @@ export const ServicesDatabase = [
             }
         ]
     },
+    {
+        id: "laundry-services",
+        title: "Laundry",
+        rating: 4.6,
+        reviews: "350k",
+        smallImg: [
+            {
+                img: "https://example.com/home-clothes.jpg",
+                title: "Home Clothes",
+            },
+            {
+                img: "https://example.com/hotels-clothes.jpg",
+                title: "Hotels Clothes",
+            },
+            {
+                img: "https://example.com/gaalicha-washing.jpg",
+                title: "Gaalicha Washing",
+            },
+            {
+                img: "https://example.com/shoes-washing.jpg",
+                title: "Shoes Washing",
+            }
+        ],
+        packages: [
+            {
+                id: uuid(),
+                name: "Home Clothes Laundry",
+                time: "Depends upon quantity",
+                list: ["Washing", "Ironing", "Folding"],
+            },
+            {
+                id: uuid(),
+                name: "Hotels Clothes Laundry",
+                time: "Depends upon quantity",
+                list: ["Bulk Washing", "Dry Cleaning", "Folding"],
+            },
+            {
+                id: uuid(),
+                name: "Gaalicha Washing",
+                time: "Depends upon quantity",
+                list: ["Deep Carpet Cleaning", "Drying", "Vacuuming"],
+            },
+            {
+                id: uuid(),
+                name: "Shoes Washing",
+                time: "Depends upon quantity",
+                list: ["Shoe Cleaning", "Deodorizing", "Polishing"],
+            },
+        ]
+    },{
+        id: "tiffin-services",
+        title: "Tiffin Services",
+        rating: 4.7,
+        reviews: "500k",
+        smallImg: [
+            {
+                img: "https://example.com/mess.jpg",
+                title: "Mess Tiffin",
+            },
+            {
+                img: "https://example.com/office-tiffin.jpg",
+                title: "Office Tiffin",
+            },
+            {
+                img: "https://example.com/home-tiffin.jpg",
+                title: "Home Tiffin",
+            }
+        ],
+        packages: [
+            {
+                id: uuid(),
+                name: "Mess Tiffin Plan",
+                time: "1 month",
+                list: ["Breakfast + Lunch + Dinner", "Veg Meals", "Daily Fresh"],
+            },
+            {
+                id: uuid(),
+                name: "Office Tiffin Plan",
+                time: "1 month",
+                list: ["Lunch Only", "Varied Menu", "Healthy & Hygienic"],
+            },
+            {
+                id: uuid(),
+                name: "Home Tiffin Plan",
+                time: "1 month",
+                list: ["Lunch + Dinner", "Home-Cooked Style", "Customizable"],
+            }
+        ]
+    }
 ];
 
 

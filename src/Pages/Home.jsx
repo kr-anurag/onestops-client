@@ -28,41 +28,11 @@ import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import Testimonials from "../Components/Testmonial/Testimonial";
 import HowItWorks from "../Components/Common/HowItWorks";
 import Statistics from "../Components/Common/Statistics";
-import { cleaningServices, homeRepairServices, sampleTestimonials } from "../Utils/Database";
+import {allServices, sampleTestimonials, topServices} from "../Utils/Database";
 import {keyframes} from "@emotion/react";
+import HomeCarousel from "../Components/HomeCarousel";
 
-const topServices = [
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
-    title: "Electricians",
-    path: "electrician-services",
-  },
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
-    title: "Appliance Repair",
-    path: "appliance-services",
-  },
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/woman.png?updatedAt=1740831155914",
-    title: "Carpenters",
-    path: "carpenter-services",
-  },
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/plumber%20(1).png?updatedAt=1740853653226",
-    title: "Plumbers",
-    path: "plumber-services",
-  },
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/painter%20(1).png?updatedAt=1740831438506",
-    title: "Painters",
-    path: "painting-services",
-  },
-  {
-    img: "https://ik.imagekit.io/ulyn7697x/customer-service.png?updatedAt=1740976487463",
-    title: "Other Services",
-    path: "",
-  },
-];
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -176,7 +146,7 @@ const Home = () => {
         <Box p="10px 0 64px" mt="70px">
           <Carousel images={imgArr} />
         </Box>
-        <ServiceCategory title="Our Services" services={homeRepairServices} />
+        <ServiceCategory title="Our Services" services={allServices} />
         <HowItWorks />
         <Testimonials testimonials={sampleTestimonials} />
         <Statistics />
