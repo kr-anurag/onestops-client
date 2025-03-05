@@ -54,7 +54,7 @@ const ServiceCategory = ({ title, services, }) => {
                                 px="8px"
                                 py="2px"
                                 rounded="md"
-                                fontSize="12px"
+                                fontSize={{base: "10px", md: "12px"}}
                                 fontWeight="bold"
                                 zIndex="999"
                             >
