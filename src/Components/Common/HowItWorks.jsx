@@ -29,7 +29,7 @@ const HowItWorks = () => {
     return (
         <Box py={{ base: "10", md: "20" }} bg="#f2f4f6">
             <Box maxW="1200px" mx="auto" px={{ base: "2", md: "4" }}>
-                <Heading as="h2" textAlign="center" mb={{ base: "2", md: "4" }} fontSize={{ base: "2xl", md: "var(--font-size-title)" }} fontWeight="700" color="#212121">
+                <Heading as="h2" textAlign="center" mb={{ base: "2", md: "4" }} fontSize= "var(--font-size-title)" fontWeight="700" color="#212121">
                     How It Works
                 </Heading>
                 <Text fontSize={{ base: "sm", md: "var(--font-size-normal)" }} color="gray.600" textAlign="center" mb={{ base: "6", md: "12" }}>
