@@ -12,8 +12,8 @@ code {
 }
 
 :root {
-  --font-size-title-mobile: 24px;
-  --font-size-title-tablet: 28px;
+  --font-size-title-mobile: 20px;
+  --font-size-title-tablet: 26px;
   --font-size-title-big-screen: 32px;
 
   --font-size-subtitle-mobile: 18px;

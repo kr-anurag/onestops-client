@@ -45,6 +45,21 @@ const ServiceCategory = ({ title, services, }) => {
                             cursor="pointer"
                             position="relative"
                         >
+                            {service.tag && <Box
+                                position="absolute"
+                                top="10px"
+                                right="10px"
+                                bg="red.500"
+                                color="white"
+                                px="8px"
+                                py="2px"
+                                rounded="md"
+                                fontSize="12px"
+                                fontWeight="bold"
+                                zIndex="999"
+                            >
+                                {service.tag}
+                            </Box>}
                             <Image
                                 mb="20px"
                                 transition="transform 0.4s"

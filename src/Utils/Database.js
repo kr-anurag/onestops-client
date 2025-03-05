@@ -5,6 +5,7 @@ export const topServices = [
         img: "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
         title: "Electricians",
         path: "electrician-services",
+        tag: "Most Ordered",
     },
     {
         img: "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
@@ -33,18 +34,7 @@ export const topServices = [
     },
 ];
 
-export const  cleaningServices = [
-    {
-        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg",
-        title: "Bathroom & Kitchen Cleaning",
-        path: "bathroom-kitchen-cleaning",
-    },
-    {
-        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1630420912606-2fffa6.jpeg",
-        title: "Sofa & Carpet Cleaning",
-        path: "sofa-carpet-cleaning",
-    },
-];
+
 
 export const allServices = [
     {
@@ -56,6 +46,7 @@ export const allServices = [
         img: "https://ik.imagekit.io/ulyn7697x/c51405fecd029f91ae69e8bedfeeabeb.jpg?updatedAt=1740982112780",
         title: "Electricians",
         path: "electrician-services",
+        tag: "Most Ordered",
     },
     {
         img: "https://ik.imagekit.io/ulyn7697x/9e4f03a71df8bd5d310b18dbd3e71540.jpg?updatedAt=1740982108434",
@@ -76,11 +67,13 @@ export const allServices = [
         img: "https://ik.imagekit.io/ulyn7697x/laundary_uPQf12XuVG?updatedAt=1741172526408",
         title: "Laundry",
         path: "laundry-services",
+        tag: "Newly Added",
     },
     {
         img: "https://ik.imagekit.io/ulyn7697x/Untitled%20design%20(2).png?updatedAt=1741169254608",
         title: "Tiffin Services",
         path: "tiffin-services",
+        tag: "Newly Added",
     },
 ];
 
@@ -795,3 +788,16 @@ export const sampleTestimonials = [
     },
 ];
 
+
+export const  cleaningServices = [
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1625159882387-9585c7.jpeg",
+        title: "Bathroom & Kitchen Cleaning",
+        path: "bathroom-kitchen-cleaning",
+    },
+    {
+        img: "https://res.cloudinary.com/urbanclap/image/upload/q_auto,f_auto,fl_progressive:steep,w_532/t_high_res_category/images/growth/home-screen/1630420912606-2fffa6.jpeg",
+        title: "Sofa & Carpet Cleaning",
+        path: "sofa-carpet-cleaning",
+    },
+];
