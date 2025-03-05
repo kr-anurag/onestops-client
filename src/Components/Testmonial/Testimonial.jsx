@@ -36,7 +36,7 @@ const Testimonials = ({ testimonials }) => {
                     fontWeight="700"
                     color="#212121"
                     textAlign="center"
-                    mb={4}
+                    mb={2}
                 >
                     Customer Reviews
                 </Text>

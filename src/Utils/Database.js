@@ -83,19 +83,19 @@ export const ServicesDatabase = [
         "title": "Electrician Services",
         "smallImg": [
             {
-                "img": "https://ik.imagekit.io/ulyn7697x/switch.png?updatedAt=1740977784661",
+                "img": "https://public.readdy.ai/ai/img_res/1ab843c2299661d23d26802b76ecd5b3.jpg",
                 "title": "Switch Related Services"
             },
             {
-                "img": "https://ik.imagekit.io/ulyn7697x/air-conditioner.png?updatedAt=1740977890072",
+                "img": "https://public.readdy.ai/ai/img_res/fdff63a5f3b46fa6a4332afd7fefd446.jpg",
                 "title": "Fan Related Works"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/light-services.jpg",
+                "img": "https://public.readdy.ai/ai/img_res/0962f630dfd714d95932deabc2ea2705.jpg",
                 "title": "Wall/Ceiling Light Related Works"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/appliance-services.jpg",
+                "img": "https://public.readdy.ai/ai/img_res/e80a0680688f579a094aa3abc200f5cd.jpg",
                 "title": "Appliance Related Works"
             },
             {
@@ -328,14 +328,13 @@ export const ServicesDatabase = [
         "id": "carpenter-services",
         "title": "Carpenter Services",
         "smallImg": [
-            { "img": "placeholder.jpg", "title": "Cupboard & Drawer" },
+            { "img": "https://public.readdy.ai/ai/img_res/ae0aef34113e8f9d9c001f27a19f5543.jpg", "title": "Cupboard & Drawer" },
             { "img": "placeholder.jpg", "title": "Drill & Hang Services" },
             { "img": "placeholder.jpg", "title": "Door Services" },
             { "img": "placeholder.jpg", "title": "Windows and Curtain" },
             { "img": "placeholder.jpg", "title": "Bed Related Services" },
             { "img": "placeholder.jpg", "title": "Clothes Hangers" },
-            { "img": "placeholder.jpg", "title": "Furniture Repair" },
-            { "img": "placeholder.jpg", "title": "Carpenter Visit" }
+            { "img": "https://public.readdy.ai/ai/img_res/1b2c690f56c96763ee4966a6c62517ef.jpg", "title": "Furniture Repair" },
         ],
         "packages": [
             {
@@ -434,13 +433,13 @@ export const ServicesDatabase = [
         "id": "appliance-services",
         "title": "Appliance Repair Services",
         "smallImg": [
-            { "img": "placeholder.jpg", "title": "A/C Repair and Services" },
+            { "img": "https://public.readdy.ai/ai/img_res/977688b11f80fa24354977706406b8dd.jpg", "title": "A/C Repair and Services" },
             { "img": "placeholder.jpg", "title": "Installation & Uninstallation" },
             { "img": "placeholder.jpg", "title": "Air Cooler Repair" },
             { "img": "placeholder.jpg", "title": "Geyser Repair" },
             { "img": "placeholder.jpg", "title": "Laptop Repair & Services" },
             { "img": "placeholder.jpg", "title": "Microwave Repair" },
-            { "img": "placeholder.jpg", "title": "Refrigerator Repair" }
+            { "img": "https://public.readdy.ai/ai/img_res/14b16120a9b0447ecb617e8aa016cff8.jpg", "title": "Refrigerator Repair" }
         ],
         "packages": [
             {
@@ -547,7 +546,7 @@ export const ServicesDatabase = [
         "id": "painting-services",
         "title": "Painting & Waterproofing",
         "smallImg": [
-            { "img": "placeholder.jpg", "title": "painting work" },
+            { "img": "https://public.readdy.ai/ai/img_res/e942eb1b8892920a5d530eb63de32a72.jpg", "title": "painting work" },
             { "img": "placeholder.jpg", "title": "water proffing Works" },
         ],
         "packages": [
@@ -609,11 +608,11 @@ export const ServicesDatabase = [
         reviews: "350k",
         smallImg: [
             {
-                img: "https://example.com/home-clothes.jpg",
+                img: "https://public.readdy.ai/ai/img_res/f51d438549645626a1f267901b6daca3.jpg",
                 title: "Home Clothes",
             },
             {
-                img: "https://example.com/hotels-clothes.jpg",
+                img: "https://public.readdy.ai/ai/img_res/bfd4dada206da067b30aa4e16ee3b57c.jpg",
                 title: "Hotels Clothes",
             },
             {

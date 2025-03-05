@@ -13,7 +13,7 @@ const ServiceCategory = ({ title, services, }) => {
         <Box
             display="flex"
             flexDirection="column"
-            p={{ base: "10px 0 40px", md: "10px 0 60px" }}
+            p={{ base: "10px 0 60px" }}
             gap="3rem"
             maxW={"1100px"}
             mx={"auto"}
@@ -24,7 +24,7 @@ const ServiceCategory = ({ title, services, }) => {
                     fontWeight="700"
                     color="#212121"
                     textAlign="center"
-                    mb={4}
+                    mb={2}
                 >
                     {title}
                 </Text>
