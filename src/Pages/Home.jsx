@@ -164,7 +164,7 @@ const Home = () => {
         <Box p="10px 0 64px" mt="70px">
           <Carousel images={imgArr} />
         </Box>
-        <ServiceCategory title="Our Services" services={allServices} />
+        <ServiceCategory title="Our Services"services={allServices.slice(0, 6)} />
         <HowItWorks />
         <Testimonials testimonials={sampleTestimonials} />
         <Statistics />

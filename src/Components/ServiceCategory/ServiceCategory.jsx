@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Text, Image, Flex, Grid} from "@chakra-ui/react";
+import {Box, Text, Image, Grid} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const ServiceCategory = ({ title, services, }) => {
@@ -32,10 +32,10 @@ const ServiceCategory = ({ title, services, }) => {
                     {`Explore our wide range of ${title.toLowerCase()} services`}
                 </Text>
             </Box>
-            <Flex justifyContent="center" gap="2rem" flexWrap="wrap" px={6}>
+            <Box px={6}>
                 <Grid
                     templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(auto-fill, minmax(250px, 1fr))" }}
-                    gap="2rem"
+                    gap={{base: "1rem", md: "2rem"}}
                     w="100%"
                 >
                     {services.map((service) => (
@@ -60,29 +60,47 @@ const ServiceCategory = ({ title, services, }) => {
                             >
                                 {service.tag}
                             </Box>}
-                            <Image
-                                mb="20px"
-                                transition="transform 0.4s"
-                                _hover={{ transform: "scale(1.05)" }}
-                                rounded="lg"
-                                w="100%"
-                                src={service.img}
-                                aspectRatio={3 / 2}
-                            />
-                            <Text
-                                width="100%"
-                                textAlign="center"
-                                fontSize="14px"
-                                fontWeight="500"
-                                px="10px"
-                                mt={"-10px"}
-                            >
-                                {service.title}
-                            </Text>
+                            <Box position="relative">
+                                <Box
+                                    position="relative"
+                                    transition="transform 0.4s"
+                                    _hover={{ transform: "scale(1.05)" }}
+                                >
+                                    <Image
+                                        rounded="lg"
+                                        w="100%"
+                                        src={service.img}
+                                        aspectRatio={{ base: "4/3", md: "3/2" }}
+                                    />
+                                    <Box
+                                        position="absolute"
+                                        bottom="0"
+                                        left="0"
+                                        right="0"
+                                        height="30%"
+                                        bg="linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0))"
+                                        roundedBottom="lg"
+                                    />
+                                </Box>
+                                    <Text
+                                        position="absolute"
+                                        bottom="5px"
+                                        left="5px"
+                                        width="100%"
+                                        fontSize={{base: "14px", md: "16px"}}
+                                        fontWeight="800"
+                                        color="white"
+                                        px="10px"
+                                        py="5px"
+                                        rounded="md"
+                                    >
+                                        {service.title}
+                                    </Text>
+                            </Box>
                         </Box>
                     ))}
                 </Grid>
-            </Flex>
+            </Box>
         </Box>
     );
 };
