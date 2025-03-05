@@ -79,12 +79,12 @@ const Service = () => {
                     flexDirection={"column"}
                     alignItems="center"
                     h="fit-content"
-                    w="70px"
+                    w="78px"
                     boxSizing="border-box"
                     key={el.title}
                 >
                   <Box rounded={"md"} mb="10px">
-                    <Image h="64px" w="64px" rounded="md" src={el.img} />
+                    <Image h="78px" w="78px" rounded="md" src={el.img} />
                   </Box>
                   <Box
                       fontSize="12px"
