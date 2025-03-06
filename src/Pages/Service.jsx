@@ -161,47 +161,49 @@ const Service = () => {
                             ))}
                           </Box>
                         </GridItem>
-                        <GridItem>
-                          <Box rounded="md" mb="10px">
-                            <Image
-                                height="78px"
-                                width={"full"}
-                                rounded="md"
-                                src={el.img}
-                                loading="lazy"
-                                transition="transform 0.4s"
-                            />
-                          </Box>
-                          <Menu>
-                            <MenuButton
-                                as={Button}
-                                bgGradient="linear(to-r, blue.300, blue.600)"
-                                color="white"
-                                h="2rem"
-                                fontSize={{ base: "0.8rem", md: "1rem" }}
-                                leftIcon={<FaCalendarCheck />}
-                                _hover={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
-                                _active={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
-                                transition="transform 0.5s ease"
-                                _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
-                            >
-                              Book Now
-                            </MenuButton>
-                            <MenuList fontSize={{ base: "0.9rem", md: "1rem" }}>
-                              <MenuItem
-                                  icon={<FaWhatsapp fontSize="16px" color="green" />}
-                                  onClick={() => handleWhatsAppClick(el)}x
+                        <GridItem height="100%">
+                          <Flex flexDirection="column" justifyContent="space-between" h="full">
+                            <Box rounded="md" my="5px">
+                              <Image
+                                  height="88px"
+                                  width="full"
+                                  rounded="md"
+                                  src={el.img}
+                                  loading="lazy"
+                                  transition="transform 0.4s"
+                              />
+                            </Box>
+                            <Menu>
+                              <MenuButton
+                                  as={Button}
+                                  bgGradient="linear(to-r, blue.300, blue.600)"
+                                  color="white"
+                                  h="2rem"
+                                  fontSize={{ base: "0.8rem", md: "1rem" }}
+                                  leftIcon={<FaCalendarCheck />}
+                                  _hover={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
+                                  _active={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
+                                  transition="transform 0.5s ease"
+                                  _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
                               >
-                                Book via WhatsApp<Text fontSize="10px">(Preferred)</Text>
-                              </MenuItem>
-                              <MenuItem
-                                  icon={<PhoneIcon fontSize="14px" color="blue.600" />}
-                                  onClick={() => window.open(`tel:+917039619954`)}
-                              >
-                                Book via Call
-                              </MenuItem>
-                            </MenuList>
-                          </Menu>
+                                Book Now
+                              </MenuButton>
+                              <MenuList fontSize={{ base: "0.9rem", md: "1rem" }}>
+                                <MenuItem
+                                    icon={<FaWhatsapp fontSize="16px" color="green" />}
+                                    onClick={() => handleWhatsAppClick(el)}
+                                >
+                                  Book via WhatsApp<Text fontSize="10px">(Preferred)</Text>
+                                </MenuItem>
+                                <MenuItem
+                                    icon={<PhoneIcon fontSize="14px" color="blue.600" />}
+                                    onClick={() => window.open(`tel:+917039619954`)}
+                                >
+                                  Book via Call
+                                </MenuItem>
+                              </MenuList>
+                            </Menu>
+                          </Flex>
                         </GridItem>
                       </Grid>
                       <Divider m="20px 0" borderColor="blackAlpha.500" w="80%" />
