@@ -163,7 +163,7 @@ const Service = () => {
                         </GridItem>
                         <GridItem height="100%">
                           <Flex flexDirection="column" justifyContent="space-between" h="full">
-                            <Box rounded="md" my="5px">
+                            <Box rounded="md" mt="5px" mb="10px">
                               <Image
                                   height="88px"
                                   width="full"
