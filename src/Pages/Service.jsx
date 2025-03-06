@@ -38,6 +38,17 @@ const Service = () => {
     navigate("/carts");
   };
 
+  const handleImageClick = (title) => {
+    const element = document.getElementById(title);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+      element.classList.add("highlight");
+      setTimeout(() => {
+        element.classList.remove("highlight");
+      }, 2000);
+    }
+  };
+
   return (
       <>
         <Box w={{base:"100%", md:"60%"}} m="auto" h="100%" px={{base: "20px", md:"0px"}} mb="2rem">
@@ -83,9 +94,15 @@ const Service = () => {
                     key={el.title}
                 >
                   <Box rounded={"md"} mb="10px">
-                    <Image height={"88px"} rounded="md" src={el.img} loading="lazy"
+                    <Image height={"88px"}
+                           rounded="md"
+                           src={el.img}
+                           loading="lazy"
                            transition="transform 0.4s"
-                           _hover={{ transform: "scale(1.05)" }}/>
+                           _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
+                           _active={{ cursor: "pointer" }}
+                           onClick={() => handleImageClick(el.title)}
+                    />
                   </Box>
                   <Box
                       fontSize="12px"
@@ -106,17 +123,7 @@ const Service = () => {
             >
               <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
-                    <Box key={i}>
-                      {/*<Box display="flex" alignItems="center">*/}
-                      {/*  <Image*/}
-                      {/*      h="20px"*/}
-                      {/*      mr="5px"*/}
-                      {/*      src="https://img.icons8.com/external-wanicon-two-tone-wanicon/2x/external-box-logistics-wanicon-two-tone-wanicon-2.png"*/}
-                      {/*  />*/}
-                      {/*  <Text color="green.700" display="flex">*/}
-                      {/*    Package*/}
-                      {/*  </Text>*/}
-                      {/*</Box>*/}
+                    <Box key={i} id={el.name}>
                       <Flex alignItems="center" justifyContent="space-between" w={{base: "100%"}} >
                         <Text fontSize="18px" fontWeight="700">
                           {el.name}
@@ -150,7 +157,6 @@ const Service = () => {
                           </Text>{" "}
                         </Text>
                       </Box>
-                      {/*<Divider m="10px 0" borderColor="blackAlpha" w="70%" />*/}
                       <Box>
                         <UnorderedList color="gray" pl="10px" lineHeight="20px" fontSize="15px">
                           {el.list.map((el) => (
