@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext, useState} from "react";
 import {
   Box,
   Flex,
@@ -11,7 +11,7 @@ import {
   SimpleGrid,
   Button,
   UnorderedList,
-  ListItem, MenuList, Menu, MenuButton, MenuItem,
+  ListItem, MenuList, Menu, MenuButton, MenuItem, Grid, GridItem, Checkbox,
 } from "@chakra-ui/react";
 import {PhoneIcon, StarIcon} from "@chakra-ui/icons";
 import { RiShieldCheckFill } from "react-icons/ri";
@@ -32,6 +32,21 @@ const Service = () => {
     let item = serviceData.packages.filter((el, ind) => ind === i);
     setCartItems([...cartItems, item[0]]);
   };
+
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleCheckboxChange = (item) => {
+    setSelectedItems((prev) =>
+        prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+    );
+  };
+
+  const handleWhatsAppClick = (el) => {
+    const selectedText = selectedItems.join(", ");
+    const message = `I am interested in the ${encodeURIComponent(el.name)} service. Selected items: ${encodeURIComponent(selectedText)}`;
+    window.open(`https://wa.me/7039619954?text=${message}`);
+  };
+
 
   const goToCart = () => {
     navigate("/carts");
@@ -117,101 +132,78 @@ const Service = () => {
           {/* Service and Tags */}
           <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
-                w={{base:"100%", lg:"70%"}}
+                w={{base:"100%", lg:"60%"}}
                 p="30px 0px"
             >
               <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
-                    <Box key={i} id={el.name} pr={{base: "0.4rem", md: "2rem"}}>
-                      <Flex alignItems="center" justifyContent="space-between" w={{base: "100%"}} >
-                        <Text fontSize="18px" fontWeight="700" width="70%" wordBreak="break-word">
-                          {el.name}
-                        </Text>
-                        <Box>
+                    <Box key={i} id={el.name} pr={{ base: "0.4rem", md: "2rem" }}>
+                      <Grid templateColumns="1fr auto" alignItems="flex-start" gap={4}>
+                        <GridItem>
+                          <Text fontSize={{base: "md", md: "lg"}} fontWeight="700" wordBreak="break-word">
+                            {el.name}
+                          </Text>
+                          <Box mt="3px">
+                            <Text fontSize="14px" fontWeight="700">
+                              <Text as="span" color="gray" fontWeight="thin">
+                                Duration: {el.time}
+                              </Text>
+                            </Text>
+                          </Box>
+                          <Box fontSize="sm" mt="0.6rem" color="gray">
+                            {el.list.map((item) => (
+                                <Box key={item} display="block">
+                                  <Checkbox onChange={() => handleCheckboxChange(item)}>
+                                   <Text fontSize={{base: "0.9rem", md: "1rem"}}>{item}</Text>
+                                  </Checkbox>
+                                </Box>
+                            ))}
+                          </Box>
+                        </GridItem>
+                        <GridItem>
+                          <Box rounded="md" mb="10px">
+                            <Image
+                                height="92px"
+                                rounded="md"
+                                src={el.img}
+                                loading="lazy"
+                                transition="transform 0.4s"
+                            />
+                          </Box>
                           <Menu>
                             <MenuButton
                                 as={Button}
-                                colorScheme="blue"
+                                bgGradient="linear(to-r, blue.300, blue.600)"
+                                color="white"
                                 h="2rem"
                                 fontSize={{ base: "0.9rem", md: "1rem" }}
                                 leftIcon={<FaCalendarCheck />}
+                                _hover={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
+                                _active={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
+                                transition="transform 0.5s ease"
+                                _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
                             >
                               Book Now
                             </MenuButton>
-                            <MenuList  fontSize={{ base: "0.9rem", md: "1rem" }}>
+                            <MenuList fontSize={{ base: "0.9rem", md: "1rem" }}>
                               <MenuItem
-                                  icon={<FaWhatsapp fontSize={"16px"} color={"green"} />}
+                                  icon={<FaWhatsapp fontSize="16px" color="green" />}
                                   onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}
                               >
                                 Book via WhatsApp<Text fontSize="10px">(Preferred)</Text>
                               </MenuItem>
                               <MenuItem
-                                  icon={<PhoneIcon fontSize={"14px"} color={"blue.600"}/>}
+                                  icon={<PhoneIcon fontSize="14px" color="blue.600" />}
                                   onClick={() => window.open(`tel:+917039619954`)}
                               >
                                 Book via Call
                               </MenuItem>
                             </MenuList>
                           </Menu>
-                        </Box>
-                      </Flex>
-                      {/* Stars and Ratings */}
-                      {/*<Box display="flex" alignItems="center">*/}
-                      {/*  {Array(1)*/}
-                      {/*      .fill("")*/}
-                      {/*      .map((_, i) => (*/}
-                      {/*          <StarIcon key={i} color="gray" />*/}
-                      {/*      ))}*/}
-                      {/*  <Box as="span" ml="2" color="gray.600" fontSize="xs">*/}
-                      {/*    {el.rating}*/}
-                      {/*  </Box>*/}
-                      {/*</Box>*/}
-                      {/* Price and hours */}
-                      <Box mt="3px">
-                        <Text fontSize="15px" fontWeight="700">
-                          {/*&#8377; {el.price} &bull;{" "}*/}
-                          <Text as="span" color="gray" fontWeight="thin">
-                            Duration: {el.time}
-                          </Text>{" "}
-                        </Text>
-                      </Box>
-                      <Box>
-                        <UnorderedList color="gray" pl="10px" lineHeight="20px" fontSize="15px">
-                          {el.list.map((el) => (
-                              <ListItem key={el}>{el}</ListItem>
-                          ))}
-                        </UnorderedList>
-                      </Box>
-                      <Flex justifyContent={"flex-end"} mr="2rem" gap={"1rem"} flexWrap={"wrap"} mt={"1rem"}>
-                        {/*<Menu>*/}
-                        {/*  <MenuButton*/}
-                        {/*      as={Button}*/}
-                        {/*      colorScheme="blue"*/}
-                        {/*      h="30px"*/}
-                        {/*      fontSize={{ base: "0.9rem", md: "1rem" }}*/}
-                        {/*      leftIcon={<FaCalendarCheck />}*/}
-                        {/*  >*/}
-                        {/*    Book Now*/}
-                        {/*  </MenuButton>*/}
-                        {/*  <MenuList  fontSize={{ base: "0.9rem", md: "1rem" }}>*/}
-                        {/*    <MenuItem*/}
-                        {/*        icon={<FaWhatsapp fontSize={"16px"} color={"green.600"} />}*/}
-                        {/*        onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}*/}
-                        {/*    >*/}
-                        {/*      Book via WhatsApp*/}
-                        {/*    </MenuItem>*/}
-                        {/*    <MenuItem*/}
-                        {/*        icon={<PhoneIcon fontSize={"14px"} color={"blue.600"}/>}*/}
-                        {/*        onClick={() => window.open(`tel:+917039619954`)}*/}
-                        {/*    >*/}
-                        {/*      Book via Call*/}
-                        {/*    </MenuItem>*/}
-                        {/*  </MenuList>*/}
-                        {/*</Menu>*/}
-                        </Flex>
+                        </GridItem>
+                      </Grid>
                       <Divider m="20px 0" borderColor="blackAlpha.500" w="80%" />
                     </Box>
-
                 ))}
               </SimpleGrid>
             </Box>
