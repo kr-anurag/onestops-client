@@ -68,7 +68,7 @@ const Home = () => {
   return (
       <>
         <Box
-            h={{ base: "428px", md: "518px" }}
+            h={{ base: "458px", md: "518px" }}
             background="linear-gradient(to right, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.1) 100%), url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1741240363375')"
             bgAttachment="fixed"
             bgSize={{base: "", md: "cover"}}
@@ -83,8 +83,7 @@ const Home = () => {
                 animation={`${fadeInUp} 1.5s ease-in-out`}
                 lineHeight={{base: "40px", md: "50px"}}
             >
-              Professional Home Services at Your Doorstep
-
+              Endless possibilities, just one request away.
             </Text>
           </Box>
           <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>

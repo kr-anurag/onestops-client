@@ -81,6 +81,7 @@ export const ServicesDatabase = [
     {
         "id": "electrician-services",
         "title": "Electrician Services",
+        "ratings": 4.5,
         "smallImg": [
             {
                 "img": "https://public.readdy.ai/ai/img_res/1ab843c2299661d23d26802b76ecd5b3.jpg",
@@ -221,6 +222,7 @@ export const ServicesDatabase = [
     {
         "id": "plumber-services",
         "title": "Plumber Services",
+        "ratings": 4.2,
         "smallImg": [
             { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Tap & Mixer" },
             { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Toilet Related Services" },
@@ -327,6 +329,7 @@ export const ServicesDatabase = [
     },{
         "id": "carpenter-services",
         "title": "Carpenter Services",
+        "ratings": 4.7,
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/ae0aef34113e8f9d9c001f27a19f5543.jpg", "title": "Cupboard & Drawer" },
             { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Drill & Hang Services" },
@@ -432,6 +435,7 @@ export const ServicesDatabase = [
     {
         "id": "appliance-services",
         "title": "Appliance Repair Services",
+        "ratings": 3.9,
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/977688b11f80fa24354977706406b8dd.jpg", "title": "A/C Repair and Services" },
             { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Installation & Uninstallation" },
@@ -545,6 +549,7 @@ export const ServicesDatabase = [
     {
         "id": "painting-services",
         "title": "Painting & Waterproofing",
+        "ratings": 4.3,
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/e942eb1b8892920a5d530eb63de32a72.jpg", "title": "painting work" },
             { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "water proffing Works" },
@@ -605,7 +610,6 @@ export const ServicesDatabase = [
         id: "laundry-services",
         title: "Laundry",
         rating: 4.6,
-        reviews: "350k",
         smallImg: [
             {
                 img: "https://public.readdy.ai/ai/img_res/f51d438549645626a1f267901b6daca3.jpg",
@@ -654,7 +658,6 @@ export const ServicesDatabase = [
         id: "tiffin-services",
         title: "Tiffin Services",
         rating: 4.7,
-        reviews: "500k",
         smallImg: [
             {
                 img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",

@@ -28,7 +28,7 @@ const Service = () => {
   const { id: serviceId } = useParams();
   const serviceData = ServicesDatabase.find(service => service.id === serviceId) || ServicesDatabase[0];
 
-
+  console.log(serviceData)
   const addToCart = (i) => {
     let item = serviceData.packages.filter((el, ind) => ind === i);
     setCartItems([...cartItems, item[0]]);
@@ -65,26 +65,27 @@ const Service = () => {
                       .map((_, i) => (
                           <StarIcon key={i} color="gray" />
                       ))}
-                  {/*<Box as="span" ml="2" color="gray.600" fontSize="sm">*/}
-                  {/*  {serviceData.rating} ({serviceData.reviews})*/}
-                  {/*</Box>*/}
+                  <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                    {serviceData.ratings}
+                  </Box>
                 </Box>
               </Box>
             </Flex>
           </Flex>
-          {/* Small Images Box */}
           <Flex borderBottom="2px solid #E3E3E3" p="30px 0" gap="1.5rem" flexWrap={"wrap"}>
             {serviceData.smallImg?.map((el) => (
                 <Flex
                     flexDirection={"column"}
                     alignItems="center"
                     h="fit-content"
-                    w="78px"
+                    w="88px"
                     boxSizing="border-box"
                     key={el.title}
                 >
                   <Box rounded={"md"} mb="10px">
-                    <Image h="78px" w="78px" rounded="md" src={el.img} />
+                    <Image height={"88px"} rounded="md" src={el.img} loading="lazy"
+                           transition="transform 0.4s"
+                           _hover={{ transform: "scale(1.05)" }}/>
                   </Box>
                   <Box
                       fontSize="12px"
@@ -103,19 +104,19 @@ const Service = () => {
                 w={{base:"100%", lg:"70%"}}
                 p="30px 10px 0px"
             >
-              <SimpleGrid p="20px 0" spacingY="20px">
+              <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
                     <Box key={i}>
-                      <Box display="flex" alignItems="center">
-                        <Image
-                            h="20px"
-                            mr="5px"
-                            src="https://img.icons8.com/external-wanicon-two-tone-wanicon/2x/external-box-logistics-wanicon-two-tone-wanicon-2.png"
-                        />
-                        <Text color="green.700" display="flex">
-                          Package
-                        </Text>
-                      </Box>
+                      {/*<Box display="flex" alignItems="center">*/}
+                      {/*  <Image*/}
+                      {/*      h="20px"*/}
+                      {/*      mr="5px"*/}
+                      {/*      src="https://img.icons8.com/external-wanicon-two-tone-wanicon/2x/external-box-logistics-wanicon-two-tone-wanicon-2.png"*/}
+                      {/*  />*/}
+                      {/*  <Text color="green.700" display="flex">*/}
+                      {/*    Package*/}
+                      {/*  </Text>*/}
+                      {/*</Box>*/}
                       <Flex alignItems="center" justifyContent="space-between" w={{base: "100%"}} >
                         <Text fontSize="18px" fontWeight="700">
                           {el.name}
@@ -162,13 +163,14 @@ const Service = () => {
                           variant="outline"
                           colorScheme="blue"
                           h="30px"
+                          fontSize={{base: "0.9rem", md: "1rem"}}
                           leftIcon={<PhoneIcon />}
                           onClick={() => window.open(`tel:+917039619954`)}
                       >
                         Book via Call
                       </Button>
                       <Button
-                          // variant="outline"
+                          fontSize={{base: "0.9rem", md: "1rem"}}
                           colorScheme="green"
                           h="30px"
                           leftIcon={<FaWhatsapp />}
