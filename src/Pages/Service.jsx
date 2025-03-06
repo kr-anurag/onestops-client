@@ -118,7 +118,7 @@ const Service = () => {
           <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
                 w={{base:"100%", lg:"70%"}}
-                p="30px 10px 0px"
+                p="30px 0px"
             >
               <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
