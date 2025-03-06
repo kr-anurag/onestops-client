@@ -42,10 +42,11 @@ const Service = () => {
   };
 
   const handleWhatsAppClick = (el) => {
-    const selectedText = selectedItems.map(item => `- ${item}`).join("%0A");
-    const message = `I am interested in the ${encodeURIComponent(el.name)} service.%0A%0ASelected items:%0A${encodeURIComponent(selectedText)}`;
+    const selectedText = selectedItems.map(item => `- ${item}`).join("\n");
+    const message = `I am interested in the ${el.name} service.\n\nSelected items:\n${selectedText}`;
+    const encodedMessage = encodeURIComponent(message);
 
-    window.open(`https://wa.me/7039619954?text=${message}`);
+    window.open(`https://wa.me/7039619954?text=${encodedMessage}`);
   };
 
   const goToCart = () => {
