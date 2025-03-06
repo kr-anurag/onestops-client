@@ -42,11 +42,11 @@ const Service = () => {
   };
 
   const handleWhatsAppClick = (el) => {
-    const selectedText = selectedItems.join(", ");
-    const message = `I am interested in the ${encodeURIComponent(el.name)} service. Selected items: ${encodeURIComponent(selectedText)}`;
+    const selectedText = selectedItems.map(item => `- ${item}`).join("%0A");
+    const message = `I am interested in the ${encodeURIComponent(el.name)} service.%0A%0ASelected items:%0A${encodeURIComponent(selectedText)}`;
+
     window.open(`https://wa.me/7039619954?text=${message}`);
   };
-
 
   const goToCart = () => {
     navigate("/carts");
@@ -137,7 +137,7 @@ const Service = () => {
             >
               <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
-                    <Box key={i} id={el.name} pr={{ base: "0.4rem", md: "2rem" }}>
+                    <Box key={i} id={el.name} pr={{ base: "0rem", md: "2rem" }}>
                       <Grid templateColumns="1fr auto" alignItems="flex-start" gap={4}>
                         <GridItem>
                           <Text fontSize={{base: "md", md: "lg"}} fontWeight="700" wordBreak="break-word">
@@ -163,7 +163,8 @@ const Service = () => {
                         <GridItem>
                           <Box rounded="md" mb="10px">
                             <Image
-                                height="92px"
+                                height="78px"
+                                width={"full"}
                                 rounded="md"
                                 src={el.img}
                                 loading="lazy"
@@ -176,7 +177,7 @@ const Service = () => {
                                 bgGradient="linear(to-r, blue.300, blue.600)"
                                 color="white"
                                 h="2rem"
-                                fontSize={{ base: "0.9rem", md: "1rem" }}
+                                fontSize={{ base: "0.8rem", md: "1rem" }}
                                 leftIcon={<FaCalendarCheck />}
                                 _hover={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
                                 _active={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
@@ -188,7 +189,7 @@ const Service = () => {
                             <MenuList fontSize={{ base: "0.9rem", md: "1rem" }}>
                               <MenuItem
                                   icon={<FaWhatsapp fontSize="16px" color="green" />}
-                                  onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}
+                                  onClick={() => handleWhatsAppClick(el)}x
                               >
                                 Book via WhatsApp<Text fontSize="10px">(Preferred)</Text>
                               </MenuItem>
