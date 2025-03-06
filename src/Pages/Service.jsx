@@ -11,14 +11,14 @@ import {
   SimpleGrid,
   Button,
   UnorderedList,
-  ListItem,
+  ListItem, MenuList, Menu, MenuButton, MenuItem,
 } from "@chakra-ui/react";
 import {PhoneIcon, StarIcon} from "@chakra-ui/icons";
 import { RiShieldCheckFill } from "react-icons/ri";
 import { Appcontext } from "../Context/Appcontext";
 import {useNavigate, useParams} from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
-import {FaWhatsapp} from "react-icons/fa";
+import {FaBook, FaCalendarCheck, FaWhatsapp} from "react-icons/fa";
 import OnDemandService from "../Components/ServiceCategory/OnDemandService";
 import demandImage from "../assests/ondemand.png";
 
@@ -122,19 +122,38 @@ const Service = () => {
             >
               <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
-                    <Box key={i} id={el.name}>
+                    <Box key={i} id={el.name} pr={{base: "0.4rem", md: "2rem"}}>
                       <Flex alignItems="center" justifyContent="space-between" w={{base: "100%"}} >
-                        <Text fontSize="18px" fontWeight="700">
+                        <Text fontSize="18px" fontWeight="700" width="70%" wordBreak="break-word">
                           {el.name}
                         </Text>
-                        {/*<Button*/}
-                        {/*    variant="outline"*/}
-                        {/*    colorScheme="blue"*/}
-                        {/*    h="30px"*/}
-                        {/*    onClick={() => addToCart(i)}*/}
-                        {/*>*/}
-                        {/*  Add*/}
-                        {/*</Button>*/}
+                        <Box>
+                          <Menu>
+                            <MenuButton
+                                as={Button}
+                                colorScheme="blue"
+                                h="2rem"
+                                fontSize={{ base: "0.9rem", md: "1rem" }}
+                                leftIcon={<FaCalendarCheck />}
+                            >
+                              Book Now
+                            </MenuButton>
+                            <MenuList  fontSize={{ base: "0.9rem", md: "1rem" }}>
+                              <MenuItem
+                                  icon={<FaWhatsapp fontSize={"16px"} color={"green"} />}
+                                  onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}
+                              >
+                                Book via WhatsApp<Text fontSize="10px">(Preferred)</Text>
+                              </MenuItem>
+                              <MenuItem
+                                  icon={<PhoneIcon fontSize={"14px"} color={"blue.600"}/>}
+                                  onClick={() => window.open(`tel:+917039619954`)}
+                              >
+                                Book via Call
+                              </MenuItem>
+                            </MenuList>
+                          </Menu>
+                        </Box>
                       </Flex>
                       {/* Stars and Ratings */}
                       {/*<Box display="flex" alignItems="center">*/}
@@ -163,26 +182,32 @@ const Service = () => {
                           ))}
                         </UnorderedList>
                       </Box>
-                      <Flex gap={"1rem"} flexWrap={"wrap"} mt={"1rem"}>
-                      <Button
-                          variant="outline"
-                          colorScheme="blue"
-                          h="30px"
-                          fontSize={{base: "0.9rem", md: "1rem"}}
-                          leftIcon={<PhoneIcon />}
-                          onClick={() => window.open(`tel:+917039619954`)}
-                      >
-                        Book via Call
-                      </Button>
-                      <Button
-                          fontSize={{base: "0.9rem", md: "1rem"}}
-                          colorScheme="green"
-                          h="30px"
-                          leftIcon={<FaWhatsapp />}
-                          onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}
-                      >
-                        Book via WhatsApp
-                      </Button>
+                      <Flex justifyContent={"flex-end"} mr="2rem" gap={"1rem"} flexWrap={"wrap"} mt={"1rem"}>
+                        {/*<Menu>*/}
+                        {/*  <MenuButton*/}
+                        {/*      as={Button}*/}
+                        {/*      colorScheme="blue"*/}
+                        {/*      h="30px"*/}
+                        {/*      fontSize={{ base: "0.9rem", md: "1rem" }}*/}
+                        {/*      leftIcon={<FaCalendarCheck />}*/}
+                        {/*  >*/}
+                        {/*    Book Now*/}
+                        {/*  </MenuButton>*/}
+                        {/*  <MenuList  fontSize={{ base: "0.9rem", md: "1rem" }}>*/}
+                        {/*    <MenuItem*/}
+                        {/*        icon={<FaWhatsapp fontSize={"16px"} color={"green.600"} />}*/}
+                        {/*        onClick={() => window.open(`https://wa.me/7039619954?text=I%20am%20interested%20in%20the%20${encodeURIComponent(el.name)}%20service`)}*/}
+                        {/*    >*/}
+                        {/*      Book via WhatsApp*/}
+                        {/*    </MenuItem>*/}
+                        {/*    <MenuItem*/}
+                        {/*        icon={<PhoneIcon fontSize={"14px"} color={"blue.600"}/>}*/}
+                        {/*        onClick={() => window.open(`tel:+917039619954`)}*/}
+                        {/*    >*/}
+                        {/*      Book via Call*/}
+                        {/*    </MenuItem>*/}
+                        {/*  </MenuList>*/}
+                        {/*</Menu>*/}
                         </Flex>
                       <Divider m="20px 0" borderColor="blackAlpha.500" w="80%" />
                     </Box>

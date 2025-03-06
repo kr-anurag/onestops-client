@@ -30,6 +30,7 @@ export const getAllServices = () => {
         )
     })
 }
+
 export const ServicesDatabase = [
     {
         id: "electrician-services",
@@ -617,80 +618,6 @@ export const ServicesDatabase = [
         ]
     }
 ];
-
-
-export const ServicesDatabaseBackup = [
-    {
-        id: "salon-services",
-        title: "Salon For Men",
-        rating: 4.75,
-        reviews: "975k",
-        smallImg: [
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/luminosity/1646814042922-25f8f1.jpeg",
-                title: "Packages",
-            },
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/home-screen/1631190374864-78f3e8.jpeg",
-                title: "Haircut for Men & Kids",
-            },
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/home-screen/1631189933595-01692d.png",
-                title: "Hair Color",
-            },
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/home-screen/1631189957304-ea2a7b.png",
-                title: "Shave/Beard Grooming",
-            },
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/home-screen/1631189857376-d49e47.png",
-                title: "Face Care",
-            },
-            {
-                img: "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/home-screen/1631189905841-237b37.png",
-                title: "Massage Therapy",
-            },
-        ],
-        packages : [
-            {
-                id: uuid(),
-                name: "Haircut + Beard Grooming + Massage",
-                rating: "4.81 (243.1K)",
-                price: 499,
-                qty : 1,
-                time: "1 hr 5 mins",
-                list: ["Mens Haircut", "Beard Shape & Style", "10 min Head Massage"],
-            },
-            {
-                id : uuid(),
-                name: "Haircut + Massage",
-                rating: "4.82 (258.7K)",
-                price: 399,
-                qty : 1,
-                time: "50 mins",
-                list: ["Mens Haircut", "20 min Head Massage"],
-            },
-            {
-                id: uuid(),
-                name: "Father & Kids Haircut",
-                rating: "4.82 (232.9K)",
-                price: 499,
-                qty : 1,
-                time: "1 hr 10 mins",
-                list: ["Mens Haircut", "Kids Haircut(Boys)", "10 min Head Massage"],
-            },
-            {
-                id : uuid(),
-                name: "Haircut + Hair Color",
-                rating: "4.82 (243.1K)",
-                price: 499,
-                qty : 1,
-                time: "60 mins",
-                list: ["Mens Haircut", "Beard Shape & Style", "10 min Head Massage"],
-            },
-        ]
-    }
-]
 
 export const sampleTestimonials = [
     {
