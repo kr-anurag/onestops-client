@@ -1,6 +1,7 @@
 import React from "react";
-import {Box, Text, Image, Grid} from "@chakra-ui/react";
+import {Box, Text, Image, Grid, Flex} from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import {StarIcon} from "@chakra-ui/icons";
 
 const ServiceCategory = ({ title, services, }) => {
     const navigate = useNavigate();
@@ -82,20 +83,27 @@ const ServiceCategory = ({ title, services, }) => {
                                         roundedBottom="lg"
                                     />
                                 </Box>
-                                    <Text
-                                        position="absolute"
-                                        bottom="5px"
-                                        left="5px"
-                                        width="100%"
-                                        fontSize={{base: "14px", md: "16px"}}
-                                        fontWeight="800"
-                                        color="white"
-                                        px="10px"
-                                        py="5px"
-                                        rounded="md"
-                                    >
-                                        {service.title}
-                                    </Text>
+                                <Text
+                                    position="absolute"
+                                    bottom="5px"
+                                    left="5px"
+                                    width="100%"
+                                    fontSize={{ base: "14px", md: "16px" }}
+                                    fontWeight="800"
+                                    color="white"
+                                    px="10px"
+                                    py="5px"
+                                    rounded="md"
+                                    display="flex"
+                                    justifyContent="space-between"
+                                    alignItems="center"
+                                >
+                                    <span>{service.title}</span>
+                                    {service.ratings && <Flex alignItems="center" bg="rgba(0, 0, 0, 0.5)" px="5px" py="2px" borderRadius="md" mr="5px">
+                                        <StarIcon color="yellow.400" mr="3px" />
+                                        <Box fontSize="10px">{service.ratings}</Box>
+                                    </Flex>}
+                                </Text>
                             </Box>
                         </Box>
                     ))}

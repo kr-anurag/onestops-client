@@ -28,20 +28,19 @@ import ServiceCategory from "../Components/ServiceCategory/ServiceCategory";
 import Testimonials from "../Components/Testmonial/Testimonial";
 import HowItWorks from "../Components/Common/HowItWorks";
 import Statistics from "../Components/Common/Statistics";
-import {allServices, sampleTestimonials, topServices} from "../Utils/Database";
+import {getTopServices, getAllServices, sampleTestimonials, topServices} from "../Utils/Database";
 import {keyframes} from "@emotion/react";
-import HomeCarousel from "../Components/HomeCarousel";
 
 
 
 const Home = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredServices, setFilteredServices] = useState(topServices);
+  const [filteredServices, setFilteredServices] = useState(getTopServices());
 
   useEffect(() => {
     setFilteredServices(
-        topServices.filter((service) =>
+        getTopServices().filter((service) =>
             service.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
     );
@@ -50,7 +49,6 @@ const Home = () => {
   const moveToMG = (id) => {
     navigate(`/services/${id}`);
   };
-
 
 
 // Define the keyframes for the animation
@@ -68,13 +66,14 @@ const Home = () => {
   return (
       <>
         <Box
-            h={{ base: "458px", md: "518px" }}
+            h={{ base: "458px", md: "598px" }}
             background="linear-gradient(to right, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.1) 100%), url('https://ik.imagekit.io/ulyn7697x/a74392cc513984d10924bc021574509a.jpg?updatedAt=1741240363375')"
             bgAttachment="fixed"
             bgSize={{base: "", md: "cover"}}
+            className="animate-scale"
         >
           <HomeHeader />
-          <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "120px", lg: "220px" }} px="2rem">
+          <Box textAlign={{ md: "center" }} mt={{ base: "80px", md: "220px", lg: "250px" }} px="2rem">
             <Text
                 color="#fff"
                 fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
@@ -162,7 +161,7 @@ const Home = () => {
         <Box p="10px 0 64px" mt="70px">
           <Carousel images={imgArr} />
         </Box>
-        <ServiceCategory title="Our Services"services={allServices.slice(0, 6)} />
+        <ServiceCategory title="Our Services"services={getAllServices().slice(0, 6)} />
         <HowItWorks />
         <Testimonials testimonials={sampleTestimonials} />
         <Statistics />
@@ -193,8 +192,8 @@ const SearchBar = ({searchQuery, setSearchQuery}) => (
           <Button
               display="flex"
               justifyContent="space-between"
-              w={{ base: "110px", md: "180px" }}
-              h={{ base: "35px", md: "54px" }}
+              w={{ base: "110px", md: "150px", lg: "180px" }}
+              h={{ base: "35px", md: "44px", lg: "54px" }}
               fontSize={{ base: "14px", md: "16px" }}
           >
             Mumbai <TriangleDownIcon fontSize="sm" />
@@ -213,13 +212,13 @@ const SearchBar = ({searchQuery, setSearchQuery}) => (
       </Popover>
       <InputGroup>
         <InputLeftElement
-            h={{ base: "40px", md: "54px" }}
+            h={{ base: "40px", md:"46px", lg: "54px" }}
             pointerEvents="none"
             children={<SearchIcon color="gray.500" />}
         />
         <Input
-            h={{ base: "40px", md: "54px" }}
-            w={{ base: "100%", md: "572px" }}
+            h={{ base: "40px", md: "46px", lg: "54px" }}
+            w={{ base: "100%", md: "456px", lg: "572px" }}
             bg="white"
             type="text"
             placeholder="Search For Service"

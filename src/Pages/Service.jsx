@@ -28,7 +28,6 @@ const Service = () => {
   const { id: serviceId } = useParams();
   const serviceData = ServicesDatabase.find(service => service.id === serviceId) || ServicesDatabase[0];
 
-  console.log(serviceData)
   const addToCart = (i) => {
     let item = serviceData.packages.filter((el, ind) => ind === i);
     setCartItems([...cartItems, item[0]]);
@@ -84,7 +83,7 @@ const Service = () => {
             </Flex>
           </Flex>
           <Flex borderBottom="2px solid #E3E3E3" p="30px 0" gap="1.5rem" flexWrap={"wrap"}>
-            {serviceData.smallImg?.map((el) => (
+            {serviceData.packages?.map((el) => (
                 <Flex
                     flexDirection={"column"}
                     alignItems="center"
@@ -101,7 +100,7 @@ const Service = () => {
                            transition="transform 0.4s"
                            _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
                            _active={{ cursor: "pointer" }}
-                           onClick={() => handleImageClick(el.title)}
+                           onClick={() => handleImageClick(el.name)}
                     />
                   </Box>
                   <Box
@@ -110,7 +109,7 @@ const Service = () => {
                       textAlign={"center"}
                       fontWeight="400"
                   >
-                    <Text>{el.title}</Text>
+                    <Text>{el.name}</Text>
                   </Box>
                 </Flex>
             ))}
