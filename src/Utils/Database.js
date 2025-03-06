@@ -99,19 +99,19 @@ export const ServicesDatabase = [
                 "title": "Appliance Related Works"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/wiring-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 "title": "Wiring Related Works"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/doorbell-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 "title": "Doorbell Related Works"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/mcb-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 "title": "MCB & Submeter"
             },
             {
-                "img": "https://res.cloudinary.com/your-image-path/inverter-services.jpg",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 "title": "Inverter & Stabiliser"
             }
         ],
@@ -222,15 +222,15 @@ export const ServicesDatabase = [
         "id": "plumber-services",
         "title": "Plumber Services",
         "smallImg": [
-            { "img": "placeholder.jpg", "title": "Tap & Mixer" },
-            { "img": "placeholder.jpg", "title": "Toilet Related Services" },
-            { "img": "placeholder.jpg", "title": "Bath Fittings" },
-            { "img": "placeholder.jpg", "title": "Basin & Sink" },
-            { "img": "placeholder.jpg", "title": "Drainage" },
-            { "img": "placeholder.jpg", "title": "Water Pipes" },
-            { "img": "placeholder.jpg", "title": "Water Tank Repair" },
-            { "img": "placeholder.jpg", "title": "Motor" },
-            { "img": "placeholder.jpg", "title": "Grouting" }
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Tap & Mixer" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Toilet Related Services" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Bath Fittings" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Basin & Sink" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Drainage" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Water Pipes" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Water Tank Repair" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Motor" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Grouting" }
         ],
         "packages": [
             {
@@ -329,11 +329,11 @@ export const ServicesDatabase = [
         "title": "Carpenter Services",
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/ae0aef34113e8f9d9c001f27a19f5543.jpg", "title": "Cupboard & Drawer" },
-            { "img": "placeholder.jpg", "title": "Drill & Hang Services" },
-            { "img": "placeholder.jpg", "title": "Door Services" },
-            { "img": "placeholder.jpg", "title": "Windows and Curtain" },
-            { "img": "placeholder.jpg", "title": "Bed Related Services" },
-            { "img": "placeholder.jpg", "title": "Clothes Hangers" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Drill & Hang Services" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Door Services" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Windows and Curtain" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Bed Related Services" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Clothes Hangers" },
             { "img": "https://public.readdy.ai/ai/img_res/1b2c690f56c96763ee4966a6c62517ef.jpg", "title": "Furniture Repair" },
         ],
         "packages": [
@@ -434,11 +434,11 @@ export const ServicesDatabase = [
         "title": "Appliance Repair Services",
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/977688b11f80fa24354977706406b8dd.jpg", "title": "A/C Repair and Services" },
-            { "img": "placeholder.jpg", "title": "Installation & Uninstallation" },
-            { "img": "placeholder.jpg", "title": "Air Cooler Repair" },
-            { "img": "placeholder.jpg", "title": "Geyser Repair" },
-            { "img": "placeholder.jpg", "title": "Laptop Repair & Services" },
-            { "img": "placeholder.jpg", "title": "Microwave Repair" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Installation & Uninstallation" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Air Cooler Repair" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Geyser Repair" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Laptop Repair & Services" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "Microwave Repair" },
             { "img": "https://public.readdy.ai/ai/img_res/14b16120a9b0447ecb617e8aa016cff8.jpg", "title": "Refrigerator Repair" }
         ],
         "packages": [
@@ -547,7 +547,7 @@ export const ServicesDatabase = [
         "title": "Painting & Waterproofing",
         "smallImg": [
             { "img": "https://public.readdy.ai/ai/img_res/e942eb1b8892920a5d530eb63de32a72.jpg", "title": "painting work" },
-            { "img": "placeholder.jpg", "title": "water proffing Works" },
+            { "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226", "title": "water proffing Works" },
         ],
         "packages": [
             {
@@ -616,11 +616,11 @@ export const ServicesDatabase = [
                 title: "Hotels Clothes",
             },
             {
-                img: "https://example.com/gaalicha-washing.jpg",
+                img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 title: "Gaalicha Washing",
             },
             {
-                img: "https://example.com/shoes-washing.jpg",
+                img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 title: "Shoes Washing",
             }
         ],
@@ -657,15 +657,15 @@ export const ServicesDatabase = [
         reviews: "500k",
         smallImg: [
             {
-                img: "https://example.com/mess.jpg",
+                img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 title: "Mess Tiffin",
             },
             {
-                img: "https://example.com/office-tiffin.jpg",
+                img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 title: "Office Tiffin",
             },
             {
-                img: "https://example.com/home-tiffin.jpg",
+                img: "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741239934226",
                 title: "Home Tiffin",
             }
         ],

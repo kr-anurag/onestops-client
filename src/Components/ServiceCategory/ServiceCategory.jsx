@@ -56,7 +56,7 @@ const ServiceCategory = ({ title, services, }) => {
                                 rounded="md"
                                 fontSize={{base: "10px", md: "12px"}}
                                 fontWeight="bold"
-                                zIndex="999"
+                                zIndex="1"
                             >
                                 {service.tag}
                             </Box>}

@@ -19,7 +19,7 @@ const AllServices = () => {
     }, [searchQuery]);
 
     return (
-        <Box mt={{base: "1.5rem", md: "2rem"}}>
+        <Box mt={{base: "1.2rem", md: "2rem"}}>
             <Box px={"1rem"}>
                 <InputGroup mb="1rem" maxW="600px" mx="auto">
                     <InputLeftElement pointerEvents="none" children={<SearchIcon color="gray.500" />} />
