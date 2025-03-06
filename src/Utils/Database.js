@@ -460,6 +460,7 @@ export const ServicesDatabase = [
             {
                 "id": "uuid()",
                 "name": "Television Repair",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741240200131",
                 "time": "Varies",
                 "list": [
                     "TV Repair",
@@ -470,6 +471,7 @@ export const ServicesDatabase = [
             {
                 "id": "uuid()",
                 "name": "Washing Machine Repair",
+                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741240200131",
                 "time": "Varies",
                 "list": [
                     "Fully automatic washing machine check-up (Top load)",
