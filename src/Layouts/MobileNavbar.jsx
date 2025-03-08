@@ -38,10 +38,9 @@ function MobileNavbar() {
                   alignItems="center"
                   color={location.pathname === item.path ? "blue.500" : "gray.600"}
                   _focus={{ outline: "none" }}
-
               >
-                <Icon as={item.icon} boxSize={5} />
-                <Text fontSize="0.8rem" mt={1}>{item.name}</Text>
+                <Icon as={item.icon} boxSize={4} />
+                <Text fontSize="0.7rem" mt={1}>{item.name}</Text>
               </Flex>
             </Link>
         ))}
