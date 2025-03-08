@@ -17,7 +17,7 @@ import { RiShieldCheckFill } from "react-icons/ri";
 import { Appcontext } from "../Context/Appcontext";
 import {useNavigate, useParams} from "react-router-dom";
 import {ServicesDatabase} from "../Utils/Database";
-import {FaBook, FaCalendarCheck, FaWhatsapp} from "react-icons/fa";
+import { FaCalendarCheck, FaWhatsapp} from "react-icons/fa";
 import OnDemandService from "../Components/ServiceCategory/OnDemandService";
 import demandImage from "../assests/ondemand.png";
 
@@ -161,8 +161,9 @@ const Service = () => {
                                       border="1px solid"
                                       borderColor="gray.200"
                                       display="flex"
+                                      alignItems={"center"}
                                       rounded="md"
-                                      p="8px 16px"
+                                      p="10px 12px"
                                       cursor="pointer"
                                       onClick={() => handleCheckboxChange(item)}
                                       _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
@@ -173,7 +174,6 @@ const Service = () => {
                                     <Switch
                                         isChecked={selectedItems.includes(item)}
                                         onChange={() => handleCheckboxChange(item)}
-                                        mb="5px"
                                         size={{base: "sm", md: "md"}}
                                         colorScheme="blue"
                                     >
@@ -271,7 +271,10 @@ const Service = () => {
                   />
                   <Box flex="1" mt={"1rem"} >
                     <OnDemandService />
+                    <ReviewsSwipper testimonials={sampleTestimonials} />
                   </Box>
+
+
                 </Flex>
                 {cartItems.length !== 0 && (
                     <Flex
