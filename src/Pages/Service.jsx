@@ -132,65 +132,35 @@ const Service = () => {
                 </Flex>
             ))}
           </Flex>
-          {/* Service and Tags */}
+
+          
           <Flex borderBottom="4px solid #ededed" pb="50px" flexDirection={{base:"column", lg:"row"}}>
             <Box
                 w={{base:"100%", lg:"60%"}}
                 p="30px 0px"
             >
-              <SimpleGrid p="16px 0" spacingY="16px">
                 {serviceData?.packages?.map((el, i) => (
                     <Box key={i} id={el.name} pr={{ base: "0rem", md: "2rem" }}>
-                      <Grid templateColumns="1fr auto" alignItems="flex-start" gap={4}>
-                        <GridItem>
-                          <Text fontSize={{base: "md", md: "lg"}} fontWeight="700" wordBreak="break-word">
-                            {el.name}
-                          </Text>
-                          <Box mt="3px">
-                            <Text fontSize="14px" fontWeight="700">
-                              <Text as="span" color="gray" fontWeight="thin">
-                                Duration: {el.time}
-                              </Text>
-                            </Text>
-                          </Box>
-                          <Box fontSize="sm" mt="0.5rem" color="gray">
-                            <Flex wrap="wrap" gap="10px">
-                              {el.list.map((item) => (
-                                  <Box
-                                      key={item}
-                                      border="1px solid"
-                                      borderColor="gray.200"
-                                      display="flex"
-                                      alignItems={"center"}
-                                      rounded="md"
-                                      p="10px 12px"
-                                      cursor="pointer"
-                                      onClick={() => handleCheckboxChange(item)}
-                                      _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
-                                      transition="transform 0.2s"
-                                      flexGrow={"1"}
-                                      bg={selectedItems.includes(item) ? "blue.50" : "white"}
-                                  >
-                                    <Switch
-                                        isChecked={selectedItems.includes(item)}
-                                        onChange={() => handleCheckboxChange(item)}
-                                        size={{base: "sm", md: "md"}}
-                                        colorScheme="blue"
-                                    >
-                                    </Switch>
-                                    <Text fontSize={{ base: "0.8rem", md: "0.9rem" }} ml="10px">
-                                      {item}
+                          <Flex gap={"10px"} justifyContent={"space-between"}>
+                            <Box w={"70%"}>
+                                <Text fontSize={{base: "md", md: "lg"}} fontWeight="700" wordBreak="break-word">
+                                  {el.name}
+                                </Text>
+                                <Box mt="3px">
+                                  <Text fontSize="14px" fontWeight="700">
+                                    <Text as="span" color="gray" fontWeight="thin">
+                                      Duration: {el.time}
                                     </Text>
-                                  </Box>
-                              ))}
-                            </Flex>
-                          </Box>
-                        </GridItem>
-                        <GridItem height="100%">
-                          <Flex flexDirection="column" justifyContent="space-between" h="full">
-                            <Box rounded="md" mt="5px" mb="10px">
+                                  </Text>
+                                </Box>
+                                <Box mt="5px">
+                                    <Text as="span" color="gray" fontSize="12px" fontWeight="thin">
+                                      Select services you want to book
+                                    </Text>
+                              </Box>
+                            </Box>
+                            <Box rounded="md" mt="5px" mb="16px" w={"30%"}>
                               <Image
-                                  height="88px"
                                   width="full"
                                   rounded="md"
                                   src={el.img}
@@ -198,6 +168,40 @@ const Service = () => {
                                   transition="transform 0.4s"
                               />
                             </Box>
+                          </Flex>
+                          <Box fontSize="sm" mb="1rem" color="gray">
+                            <Flex wrap="wrap" gap="10px">
+                              {el.list.map((item) => (
+                                  <Box
+                                      key={item}
+                                      border="1px solid"
+                                      borderColor="gray.200"
+                                      flexGrow={"1"}
+                                      display={"flex"}
+                                      alignItems={"center"}
+                                      rounded="md"
+                                      p="10px 12px"
+                                      cursor="pointer"
+                                      onClick={() => handleCheckboxChange(item)}
+                                      _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
+                                      transition="transform 0.2s"
+                                      bg={selectedItems.includes(item) ? "blue.50" : "white"}
+                                  >
+                                      <Switch
+                                          isChecked={selectedItems.includes(item)}
+                                          onChange={() => handleCheckboxChange(item)}
+                                          size={{base: "sm", md: "md"}}
+                                          colorScheme="blue"
+                                      >
+                                      </Switch>
+                                      <Text fontSize={{ base: "0.8rem", md: "0.9rem" }} ml="10px">
+                                        {item}
+                                      </Text>
+                                  </Box>
+                              ))}
+                            </Flex>
+                          </Box>
+                          <Flex flexDirection="row" justifyContent="flex-end" h="full">
                             <Menu>
                               <MenuButton
                                   as={Button}
@@ -210,6 +214,7 @@ const Service = () => {
                                   _active={{ bgGradient: "linear(to-r, blue.600, blue.300)" }}
                                   transition="transform 0.5s ease"
                                   _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
+                                  w={"max-content"}
                               >
                                 Book Now
                               </MenuButton>
@@ -229,12 +234,10 @@ const Service = () => {
                               </MenuList>
                             </Menu>
                           </Flex>
-                        </GridItem>
-                      </Grid>
                       <Divider m="20px 0" borderColor="blackAlpha.500" w="80%" />
                     </Box>
                 ))}
-              </SimpleGrid>
+             
             </Box>
             <center>
               <Divider orientation="vertical" borderColor="blackAlpha.500" m="20px 0"/>
@@ -267,14 +270,10 @@ const Service = () => {
                       src={demandImage}
                       alt="Service Image"
                       objectFit="cover"
-                      // width={{ base: "100%", md: "50%" }}
                   />
                   <Box flex="1" mt={"1rem"} >
                     <OnDemandService />
-                    <ReviewsSwipper testimonials={sampleTestimonials} />
                   </Box>
-
-
                 </Flex>
                 {cartItems.length !== 0 && (
                     <Flex
