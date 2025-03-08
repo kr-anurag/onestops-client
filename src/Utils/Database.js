@@ -33,14 +33,14 @@ export const getAllServices = () => {
 
 export const ServicesDatabase = [
     {
-        id: "electrician-services",
-        title: "Electrician Services",
-        icon: "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
-        shortTitle: "Electricians",
-        img: "https://ik.imagekit.io/ulyn7697x/c51405fecd029f91ae69e8bedfeeabeb.jpg?updatedAt=1740982112780",
-        tag: "Most Ordered",
-        ratings: 4.5,
-        packages: [
+        "id": "electrician-services",
+        "title": "Electrician Services",
+        "icon": "https://ik.imagekit.io/ulyn7697x/electrician%20(1).png?updatedAt=1740831155688",
+        "shortTitle": "Electricians",
+        "img": "https://ik.imagekit.io/ulyn7697x/c51405fecd029f91ae69e8bedfeeabeb.jpg?updatedAt=1740982112780",
+        "tag": "Most Ordered",
+        "ratings": 4.5,
+        "packages": [
             {
                 "id": "switch-services",
                 "name": "Switch Related Services",
@@ -145,20 +145,20 @@ export const ServicesDatabase = [
                 ]
             }
         ],
-        notes: [
+        "notes": [
             "Provide a ladder if required.",
             "Wiring of more than 2m will cost extra.",
             "Warranty doesn't cover spare parts sourced by the customer."
         ]
     },
     {
-        id: "plumber-services",
-        title: "Plumber Services",
-        icon: "https://ik.imagekit.io/ulyn7697x/plumber%20(1).png?updatedAt=1740853653226",
-        img: "https://ik.imagekit.io/ulyn7697x/9e4f03a71df8bd5d310b18dbd3e71540.jpg?updatedAt=1740982108434",
-        shortTitle: "Plumbers",
-        ratings: 4.2,
-        packages: [
+        "id": "plumber-services",
+        "title": "Plumber Services",
+        "icon": "https://ik.imagekit.io/ulyn7697x/plumber%20(1).png?updatedAt=1740853653226",
+        "img": "https://ik.imagekit.io/ulyn7697x/9e4f03a71df8bd5d310b18dbd3e71540.jpg?updatedAt=1740982108434",
+        "shortTitle": "Plumbers",
+        "ratings": 4.2,
+        "packages": [
             {
                 "id": "uuid()",
                 "name": "Tap & Mixer",
@@ -261,13 +261,13 @@ export const ServicesDatabase = [
         ]
     },
     {
-        id: "carpenter-services",
-        title: "Carpenter Services",
-        icon: "https://ik.imagekit.io/ulyn7697x/woman.png?updatedAt=1740831155914",
-        img: "https://ik.imagekit.io/ulyn7697x/86f8fe318aa84c3a8dc23a7457963375.jpg?updatedAt=1740982108305",
-        shortTitle: "Carpenters",
-        ratings: 4.7,
-        packages: [
+        "id": "carpenter-services",
+        "title": "Carpenter Services",
+        "icon": "https://ik.imagekit.io/ulyn7697x/woman.png?updatedAt=1740831155914",
+        "img": "https://ik.imagekit.io/ulyn7697x/86f8fe318aa84c3a8dc23a7457963375.jpg?updatedAt=1740982108305",
+        "shortTitle": "Carpenters",
+        "ratings": 4.7,
+        "packages": [
             {
                 "id": "uuid()",
                 "name": "Cupboard & Drawer",
@@ -364,17 +364,17 @@ export const ServicesDatabase = [
                     "Table/chair wheels fitting",
                     "Plastic buffer installation (up to 4)"
                 ]
-            },
+            }
         ]
     },
     {
-        id: "appliance-services",
-        title: "Appliance Repair Services",
-        icon: "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
-        img: "https://ik.imagekit.io/ulyn7697x/71d56df0b76fe646babd8d137382b495.jpg?updatedAt=1740982108586",
-        shortTitle: "Appliance Repair",
-        ratings: 3.9,
-        packages: [
+        "id": "appliance-services",
+        "title": "Appliance Repair Services",
+        "icon": "https://ik.imagekit.io/ulyn7697x/technician.png?updatedAt=1740853791687",
+        "img": "https://ik.imagekit.io/ulyn7697x/71d56df0b76fe646babd8d137382b495.jpg?updatedAt=1740982108586",
+        "shortTitle": "Appliance Repair",
+        "ratings": 3.9,
+        "packages": [
             {
                 "id": "uuid()",
                 "name": "A/C Repair and Services",
@@ -485,13 +485,13 @@ export const ServicesDatabase = [
         ]
     },
     {
-        id: "painting-services",
-        title: "Painting & Waterproofing",
-        icon: "https://ik.imagekit.io/ulyn7697x/painter%20(1).png?updatedAt=1740831438506",
-        img: "https://ik.imagekit.io/ulyn7697x/80c5407b7a53cdcb2a6b905dd8716501.jpg?updatedAt=1740982109014",
-        shortTitle: "Painter",
-        ratings: 4.3,
-        packages: [
+        "id": "painting-services",
+        "title": "Painting & Waterproofing",
+        "icon": "https://ik.imagekit.io/ulyn7697x/painter%20(1).png?updatedAt=1740831438506",
+        "img": "https://ik.imagekit.io/ulyn7697x/80c5407b7a53cdcb2a6b905dd8716501.jpg?updatedAt=1740982109014",
+        "shortTitle": "Painter",
+        "ratings": 4.3,
+        "packages": [
             {
                 "id": "uuid()",
                 "name": "General Painting",
@@ -548,76 +548,105 @@ export const ServicesDatabase = [
         ]
     },
     {
-        id: "laundry-services",
-        title: "Laundry",
-        img: "https://ik.imagekit.io/ulyn7697x/laundary_uPQf12XuVG?updatedAt=1741172526408",
-        shortTitle: "Laundry",
-        path: "laundry-services",
-        tag: "Newly Added",
-        ratings: 4.6,
-        packages: [
+        "id": "laundry-services",
+        "title": "Laundry",
+        "img": "https://ik.imagekit.io/ulyn7697x/laundary_uPQf12XuVG?updatedAt=1741172526408",
+        "shortTitle": "Laundry",
+        "path": "laundry-services",
+        "tag": "Newly Added",
+        "ratings": 4.6,
+        "packages": [
             {
-                id: uuid(),
-                name: "Home Clothes",
-                img: "https://public.readdy.ai/ai/img_res/81f43fb05fa32d30912aad7432d7e388.jpg",
-                time: "Depends upon quantity",
-                list: ["Washing", "Ironing", "Folding"],
+                "id": "uuid()",
+                "name": "Home Clothes",
+                "img": "https://public.readdy.ai/ai/img_res/81f43fb05fa32d30912aad7432d7e388.jpg",
+                "time": "Depends upon quantity",
+                "list": [
+                    "Washing",
+                    "Ironing",
+                    "Folding"
+                ]
             },
             {
-                id: uuid(),
-                name: "Hotels Clothes",
-                img: "https://public.readdy.ai/ai/img_res/a824ebf11feeace37cc1cd8ed36f8a44.jpg",
-                time: "Depends upon quantity",
-                list: ["Bulk Washing", "Dry Cleaning", "Folding"],
+                "id": "uuid()",
+                "name": "Hotels Clothes",
+                "img": "https://public.readdy.ai/ai/img_res/a824ebf11feeace37cc1cd8ed36f8a44.jpg",
+                "time": "Depends upon quantity",
+                "list": [
+                    "Bulk Washing",
+                    "Dry Cleaning",
+                    "Folding"
+                ]
             },
             {
-                id: uuid(),
-                name: "Gaalicha Washing",
-                img: "https://public.readdy.ai/ai/img_res/ffc54527847ec0672d6e217d71b254b9.jpg",
-                time: "Depends upon quantity",
-                list: ["Deep Carpet Cleaning", "Drying", "Vacuuming"],
+                "id": "uuid()",
+                "name": "Gaalicha Washing",
+                "img": "https://public.readdy.ai/ai/img_res/ffc54527847ec0672d6e217d71b254b9.jpg",
+                "time": "Depends upon quantity",
+                "list": [
+                    "Deep Carpet Cleaning",
+                    "Drying",
+                    "Vacuuming"
+                ]
             },
             {
-                id: uuid(),
-                name: "Shoes Washing",
-                img: "https://public.readdy.ai/ai/img_res/d2023a9f71d2d660aac25de236faf3af.jpg",
-                time: "Depends upon quantity",
-                list: ["Shoe Cleaning", "Deodorizing", "Polishing"],
-            },
+                "id": "uuid()",
+                "name": "Shoes Washing",
+                "img": "https://public.readdy.ai/ai/img_res/d2023a9f71d2d660aac25de236faf3af.jpg",
+                "time": "Depends upon quantity",
+                "list": [
+                    "Shoe Cleaning",
+                    "Deodorizing",
+                    "Polishing"
+                ]
+            }
         ]
-    },{
-        id: "tiffin-services",
-        title: "Tiffin Services",
-        img: "https://ik.imagekit.io/ulyn7697x/Untitled%20design%20(2).png?updatedAt=1741169254608",
-        shortTitle: "Tiffin",
-        path: "tiffin-services",
-        tag: "Newly Added",
-        ratings: 4.7,
-        packages: [
+    },
+    {
+        "id": "tiffin-services",
+        "title": "Tiffin Services",
+        "img": "https://ik.imagekit.io/ulyn7697x/Untitled%20design%20(2).png?updatedAt=1741169254608",
+        "shortTitle": "Tiffin",
+        "path": "tiffin-services",
+        "tag": "Newly Added",
+        "ratings": 4.7,
+        "packages": [
             {
-                id: uuid(),
-                name: "Mess Tiffin",
-                img: "https://public.readdy.ai/ai/img_res/24277a804f68e273772378491e8c9b9c.jpg",
-                time: "1 month",
-                list: ["Breakfast + Lunch + Dinner", "Veg Meals", "Daily Fresh"],
+                "id": "uuid()",
+                "name": "Mess Tiffin",
+                "img": "https://public.readdy.ai/ai/img_res/24277a804f68e273772378491e8c9b9c.jpg",
+                "time": "1 month",
+                "list": [
+                    "Breakfast + Lunch + Dinner",
+                    "Veg Meals",
+                    "Daily Fresh"
+                ]
             },
             {
-                id: uuid(),
-                name: "Office Tiffin",
-                img: "https://public.readdy.ai/ai/img_res/391ec43755d179bae7f63b25d219a28e.jpg",
-                time: "1 month",
-                list: ["Lunch Only", "Varied Menu", "Healthy & Hygienic"],
+                "id": "uuid()",
+                "name": "Office Tiffin",
+                "img": "https://public.readdy.ai/ai/img_res/391ec43755d179bae7f63b25d219a28e.jpg",
+                "time": "1 month",
+                "list": [
+                    "Lunch Only",
+                    "Varied Menu",
+                    "Healthy & Hygienic"
+                ]
             },
             {
-                id: uuid(),
-                name: "Home Tiffin",
-                img: "https://public.readdy.ai/ai/img_res/6fb48c51c2a9e7288ef0797e474584ef.jpg",
-                time: "1 month",
-                list: ["Lunch + Dinner", "Home-Cooked Style", "Customizable"],
+                "id": "uuid()",
+                "name": "Home Tiffin",
+                "img": "https://public.readdy.ai/ai/img_res/6fb48c51c2a9e7288ef0797e474584ef.jpg",
+                "time": "1 month",
+                "list": [
+                    "Lunch + Dinner",
+                    "Home-Cooked Style",
+                    "Customizable"
+                ]
             }
         ]
     }
-];
+]
 
 export const sampleTestimonials = [
     {

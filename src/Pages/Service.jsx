@@ -10,8 +10,7 @@ import {
   TagLeftIcon,
   SimpleGrid,
   Button,
-  UnorderedList,
-  ListItem, MenuList, Menu, MenuButton, MenuItem, Grid, GridItem, Checkbox,
+ MenuList, Menu, MenuButton, MenuItem, Grid, GridItem, Checkbox, Switch,
 } from "@chakra-ui/react";
 import {PhoneIcon, StarIcon} from "@chakra-ui/icons";
 import { RiShieldCheckFill } from "react-icons/ri";
@@ -42,7 +41,10 @@ const Service = () => {
   };
 
   const handleWhatsAppClick = (el) => {
-    const selectedText = selectedItems.map(item => `- ${item}`).join("\n");
+    const selectedText = el.list
+        .filter(item => selectedItems.includes(item))
+        .map(item => `- ${item}`)
+        .join("\n");
     const message = `I am interested in the ${el.name} service.\n\nSelected items:\n${selectedText}`;
     const encodedMessage = encodeURIComponent(message);
 
@@ -151,14 +153,37 @@ const Service = () => {
                               </Text>
                             </Text>
                           </Box>
-                          <Box fontSize="sm" mt="0.6rem" color="gray">
-                            {el.list.map((item) => (
-                                <Box key={item} display="block">
-                                  <Checkbox onChange={() => handleCheckboxChange(item)}>
-                                   <Text fontSize={{base: "0.9rem", md: "1rem"}}>{item}</Text>
-                                  </Checkbox>
-                                </Box>
-                            ))}
+                          <Box fontSize="sm" mt="0.5rem" color="gray">
+                            <Flex wrap="wrap" gap="10px">
+                              {el.list.map((item) => (
+                                  <Box
+                                      key={item}
+                                      border="1px solid"
+                                      borderColor="gray.200"
+                                      display="flex"
+                                      rounded="md"
+                                      p="8px 16px"
+                                      cursor="pointer"
+                                      onClick={() => handleCheckboxChange(item)}
+                                      _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
+                                      transition="transform 0.2s"
+                                      flexGrow={"1"}
+                                      bg={selectedItems.includes(item) ? "blue.50" : "white"}
+                                  >
+                                    <Switch
+                                        isChecked={selectedItems.includes(item)}
+                                        onChange={() => handleCheckboxChange(item)}
+                                        mb="5px"
+                                        size={{base: "sm", md: "md"}}
+                                        colorScheme="blue"
+                                    >
+                                    </Switch>
+                                    <Text fontSize={{ base: "0.8rem", md: "0.9rem" }} ml="10px">
+                                      {item}
+                                    </Text>
+                                  </Box>
+                              ))}
+                            </Flex>
                           </Box>
                         </GridItem>
                         <GridItem height="100%">
