@@ -20,6 +20,8 @@ import {ServicesDatabase} from "../Utils/Database";
 import { FaCalendarCheck, FaWhatsapp} from "react-icons/fa";
 import OnDemandService from "../Components/ServiceCategory/OnDemandService";
 import demandImage from "../assests/ondemand.png";
+import {IoCheckmarkCircle, IoCheckmarkCircleOutline, IoCheckmarkCircleSharp} from "react-icons/io5";
+import Footer from "../Layouts/Footer";
 
 const Service = () => {
   const { cartItems, setCartItems, price } = useContext(Appcontext);
@@ -187,13 +189,19 @@ const Service = () => {
                                       transition="transform 0.2s"
                                       bg={selectedItems.includes(item) ? "blue.50" : "white"}
                                   >
-                                      <Switch
-                                          isChecked={selectedItems.includes(item)}
-                                          onChange={() => handleCheckboxChange(item)}
-                                          size={{base: "sm", md: "md"}}
-                                          colorScheme="blue"
-                                      >
-                                      </Switch>
+                                      {/*<Switch*/}
+                                      {/*    isChecked={selectedItems.includes(item)}*/}
+                                      {/*    onChange={() => handleCheckboxChange(item)}*/}
+                                      {/*    size={{base: "sm", md: "md"}}*/}
+                                      {/*    colorScheme="blue"*/}
+                                      {/*>*/}
+                                      {/*</Switch>*/}
+
+                                    {selectedItems.includes(item) ?
+                                        <IoCheckmarkCircle size="20" color="green"/> :
+                                        <IoCheckmarkCircleOutline size="20"/>
+                                        }
+
                                       <Text fontSize={{ base: "0.8rem", md: "0.9rem" }} ml="10px">
                                         {item}
                                       </Text>
