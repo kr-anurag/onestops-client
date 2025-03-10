@@ -503,10 +503,10 @@ export const ServicesDatabase = [
                     "Living room",
                     "Living & dining room",
                     "Lobby",
-                    "Multiple room 2 or more cost (12,998) UC",
-                    "Full home 1BHK 10,999 UC Cost",
-                    "2 BHK (14,849) UC Cost",
-                    "3 BHK (22,524) UC Cost"
+                    "Multiple room 2 or more cost",
+                    "Full home 1BHK",
+                    "2 BHK",
+                    "3 BHK"
                 ]
             },
             {
