@@ -645,6 +645,51 @@ export const ServicesDatabase = [
                 ]
             }
         ]
+    },
+    {
+        "id": "dairy-products",
+        "title": "Dairy Products",
+        "img": "https://ik.imagekit.io/onestops/WhatsApp%20Image%202025-03-09%20at%2023.54.54.jpeg?updatedAt=1741544807634",
+        "shortTitle": "Dairy",
+        "path": "dairy-products",
+        "tag": "Newly Added",
+        "ratings": 4.9,
+        "packages": [
+            {
+                "id": "uuid()",
+                "name": "Milk Delivery",
+                "img": "https://ik.imagekit.io/onestops/WhatsApp%20Image%202025-03-09%20at%2022.24.48.jpeg?updatedAt=1741539331333",
+                "time": "Renews after evry 1 month",
+                "list": [
+                    "Buffalo Milk",
+                    "Cow's Milk",
+                    "Goat's Milk",
+                    "Customizable"
+                ]
+            },
+            {
+                "id": "uuid()",
+                "name": "Fresh Yogurt",
+                "img": "https://ik.imagekit.io/onestops/WhatsApp%20Image%202025-03-09%20at%2023.54.54(1).jpeg?updatedAt=1741544879965",
+                "time": "Renews after evry 1 month",
+                "list": [
+                    "Tangy Curd",
+                    "Sweet Curd",
+                    "Customizable"
+                ]
+            },
+            {
+                "id": "uuid()",
+                "name": "Paneer",
+                "img": "https://ik.imagekit.io/onestops/WhatsApp%20Image%202025-03-10%20at%2000.00.17.jpeg?updatedAt=1741545047941",
+                "time": "Renews after evry 1 month",
+                "list": [
+                    "Low-fat Paneer",
+                    "Soft Paneer",
+                    "Customizable"
+                ]
+            }
+        ]
     }
 ]
 
