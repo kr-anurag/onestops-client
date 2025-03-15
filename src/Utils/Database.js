@@ -90,19 +90,6 @@ export const ServicesDatabase = [
                 "price": 219
             },
             {
-                "id": "appliance-services",
-                "name": "Appliance Related Works",
-                "img": "https://public.readdy.ai/ai/img_res/e80a0680688f579a094aa3abc200f5cd.jpg",
-                "time": "60-90 mins",
-                "list": [
-                    "Room heater repair",
-                    "Kaban airzone installation",
-                    "Karba airzone lite installation",
-                    "TV installation/uninstallation",
-                    "Mini home theatre installation"
-                ]
-            },
-            {
                 "id": "wiring-services",
                 "name": "Wiring Related Works",
                 "img": "https://public.readdy.ai/ai/img_res/161fa148a2e57808ed8ced10fcb27d4a.jpg",
@@ -122,7 +109,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Doorbell installation",
                     "Doorbell replacement"
-                ]
+                ],
+                "price": 205
             },
             {
                 "id": "mcb-services",
@@ -134,20 +122,9 @@ export const ServicesDatabase = [
                     "MCB/Fuse replacement",
                     "Submeter installation",
                     "3-phase changeover switch installation"
-                ]
+                ],
+                "price": 249
             },
-            {
-                "id": "inverter-services",
-                "name": "Inverter & Stabiliser",
-                "img": "https://public.readdy.ai/ai/img_res/47816951083c829585c25feba29cad02.jpg",
-                "time": "30-40 mins",
-                "list": [
-                    "Inverter installation",
-                    "Stabiliser installation",
-                    "Inverter fuse replacement",
-                    "Inverter servicing (Terminal dust removal & distilled water top-up)"
-                ]
-            }
         ],
         "notes": [
             "Provide a ladder if required.",
@@ -410,6 +387,18 @@ export const ServicesDatabase = [
                 "list": [
                     "Air cooler repair",
                     "Air cooler services"
+                ]
+            },
+            {
+                "id": "inverter-services",
+                "name": "Inverter & Stabiliser",
+                "img": "https://public.readdy.ai/ai/img_res/47816951083c829585c25feba29cad02.jpg",
+                "time": "30-40 mins",
+                "list": [
+                    "Inverter installation",
+                    "Stabiliser installation",
+                    "Inverter fuse replacement",
+                    "Inverter servicing (Terminal dust removal & distilled water top-up)"
                 ]
             },
             {
