@@ -156,7 +156,7 @@ const Service = () => {
                                   </Text>
                                 </Box>
                               {el.price && <Box mt="3px"  borderRadius="md">
-                                <Text fontSize="16px" fontWeight="bold" color="blue.600">
+                                <Text fontSize="14px" fontWeight="bold" color="blue.600">
                                   Price: <Text as="span" color="green.500" fontWeight="semibold">&#8377;{el.price} Onwards</Text>
                                 </Text>
                               </Box>}
