@@ -192,7 +192,6 @@ const Service = () => {
                                       onClick={() => handleCheckboxChange(item)}
                                       _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
                                       transition="transform 0.3s, box-shadow 0.3s"
-                                      boxShadow={selectedItems.includes(item) ? "0 0 10px rgba(0, 0, 255, 0.2)" : "sm"}
                                       bg={selectedItems.includes(item) ? "blue.50" : "white"}
                                   >
                                     {selectedItems.includes(item) ?
