@@ -150,11 +150,16 @@ const Service = () => {
                                 </Text>
                                 <Box mt="3px">
                                   <Text fontSize="14px" fontWeight="700">
-                                    <Text as="span" color="gray" fontWeight="thin">
+                                    <Text as="span" color="gray">
                                       Duration: {el.time}
                                     </Text>
                                   </Text>
                                 </Box>
+                              {el.price && <Box mt="3px"  borderRadius="md">
+                                <Text fontSize="16px" fontWeight="bold" color="blue.600">
+                                  Price: <Text as="span" color="green.500" fontWeight="semibold">&#8377;{el.price} Onwards</Text>
+                                </Text>
+                              </Box>}
                                 <Box mt="5px">
                                     <Text as="span" color="gray" fontSize="12px" fontWeight="thin">
                                       Select services you want to book
@@ -186,17 +191,10 @@ const Service = () => {
                                       cursor="pointer"
                                       onClick={() => handleCheckboxChange(item)}
                                       _hover={{ boxShadow: "md", transform: "scale(1.01)" }}
-                                      transition="transform 0.2s"
+                                      transition="transform 0.3s, box-shadow 0.3s"
+                                      boxShadow={selectedItems.includes(item) ? "0 0 10px rgba(0, 0, 255, 0.2)" : "sm"}
                                       bg={selectedItems.includes(item) ? "blue.50" : "white"}
                                   >
-                                      {/*<Switch*/}
-                                      {/*    isChecked={selectedItems.includes(item)}*/}
-                                      {/*    onChange={() => handleCheckboxChange(item)}*/}
-                                      {/*    size={{base: "sm", md: "md"}}*/}
-                                      {/*    colorScheme="blue"*/}
-                                      {/*>*/}
-                                      {/*</Switch>*/}
-
                                     {selectedItems.includes(item) ?
                                         <IoCheckmarkCircle size="20" color="green"/> :
                                         <IoCheckmarkCircleOutline size="20"/>

@@ -52,7 +52,8 @@ export const ServicesDatabase = [
                     "Switchboard installing",
                     "A/C Switchbox installing",
                     "Switchboard repair"
-                ]
+                ],
+                "price": 179
             },
             {
                 "id": "fan-services",
@@ -67,7 +68,8 @@ export const ServicesDatabase = [
                     "Wall fan installing",
                     "Decorative ceiling fan installing",
                     "Fan uninstalling (ceiling/wall/exhaust)"
-                ]
+                ],
+                "price": 179
             },
             {
                 "id": "light-services",
@@ -84,7 +86,8 @@ export const ServicesDatabase = [
                     "Decorative light uninstallation (per 5m)",
                     "Chandelier installation",
                     "CFL to LED Replacement"
-                ]
+                ],
+                "price": 219
             },
             {
                 "id": "appliance-services",
@@ -108,7 +111,8 @@ export const ServicesDatabase = [
                     "New wiring with casing (per 5m)",
                     "New wiring without casing (per 5m)",
                     "New internal wiring (per 5m)"
-                ]
+                ],
+                "price": 209
             },
             {
                 "id": "doorbell-services",
