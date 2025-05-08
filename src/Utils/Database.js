@@ -149,7 +149,8 @@ export const ServicesDatabase = [
                     "Tap repair",
                     "Tap installation/replacement",
                     "Water nozzle installation"
-                ]
+                ],
+                "price": 169
             },
             {
                 "id": "uuid()",
@@ -162,7 +163,8 @@ export const ServicesDatabase = [
                     "Toilet installation/replacement",
                     "Toilet repair",
                     "Toilet pot blockage removal"
-                ]
+                ],
+                "price": 299
             },
             {
                 "id": "uuid()",
@@ -174,7 +176,8 @@ export const ServicesDatabase = [
                     "Toilet seat cover installation",
                     "Shower installation",
                     "Minor fittings installation"
-                ]
+                ],
+                "price": 349
             },
             {
                 "id": "uuid()",
@@ -184,7 +187,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Wash basin repair",
                     "Wash basin installation"
-                ]
+                ],
+                "price": 214
             },
             {
                 "id": "uuid()",
@@ -194,7 +198,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Drain cover installation",
                     "Blockage removal"
-                ]
+                ],
+                "price": 264
             },
             {
                 "id": "uuid()",
@@ -204,7 +209,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Connection hose installation",
                     "Connection hose uninstallation"
-                ]
+                ],
+                "price": 214
             },
             {
                 "id": "uuid()",
@@ -217,7 +223,8 @@ export const ServicesDatabase = [
                     "Overhead water tank cleaning",
                     "Underground water tank cleaning",
                     "Water meter installing"
-                ]
+                ],
+                "price": 869
             },
             {
                 "id": "uuid()",
@@ -227,7 +234,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Motor air cavity removal",
                     "Motor installation/replacement"
-                ]
+                ],
+                "price": 369
             },
             {
                 "id": "uuid()",
@@ -237,7 +245,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Bathroom tile grouting",
                     "Kitchen tile grouting"
-                ]
+                ],
+                "price": 905
             }
         ]
     },
@@ -264,7 +273,8 @@ export const ServicesDatabase = [
                     "Wooden shelf installation",
                     "Handle installation",
                     "Handle installation/replacement"
-                ]
+                ],
+                "price": 209
             },
             {
                 "id": "uuid()",
@@ -275,7 +285,8 @@ export const ServicesDatabase = [
                     "Drill & hang (wall decor)",
                     "Bath fitting installation (one unit)",
                     "Bathroom mirror installation"
-                ]
+                ],
+                "price": 599
             },
             {
                 "id": "uuid()",
@@ -297,7 +308,8 @@ export const ServicesDatabase = [
                     "Mesh replacement",
                     "Peephole installation",
                     "Door latch/aldrop installation"
-                ]
+                ],
+                "price": 199
             },
             {
                 "id": "uuid()",
@@ -313,7 +325,8 @@ export const ServicesDatabase = [
                     "Window A/C Frame installation",
                     "Motorized blinds fittings (up to 5ft)",
                     "Curtain blinds measurement"
-                ]
+                ],
+                "price": 199
             },
             {
                 "id": "uuid()",
@@ -324,7 +337,8 @@ export const ServicesDatabase = [
                     "Bed support repair",
                     "Bed legs/Headboard repair",
                     "New bed making"
-                ]
+                ],
+                "price": 349
             },
             {
                 "id": "uuid()",
@@ -334,7 +348,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Ceiling-mounted hanger installation",
                     "Wall/door hanger installation"
-                ]
+                ],
+                "price": 499
             },
             {
                 "id": "uuid()",
@@ -344,7 +359,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Table/chair wheels fitting",
                     "Plastic buffer installation (up to 4)"
-                ]
+                ],
+                "price": 249
             }
         ]
     },
@@ -367,7 +383,8 @@ export const ServicesDatabase = [
                     "Lite AC services",
                     "Repair & gas refill",
                     "A/C gas leak fix & refill"
-                ]
+                ],
+                "price": 365
             },
             {
                 "id": "uuid()",
@@ -377,7 +394,8 @@ export const ServicesDatabase = [
                 "list": [
                     "AC Installation",
                     "AC Uninstallation"
-                ]
+                ],
+                "price": 1499
             },
             {
                 "id": "uuid()",
@@ -387,7 +405,8 @@ export const ServicesDatabase = [
                 "list": [
                     "Air cooler repair",
                     "Air cooler services"
-                ]
+                ],
+                "price": 299
             },
             {
                 "id": "inverter-services",
@@ -399,7 +418,8 @@ export const ServicesDatabase = [
                     "Stabiliser installation",
                     "Inverter fuse replacement",
                     "Inverter servicing (Terminal dust removal & distilled water top-up)"
-                ]
+                ],
+                "price": 515
             },
             {
                 "id": "uuid()",
@@ -411,7 +431,8 @@ export const ServicesDatabase = [
                     "Geyser services",
                     "Geyser installation",
                     "Geyser uninstallation"
-                ]
+                ],
+                "price": 349
             },
             {
                 "id": "uuid()",
@@ -424,7 +445,8 @@ export const ServicesDatabase = [
                     "Desktop repair",
                     "Laptop & PC Services",
                     "RAM/Hard disk upgrade"
-                ]
+                ],
+                "price": 229
             },
             {
                 "id": "uuid()",
@@ -437,7 +459,8 @@ export const ServicesDatabase = [
                     "Noise issue",
                     "Not heating",
                     "Unknown issue"
-                ]
+                ],
+                "price": 269
             },
             {
                 "id": "uuid()",
@@ -449,7 +472,8 @@ export const ServicesDatabase = [
                     "Double door refrigerator check-up",
                     "Double door refrigerator check-up (non-inverter)",
                     "Side-by-side door refrigerator check-up"
-                ]
+                ],
+                "price": 219
             },
             {
                 "id": "uuid()",
@@ -460,7 +484,8 @@ export const ServicesDatabase = [
                     "TV Repair",
                     "TV Installation",
                     "TV Uninstallation"
-                ]
+                ],
+                "price": 369
             },
             {
                 "id": "uuid()",
@@ -473,7 +498,8 @@ export const ServicesDatabase = [
                     "Semi-automatic washing machine check-up",
                     "Washing machine installation",
                     "Washing machine uninstallation"
-                ]
+                ],
+                "price": 169
             }
         ]
     },
