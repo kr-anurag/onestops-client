@@ -526,7 +526,9 @@ export const ServicesDatabase = [
                     "Full home 1BHK",
                     "2 BHK",
                     "3 BHK"
-                ]
+                ],
+                "customButtonText": "Book a Consultation",
+                "price": 119
             },
             {
                 "id": "uuid()",
@@ -536,7 +538,9 @@ export const ServicesDatabase = [
                 "list": [
                     "Kitchen",
                     "Bathroom"
-                ]
+                ],
+                "customButtonText": "Book a Consultation",
+                "price": 119
             },
             {
                 "id": "uuid()",
@@ -548,7 +552,9 @@ export const ServicesDatabase = [
                     "Balcony",
                     "Washing area",
                     "Terrace"
-                ]
+                ],
+                "customButtonText": "Book a Consultation",
+                "price": 119
             },
             {
                 "id": "uuid()",
@@ -562,7 +568,9 @@ export const ServicesDatabase = [
                     "Single door cabinet painting",
                     "Double door cabinet painting",
                     "Tile grouting"
-                ]
+                ],
+                "customButtonText": "Book a Consultation",
+                "price": 119
             }
         ]
     },
@@ -584,7 +592,8 @@ export const ServicesDatabase = [
                     "Washing",
                     "Ironing",
                     "Folding"
-                ]
+                ],
+                "price": 70
             },
             {
                 "id": "uuid()",
@@ -595,7 +604,8 @@ export const ServicesDatabase = [
                     "Bulk Washing",
                     "Dry Cleaning",
                     "Folding"
-                ]
+                ],
+                "price": 70
             },
             {
                 "id": "uuid()",
@@ -606,7 +616,8 @@ export const ServicesDatabase = [
                     "Deep Carpet Cleaning",
                     "Drying",
                     "Vacuuming"
-                ]
+                ],
+                "price": 100
             },
             {
                 "id": "uuid()",
@@ -617,7 +628,8 @@ export const ServicesDatabase = [
                     "Shoe Cleaning",
                     "Deodorizing",
                     "Polishing"
-                ]
+                ],
+                "price": 80
             }
         ]
     },
@@ -639,7 +651,8 @@ export const ServicesDatabase = [
                     "Breakfast + Lunch + Dinner",
                     "Veg Meals",
                     "Daily Fresh"
-                ]
+                ],
+                "price": 70
             },
             {
                 "id": "uuid()",
@@ -650,7 +663,8 @@ export const ServicesDatabase = [
                     "Lunch Only",
                     "Varied Menu",
                     "Healthy & Hygienic"
-                ]
+                ],
+                "price": 100
             },
             {
                 "id": "uuid()",
@@ -661,7 +675,8 @@ export const ServicesDatabase = [
                     "Lunch + Dinner",
                     "Home-Cooked Style",
                     "Customizable"
-                ]
+                ],
+                "price": 80
             }
         ]
     },

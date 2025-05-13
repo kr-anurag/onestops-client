@@ -221,7 +221,7 @@ const Service = () => {
                                   _hover={{ transform: "scale(1.05)", boxShadow: "md" }}
                                   w={"max-content"}
                               >
-                                Book Now
+                                {el?.customButtonText || "Book Now"}
                               </MenuButton>
                               <MenuList fontSize={{ base: "0.9rem", md: "1rem" }}>
                                 <MenuItem
