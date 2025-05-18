@@ -478,7 +478,7 @@ export const ServicesDatabase = [
             {
                 "id": "uuid()",
                 "name": "Television Repair",
-                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741240200131",
+                "img": "https://ik.imagekit.io/onestops/file_00000000d06461f7a9275b122391756f.png?updatedAt=1747559117605",
                 "time": "Varies",
                 "list": [
                     "TV Repair",
@@ -490,7 +490,7 @@ export const ServicesDatabase = [
             {
                 "id": "uuid()",
                 "name": "Washing Machine Repair",
-                "img": "https://ik.imagekit.io/ulyn7697x/noimage.jpg?updatedAt=1741240200131",
+                "img": "https://ik.imagekit.io/onestops/file_00000000ecec61f9aee8ccfb1a2158c2%20(1).png?updatedAt=1747559077944",
                 "time": "Varies",
                 "list": [
                     "Fully automatic washing machine check-up (Top load)",
